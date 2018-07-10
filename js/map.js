@@ -170,8 +170,33 @@ $(document).ready(function(){
     return [(b[0][0] + b[1][0]) / 2, (b[0][1] + b[1][1]) / 2];
   }
 
+  var getcirclecenter = function(root, id) {
+    // select element
+    var region = root.select('circle#' + id)[0][0];
+    // return center [x,y]
+    return [parseFloat(region.attributes.cx.value), parseFloat(region.attributes.cy.value)];
+  }
+
+  var randomPointWithinBounds = function (root, id) {
+    // spread amount
+    spread = .5;
+    // select element
+    var region = root.select('#' + id).datum();
+    // calculate bounding box
+    var b = path.bounds(region);
+    // return center [x,y]
+    console.log(id, b);
+    return [
+    ((b[0][0] + b[1][0]) / 2) + ((b[1][0] - b[0][0]) * Math.random() - ((b[1][0] - b[0][0]) / 2)) * spread,
+    ((b[0][1] + b[1][1]) / 2) + ((b[1][1] - b[0][1]) * Math.random() - ((b[1][1] - b[0][1]) / 2)) * spread
+    ];
+  }
+
   var w = 1000;
   var h = 800;
+  var circleR = 20;
+  var pinW = 2;
+  var pinH = 20;
   active = d3.select(null);
 
   var svg = d3.select("#map")
@@ -183,7 +208,7 @@ $(document).ready(function(){
   // .rotate([100, -45])
   .center([5, 20])
   .scale(200)
-  .translate([w/2, h/2]);
+  // .translate([w/2, h/2]);
 
   var path = d3.geo.path()
   .projection(projection);
@@ -214,16 +239,17 @@ $(document).ready(function(){
       .enter()
       .append("circle")
       .attr("class", "circle")
-      .attr("id", function(d) { return getid(d.name);})
+      .attr("id", function(d) { return getid(d.name) + '-circle';})
       .attr("data-province", function(d) { return d.name;})
       .attr("cx", function(d) {
-        return getcenter(svg, getid(diacritics(d.name)))[0];
+        return randomPointWithinBounds(svg, getid(diacritics(d.country)))[0];
       })
       .attr("cy", function(d) {
-        return getcenter(svg, getid(diacritics(d.name)))[1];
+        return randomPointWithinBounds(svg, getid(diacritics(d.country)))[1] - pinH;
       })
       .attr("r", function(d) {
-        return Math.sqrt(d.count)*15;
+        // return Math.sqrt(d.count)*15;
+        return circleR;
       })
 
       .on("mouseover", function(d) {
@@ -276,15 +302,30 @@ $(document).ready(function(){
       .enter()
       .append("text")
       .attr("x", function(d) {
-        return getcenter(svg, getid(diacritics(d.name)))[0];
+        return getcirclecenter(svg, getid(d.name) + '-circle' )[0];
       })
       .attr("y", function(d) {
-        return getcenter(svg, getid(diacritics(d.name)))[1];
+        return getcirclecenter(svg, getid(d.name) + '-circle' )[1];
       })
       .attr("text-anchor", "middle")
       .attr("dy", "6")
-      .text(function(d) { return d.count; })
+      .text(function(d) { return d.name; })
       .attr("class", "number")
+
+      svg.selectAll("rect")
+      .data(data)
+      .enter()
+      .append("rect")
+      .attr("x", function(d) {
+        return getcirclecenter(svg, getid(d.name) + '-circle' )[0] - pinW / 2;
+      })
+      .attr("y", function(d) {
+        return getcirclecenter(svg, getid(d.name) + '-circle' )[1] + circleR;
+      })
+      .attr("width", pinW)
+      .attr("height", pinH)
+      .attr("class", "pin")
+
     });
   });
 });

@@ -11,9 +11,9 @@
 }
 
 .map-wrapper {
-  margin-top: -230px;
-  margin-bottom: -40px;
-  position: relative;
+  // margin-top: -230px;
+  // margin-bottom: -40px;
+  // position: relative;
 }
 
 #caption {
@@ -22,11 +22,11 @@
   width: 100%;
   text-align: center;
 
-  .map-tooltip {   
+  .map-tooltip {
     color: rgba(white, .6);
     text-transform: uppercase;
     font-weight: 600;
-    
+
   }
 }
 
@@ -38,10 +38,16 @@
     stroke-linejoin: round;
   }
 
-  .circle { 
-    cursor: pointer; 
-    fill: $theme-pink; 
-    opacity: .7; 
+  .circle {
+    cursor: pointer;
+    fill: $theme-pink;
+    opacity: .7;
+  }
+
+  .pin {
+    // cursor: pointer;
+    fill: $theme-pink;
+    opacity: .7;
   }
 
   .active { fill: $theme-green; }
