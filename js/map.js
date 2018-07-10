@@ -1,7 +1,7 @@
 /* Based on the Social Innovation Simulation Tutorial Available at http://socialinnovationsimulation.com/2013/07/11/tutorial-making-maps-on-d3/ */
 
 $(document).ready(function(){
-  var apiUrl = 'http://api.opendata500.com/api/v1/map/Canada';
+  var apiUrl = './static/map-test-data.json';
 
   var diacritics = function (str) {
 
@@ -130,11 +130,11 @@ $(document).ready(function(){
     var filteredData = [];
     for (d in data) {
       // if the province name is fr
-      if (isFr(data[d].province)) {
+      if (isFr(data[d].name)) {
         // loop over the filtered data and add the count of the fr name to the eng name if present
         var found = false;
         for (e in filteredData) {
-          if (filteredData[e].province == toEn(data[d].province)) {
+          if (filteredData[e].name == toEn(data[d].name)) {
             filteredData[e].count += data[d].count;
             found = true;
           }
@@ -142,7 +142,7 @@ $(document).ready(function(){
         // if not already present, push eng translated name and count to filtered data
         if (!found) {
           var x = data[d];
-          x.province = (toEn(x.province));
+          x.name = (toEn(x.name));
           filteredData.push(x);
         }
       // else if the province name is eng
@@ -170,8 +170,8 @@ $(document).ready(function(){
     return [(b[0][0] + b[1][0]) / 2, (b[0][1] + b[1][1]) / 2];
   }
 
-  var w = 600;
-  var h = 500;
+  var w = 1000;
+  var h = 800;
   active = d3.select(null);
 
   var svg = d3.select("#map")
@@ -179,11 +179,11 @@ $(document).ready(function(){
   .attr("width", w)
   .attr("height", h)
 
-  var projection = d3.geo.azimuthalEqualArea()
-  .rotate([100, -45])
+  var projection = d3.geoNaturalEarth1()
+  // .rotate([100, -45])
   .center([5, 20])
-  .scale(600)
-  .translate([w/2, h/2.5]);
+  .scale(200)
+  .translate([w/2, h/2]);
 
   var path = d3.geo.path()
   .projection(projection);
@@ -201,7 +201,7 @@ $(document).ready(function(){
     .attr("d", path)
     .attr("class", "path")
     .attr("id", function(d) {
-      return getid(d.properties.NAME);
+      return getid(d.properties.name);
     });
 
     console.log(apiUrl)
@@ -214,13 +214,13 @@ $(document).ready(function(){
       .enter()
       .append("circle")
       .attr("class", "circle")
-      .attr("id", function(d) { return getid(d.province);})
-      .attr("data-province", function(d) { return d.province;})
+      .attr("id", function(d) { return getid(d.name);})
+      .attr("data-province", function(d) { return d.name;})
       .attr("cx", function(d) {
-        return getcenter(svg, getid(diacritics(d.province)))[0];
+        return getcenter(svg, getid(diacritics(d.name)))[0];
       })
       .attr("cy", function(d) {
-        return getcenter(svg, getid(diacritics(d.province)))[1];
+        return getcenter(svg, getid(diacritics(d.name)))[1];
       })
       .attr("r", function(d) {
         return Math.sqrt(d.count)*15;
@@ -231,10 +231,10 @@ $(document).ready(function(){
         .duration(200)
         .style("opacity", 1)
         if (d.count==1) {
-          div.html(d.province + " | " + d.count + " company")
+          div.html(d.name + " | " + d.count + " company")
         }
         else {
-          div.html(d.province + " | " + d.count + " companies")
+          div.html(d.name + " | " + d.count + " companies")
         }
         d3.select(this)
         .transition()
@@ -276,10 +276,10 @@ $(document).ready(function(){
       .enter()
       .append("text")
       .attr("x", function(d) {
-        return getcenter(svg, getid(diacritics(d.province)))[0];
+        return getcenter(svg, getid(diacritics(d.name)))[0];
       })
       .attr("y", function(d) {
-        return getcenter(svg, getid(diacritics(d.province)))[1];
+        return getcenter(svg, getid(diacritics(d.name)))[1];
       })
       .attr("text-anchor", "middle")
       .attr("dy", "6")
