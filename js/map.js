@@ -1,6 +1,7 @@
 /* Based on the Social Innovation Simulation Tutorial Available at http://socialinnovationsimulation.com/2013/07/11/tutorial-making-maps-on-d3/ */
 
 $(document).ready(function(){
+
   var apiUrl = './static/map-test-data.json';
 
   var diacritics = function (str) {
@@ -185,7 +186,6 @@ $(document).ready(function(){
     // calculate bounding box
     var b = path.bounds(region);
     // return center [x,y]
-    console.log(id, b);
     return [
     ((b[0][0] + b[1][0]) / 2) + ((b[1][0] - b[0][0]) * Math.random() - ((b[1][0] - b[0][0]) / 2)) * spread,
     ((b[0][1] + b[1][1]) / 2) + ((b[1][1] - b[0][1]) * Math.random() - ((b[1][1] - b[0][1]) / 2)) * spread
@@ -218,20 +218,36 @@ $(document).ready(function(){
   .attr("class", "map-tooltip")
   .style("opacity", 0)
 
-  d3.json("./static/world.geo.json", function(map) {
-    svg.selectAll("append")
-    .data(map.features)
-    .enter()
-    .append("path")
-    .attr("d", path)
-    .attr("class", "path")
-    .attr("id", function(d) {
-      return getid(d.properties.name);
-    });
 
-    console.log(apiUrl)
 
-    d3.json(apiUrl, function(data) {
+  d3.queue()
+  .defer(d3.xml, "./img/crowdlaw-shapes1.svg")
+  .defer(d3.xml, "./img/crowdlaw-shapes2.svg")
+  .await(function(error, file1, file2) {
+    if (error) { console.log(error); return; }
+
+    var shape1 = file1.getElementsByTagName("svg")[0];
+    var shape2 = file2.getElementsByTagName("svg")[0];
+
+    var shapeTypes = {
+      1 : shape1,
+      2 : shape2
+    };
+
+    d3.json("./static/world.geo.json", function(map) {
+      svg.selectAll("append")
+      .data(map.features)
+      .enter()
+      .append("path")
+      .attr("d", path)
+      .attr("class", "path")
+      .attr("id", function(d) {
+        return getid(d.properties.name);
+      });
+
+      console.log(apiUrl)
+
+      d3.json(apiUrl, function(data) {
       // data = prefilter(data);
       data=data.sort(function(a,b) { return b.count - a.count; })
       svg.selectAll("circle")
@@ -252,36 +268,36 @@ $(document).ready(function(){
         return circleR;
       })
 
-      .on("mouseover", function(d) {
-        div.transition()
-        .duration(200)
-        .style("opacity", 1)
-        if (d.count==1) {
-          div.html(d.name + " | " + d.count + " company")
-        }
-        else {
-          div.html(d.name + " | " + d.count + " companies")
-        }
-        d3.select(this)
-        .transition()
-        .delay(0)
-        .duration(750)
-        .attr("r", function(d) {
-          return Math.sqrt(d.count) * 20;
-        })
-      })
+      // .on("mouseover", function(d) {
+      //   div.transition()
+      //   .duration(200)
+      //   .style("opacity", 1)
+      //   if (d.count==1) {
+      //     div.html(d.name + " | " + d.count + " company")
+      //   }
+      //   else {
+      //     div.html(d.name + " | " + d.count + " companies")
+      //   }
+      //   d3.select(this)
+      //   .transition()
+      //   .delay(0)
+      //   .duration(750)
+      //   .attr("r", function(d) {
+      //     return Math.sqrt(d.count) * 20;
+      //   })
+      // })
 
-      .on("mouseout", function(d) {
-        div.transition()
-        .duration(500)
-        .style("opacity", 0)
-        d3.select(this)
-        .transition()
-        .duration(750)
-        .attr("r", function(d) {
-          return Math.sqrt(d.count) * 15;
-        })
-      })
+      // .on("mouseout", function(d) {
+      //   div.transition()
+      //   .duration(500)
+      //   .style("opacity", 0)
+      //   d3.select(this)
+      //   .transition()
+      //   .duration(750)
+      //   .attr("r", function(d) {
+      //     return Math.sqrt(d.count) * 15;
+      //   })
+      // })
 
       .on("click", clicked)
 
@@ -312,6 +328,22 @@ $(document).ready(function(){
       .text(function(d) { return d.name; })
       .attr("class", "number")
 
+      svg.selectAll("svg")
+      .data(data)
+      .enter()
+      .select(function(d) {
+        return this.appendChild(shapeTypes[d.type].cloneNode(true));
+      })
+      .attr("x", function(d) {
+        return getcirclecenter(svg, getid(d.name) + '-circle' )[0] - circleR;
+      })
+      .attr("y", function(d) {
+        return getcirclecenter(svg, getid(d.name) + '-circle' )[1] - circleR;
+      })
+      .attr("width", circleR*2)
+      .attr("height", circleR*2)
+      .attr("class", "icon")
+
       svg.selectAll("rect")
       .data(data)
       .enter()
@@ -327,6 +359,8 @@ $(document).ready(function(){
       .attr("class", "pin")
 
     });
+    });
   });
+
 });
 

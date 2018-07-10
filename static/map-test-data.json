@@ -2,26 +2,139 @@
     {
         "name": "p1",
         "country": "Bahamas",
+        "type": 1,
         "count": 105
     },
     {
         "name": "p2",
         "country": "Canada",
+        "type": 1,
         "count": 8
     },
     {
         "name": "p3",
         "country": "Canada",
+        "type": 2,
         "count": 9
     },
     {
         "name": "p4",
         "country": "Mexico",
+        "type": 1,
         "count": 13
     },
     {
         "name": "p5",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p6",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p7",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p8",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p9",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p10",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p4",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p4",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p4",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p4",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p4",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p4",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p4",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p4",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p4",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p4",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p4",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p4",
+        "country": "Mexico",
+        "type": 1,
+        "count": 13
+    },
+    {
+        "name": "p9999",
         "country": "Puerto Rico",
+        "type": 2,
         "count": 14
     }
 ]
