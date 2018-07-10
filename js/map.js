@@ -180,7 +180,7 @@ $(document).ready(function(){
 
   var randomPointWithinBounds = function (root, id) {
     // spread amount
-    spread = .5;
+    spread = .4;
     // select element
     var region = root.select('#' + id).datum();
     // calculate bounding box
@@ -223,15 +223,45 @@ $(document).ready(function(){
   d3.queue()
   .defer(d3.xml, "./img/crowdlaw-shapes1.svg")
   .defer(d3.xml, "./img/crowdlaw-shapes2.svg")
-  .await(function(error, file1, file2) {
+  .defer(d3.xml, "./img/s3.svg")
+  .defer(d3.xml, "./img/crowdlaw-shapes4.svg")
+  .defer(d3.xml, "./img/crowdlaw-shapes5.svg")
+  .defer(d3.xml, "./img/s6.svg")
+  .defer(d3.xml, "./img/crowdlaw-shapes7.svg")
+  .defer(d3.xml, "./img/crowdlaw-shapes8.svg")
+  .defer(d3.xml, "./img/crowdlaw-shapes9.svg")
+  .defer(d3.xml, "./img/crowdlaw-shapes10.svg")
+  .defer(d3.xml, "./img/crowdlaw-shapes11.svg")
+  .defer(d3.xml, "./img/crowdlaw-shapes12.svg")
+  .await(function(error, file1, file2, file3, file4, file5, file6, file7, file8, file9, file10, file11, file12) {
     if (error) { console.log(error); return; }
 
     var shape1 = file1.getElementsByTagName("svg")[0];
     var shape2 = file2.getElementsByTagName("svg")[0];
+    var shape3 = file3.getElementsByTagName("svg")[0];
+    var shape4 = file4.getElementsByTagName("svg")[0];
+    var shape5 = file5.getElementsByTagName("svg")[0];
+    var shape6 = file6.getElementsByTagName("svg")[0];
+    var shape7 = file7.getElementsByTagName("svg")[0];
+    var shape8 = file8.getElementsByTagName("svg")[0];
+    var shape9 = file9.getElementsByTagName("svg")[0];
+    var shape10 = file10.getElementsByTagName("svg")[0];
+    var shape11 = file11.getElementsByTagName("svg")[0];
+    var shape12 = file12.getElementsByTagName("svg")[0];
 
     var shapeTypes = {
       1 : shape1,
-      2 : shape2
+      2 : shape2,
+      3 : shape3,
+      4 : shape4,
+      5 : shape5,
+      6 : shape6,
+      7 : shape7,
+      8 : shape8,
+      9 : shape9,
+      10 : shape10,
+      11 : shape11,
+      12 : shape12
     };
 
     d3.json("./static/world.geo.json", function(map) {
@@ -317,6 +347,7 @@ $(document).ready(function(){
       .data(data)
       .enter()
       .append("text")
+      .attr("id", function(d) { return getid(d.name) + '-text';})
       .attr("x", function(d) {
         return getcirclecenter(svg, getid(d.name) + '-circle' )[0];
       })
@@ -328,26 +359,11 @@ $(document).ready(function(){
       .text(function(d) { return d.name; })
       .attr("class", "number")
 
-      svg.selectAll("svg")
-      .data(data)
-      .enter()
-      .select(function(d) {
-        return this.appendChild(shapeTypes[d.type].cloneNode(true));
-      })
-      .attr("x", function(d) {
-        return getcirclecenter(svg, getid(d.name) + '-circle' )[0] - circleR;
-      })
-      .attr("y", function(d) {
-        return getcirclecenter(svg, getid(d.name) + '-circle' )[1] - circleR;
-      })
-      .attr("width", circleR*2)
-      .attr("height", circleR*2)
-      .attr("class", "icon")
-
       svg.selectAll("rect")
       .data(data)
       .enter()
       .append("rect")
+      .attr("id", function(d) { return getid(d.name) + '-pin';})
       .attr("x", function(d) {
         return getcirclecenter(svg, getid(d.name) + '-circle' )[0] - pinW / 2;
       })
@@ -357,6 +373,23 @@ $(document).ready(function(){
       .attr("width", pinW)
       .attr("height", pinH)
       .attr("class", "pin")
+
+      svg.selectAll("svg")
+      .data(data)
+      .enter()
+      .select(function(d) {
+        return this.appendChild(shapeTypes[d.type].cloneNode(true));
+      })
+      .attr("id", function(d) { return getid(d.name) + '-icon';})
+      .attr("x", function(d) {
+        return getcirclecenter(svg, getid(d.name) + '-circle' )[0] - circleR;
+      })
+      .attr("y", function(d) {
+        return getcirclecenter(svg, getid(d.name) + '-circle' )[1] - circleR;
+      })
+      .attr("width", circleR*2)
+      .attr("height", circleR*2)
+      .attr("class", "icon")
 
     });
     });
