@@ -1,0 +1,201 @@
+---
+layout: default
+page_id: 'list-page'
+namespace: list_page
+page_title: 'Crowdlaw'
+---
+
+<div class="list-page">
+
+  <div class="top-section top-section--od500-header top-section--main-color top-section--map list-page__header">
+    <div class="map-wrapper">
+      <div id="map"></div>
+      <div id="caption"></div>
+    </div>
+    <h2>All Companies</h2>
+  </div>
+
+  <div class="table-dropdown page-section">
+  <h4>Filters</h4>
+
+    <div class="dropdown-wrapper">
+      <div class="row dropdown large-unstack">
+
+<!-- PROVINCE FILTER FOR MOBILE -->
+        <div class="columns table-dropdown__item company__provinces">
+          <div class="select" id=''>
+            <select data-filter="company__provinces" id="table-dropdown__provinces" class="dropdown-content">
+              <option id="all">Filter by Province</option>
+              {% for item in page.provincial_sources%}
+              <option id="{{ item | slugify }}">{{item}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+<!-- END PROVINCE FILTER FOR MOBILE -->
+
+        <div class="columns table-dropdown__item company__federal-sources">
+          <div class="select" id=''>
+            <select data-filter="company__federal-sources" id="table-dropdown__federal-sources" class="dropdown-content">
+              <option id="all">Federal Data Sources</option>
+              {% for item in page.federal_sources%}
+              <option id="{{ item | slugify }}">{{item}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+
+        <div class="columns table-dropdown__item company__provincial-sources">
+          <div class="select">
+            <select data-filter='company__provincial-sources' id="table-dropdown__provincial-sources" class="dropdown-content">
+              <option id="all">Provincial Data Sources</option>
+              {% for item in page.provincial_sources %}
+              <option id="{{ item | slugify }}">{{item}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+
+        <div class="columns table-dropdown__item company__other-sources">
+          <div class="select">
+            <select data-filter='company__data-sources' id="table-dropdown__other-sources" class="dropdown-content">
+              <option id="all">Other Data Sources</option>
+              {% for item in page.other_sources %}
+              <option id="{{ item | slugify }}">{{item}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+
+        <div class="columns table-dropdown__item company__data-sectors">
+          <div class="select">
+            <select data-filter='company__data-sectors' id="table-dropdown__data-sectors" class="dropdown-content">
+              <option id="all">Sector</option>
+              {% for item in page.data_sectors %}
+              <option id="{{ item | slugify }}">{{item}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <div class="close clear_filters table-sortable__control table-sortable__control--simple"><i class="material-icons">close</i>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row align-center">
+      <div class="column small-6 button clear_filters">
+        Clear Filters
+      </div>
+    </div>
+
+  </div>
+
+  <div id="company_data">
+
+    <table class="table-sortable table-sortable--main-color"> {% comment %} .table-sortable--fixed {% endcomment %}
+
+      <thead class="company">
+        <th class="table-sortable__head-cell">&nbsp;</th>
+        <th class="table-sortable__head-cell company__name">
+          <span>Company</span>
+
+          <div class="table-sortable__control-group">
+            <span class="table-sortable__control table-sortable__control--simple js-open-table-search" data-target="#company__name--input"><i class="material-icons">search</i></span>
+            <span class="table-sortable__control table-sortable__control--simple sort" data-sort="company__name"><i class="material-icons">keyboard_arrow_down</i></span>
+          </div>
+          <form class="table-sortable__search ">
+            <input id="company__name--input" class="fuzzy-search" type="text" placeholder="Filter by text">
+            <button type="submit" class=""><i class="material-icons">close</i></button>
+          </form>
+        </th>
+
+        <th class="table-sortable__head-cell company__category">
+          <span>Category</span>
+          <div class="table-sortable__control-group">
+            <span class="table-sortable__control table-sortable__control--simple sort" data-sort="company__category"><i class="material-icons">keyboard_arrow_down</i></span>
+          </div>
+        </th>
+
+        <th class="table-sortable__head-cell company__founded">
+          <span>Founded</span>
+          <div class="table-sortable__control-group">
+            <span class="table-sortable__control table-sortable__control--simple sort" data-sort="company__founded"><i class="material-icons">keyboard_arrow_down</i></span>
+          </div>
+        </th>
+        <th class="table-sortable__head-cell company__location">
+          <span>Location</span>
+          <div class="table-sortable__control-group">
+            <span class="table-sortable__control table-sortable__control--simple js-open-table-search" data-target="#company__location--input"><i class="material-icons">search</i></span>
+            <span class="table-sortable__control table-sortable__control--simple sort" data-sort="company__location"><i class="material-icons">keyboard_arrow_down</i></span>
+          </div>
+          <form class="table-sortable__search ">
+            <input id="company__location--input" class="fuzzy-search" type="text" placeholder="Filter by text">
+            <button type="submit" class=""><i class="material-icons">close</i></button>
+          </form>
+        </th>
+        <th class="table-sortable__head-cell">&nbsp;</th>
+      </thead>
+      <tbody class="list">
+        {% for i in site.data.companies %}
+        <tr class="company" id="{{i.company_name_id}}" >
+          <td class="filter" data-location="all {{i.province | map_locations_to_en | slugify }}"></td>
+          <td class="company__name" data-target="{{i.company_name}}"><a class="company-name" href="./companies/{{i.company_name_id}}.html" target="_blank">{{i.company_name | capitalize}}</a></td>
+
+          <td class="company__category">
+            {% assign categories = "" %}
+            {% for item in i.what_industry_best_describes_your_company limit:2 %}
+            {% capture categories %}{{ categories | append: item | append: "|" }}{% endcapture %}
+            {% endfor %}
+
+            {{ categories | split: "|" | join: ", "  | replace:"other, please specify...","Other" }}
+          </td>
+
+          <td class="company__founded" data-timestamp={{i.year_founded_year_opened_in_canada}}>{{i.year_founded_year_opened_in_canada}}</td>
+
+          <td class="company__location" data-target="{{i.city | map_locations_to_en }}, {{ i.province | map_locations_to_en }}"> {{ i.city | strip | map_locations_to_en}}, {{ i.province | map_locations_to_en }} </td>
+
+          <!-- NEW COLUMNS -->
+          {% assign federal_sources = i.please_select_all_of_your_federal_sources_of_open_data%}
+          <td class="company__federal-sources" data-target="all {% for d in federal_sources %} {% if d != nil %}{{d | replace: 'other, please specify...', 'Other Federal Data Sources' | slugify}} {% endif %} {% endfor %}">
+            {{i.please_select_all_of_your_federal_sources_of_open_data | join: ', ' | truncatewords: 4 | replace: 'other, please specify...', 'Other'}}
+          </td>
+
+          {% assign provincial_sources = i.please_select_all_of_your_provincial_sources_of_open_data %}
+          <td class="company__provincial-sources" data-target="all {% for d in provincial_sources %} {% if d != nil %} {{d | replace: 'other, please specify...', 'Other Provincial Data Sources' | slugify}} {%endif %} {% endfor%}">
+            {{i.please_select_all_of_your_provincial_sources_of_open_data | join: ', ' | truncatewords: 4 | replace: 'other, please specify...', 'Other'}}
+          </td>
+
+          {% assign other_sources = i | other_fields_to_array %}
+          <td class="company__other-sources" data-target="all {% for d in other_sources %} {% if d != nil %} {{d | replace: 'other, please specify...', 'Other Data Sources' | slugify }} {% endif %} {% endfor%}">
+            {{ other_sources | join: ', ' | truncatewords: 4 | replace: 'other, please specify...', 'Other'}}
+          </td>
+
+          {% assign data_sectors = i.what_types_of_open_data_does_your_company_use %}
+          <td class="company__data-sectors" data-target="all {% for d in data_sectors %} {% if d != nil %} {{d | replace: 'other, please specify...', 'Other Sector' | slugify}} {% endif %} {% endfor%}">
+            {{i.what_types_of_open_data_does_your_company_use | join: ', ' | truncatewords: 4 | replace: 'other, please specify...', 'Other'}}
+          </td>
+
+          <!-- END NEW COLUMNS -->
+
+          <td></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+
+    </table>
+  </div>
+</div>
+
+<script>
+// Fixed Table Header
+// $(window).scroll(function(){
+//     var yPosition = $( window ).scrollTop(),
+//         target = $('.table-sortable'),
+//         offset = target.offset().top;
+//     yPosition >= offset ? target.addClass("table-sortable--fixed") : target.removeClass("table-sortable--fixed");
+// });
+</script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="./js/map.js"></script>

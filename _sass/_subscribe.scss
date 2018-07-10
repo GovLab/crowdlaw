@@ -1,0 +1,45 @@
+.resource-page {
+  .top-section--main-color {
+    background-color: $theme-purple;
+  }
+}
+
+.subscribe {
+    background-color: darken($theme-purple, 4);
+    padding: 35px 0;
+    color: white;
+
+    h4 {
+        margin: 0;
+        font-size: 1.4rem;
+    }
+
+    &__left-panel {
+        padding-right: 30px;
+    }
+
+    &__right-panel {
+        
+    }
+
+    form { 
+        display: flex;
+        padding-top: 1.5em;
+
+        input {
+          @include placeholder {
+            color: white;
+          }
+        }
+
+        .button { 
+            height: 40px; 
+            line-height: .7;
+            background-color: $theme-green;
+            color: $theme-purple;
+            font-weight: 600;
+        }
+    }
+    
+
+}
