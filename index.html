@@ -3,6 +3,24 @@ layout: default
 page_id: 'list-page'
 namespace: list_page
 page_title: 'Crowdlaw'
+regions:
+  - US
+  - EU
+levels:
+  - National
+  - Regional
+  - Local
+engagement_types:
+  - Ideas
+  - Opinions
+  - Actions
+  - Expertise
+progress_stages:
+  - Problem
+  - Solution
+  - Assessment
+  - Drafting
+  - Implementation
 ---
 
 <div class="list-page">
@@ -17,69 +35,60 @@ page_title: 'Crowdlaw'
   </div>
 
   <div class="table-dropdown page-section">
-    <h4>Filters</h4>
+    <div class="mobile-filters">
+      <h4>Filters</h4>
 
-    <div class="dropdown-wrapper">
-      <div class="row dropdown large-unstack">
+      <div class="dropdown-wrapper">
+        <div class="row dropdown large-unstack">
 
-        <div class="columns table-dropdown__item company__provinces">
-          <div class="select" id=''>
-            <select data-filter="company__provinces" id="table-dropdown__provinces" class="dropdown-content">
-              <option id="all">Filter by Province</option>
-              {% for item in page.provincial_sources%}
-              <option id="{{ item | slugify }}">{{item}}</option>
-              {% endfor %}
-            </select>
+          <div class="columns table-dropdown__item company__federal-sources">
+            <div class="select" id=''>
+              <select data-filter="company__federal-sources" id="table-dropdown__federal-sources" class="dropdown-content">
+                <option id="all">Region</option>
+                {% for item in page.federal_sources%}
+                <option id="{{ item | slugify }}">{{item}}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+
+          <div class="columns table-dropdown__item company__provincial-sources">
+            <div class="select">
+              <select data-filter='company__provincial-sources' id="table-dropdown__provincial-sources" class="dropdown-content">
+                <option id="all">Implementation Level</option>
+                {% for item in page.provincial_sources %}
+                <option id="{{ item | slugify }}">{{item}}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+
+          <div class="columns table-dropdown__item company__other-sources">
+            <div class="select">
+              <select data-filter='company__data-sources' id="table-dropdown__other-sources" class="dropdown-content">
+                <option id="all">Type of Engagement</option>
+                {% for item in page.other_sources %}
+                <option id="{{ item | slugify }}">{{item}}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+
+          <div class="columns table-dropdown__item company__data-sectors">
+            <div class="select">
+              <select data-filter='company__data-sectors' id="table-dropdown__data-sectors" class="dropdown-content">
+                <option id="all">Progress</option>
+                {% for item in page.data_sectors %}
+                <option id="{{ item | slugify }}">{{item}}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          <div class="close clear_filters table-sortable__control table-sortable__control--simple"><i class="material-icons">close</i>
           </div>
         </div>
 
-        <div class="columns table-dropdown__item company__federal-sources">
-          <div class="select" id=''>
-            <select data-filter="company__federal-sources" id="table-dropdown__federal-sources" class="dropdown-content">
-              <option id="all">Federal Data Sources</option>
-              {% for item in page.federal_sources%}
-              <option id="{{ item | slugify }}">{{item}}</option>
-              {% endfor %}
-            </select>
-          </div>
-        </div>
-
-        <div class="columns table-dropdown__item company__provincial-sources">
-          <div class="select">
-            <select data-filter='company__provincial-sources' id="table-dropdown__provincial-sources" class="dropdown-content">
-              <option id="all">Provincial Data Sources</option>
-              {% for item in page.provincial_sources %}
-              <option id="{{ item | slugify }}">{{item}}</option>
-              {% endfor %}
-            </select>
-          </div>
-        </div>
-
-        <div class="columns table-dropdown__item company__other-sources">
-          <div class="select">
-            <select data-filter='company__data-sources' id="table-dropdown__other-sources" class="dropdown-content">
-              <option id="all">Other Data Sources</option>
-              {% for item in page.other_sources %}
-              <option id="{{ item | slugify }}">{{item}}</option>
-              {% endfor %}
-            </select>
-          </div>
-        </div>
-
-        <div class="columns table-dropdown__item company__data-sectors">
-          <div class="select">
-            <select data-filter='company__data-sectors' id="table-dropdown__data-sectors" class="dropdown-content">
-              <option id="all">Sector</option>
-              {% for item in page.data_sectors %}
-              <option id="{{ item | slugify }}">{{item}}</option>
-              {% endfor %}
-            </select>
-          </div>
-        </div>
-        <div class="close clear_filters table-sortable__control table-sortable__control--simple"><i class="material-icons">close</i>
-        </div>
       </div>
-
     </div>
 
     <div class="row align-center">
@@ -88,7 +97,65 @@ page_title: 'Crowdlaw'
       </div>
     </div>
 
+    <div class="filters">
+      <table class="filter-headings">
+        <thead class="">
+          <th class="" style="width: 2%">&nbsp;</th>
+          <th class="" style="width: auto"><span class="filter-label">Filter:</span></th>
+          <th class="" style="width: 10%">&nbsp;</th>
+          <th class="table-dropdown__item" style="width: 8%">
+            <div class="select">
+              <select data-filter="company__federal-sources" id="table-dropdown__federal-sources" class="dropdown-content">
+                <option id="all">---</option>
+                {% for item in page.regions%}
+                <option id="{{ item | slugify }}">{{item}}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </th>
+          <th class="table-dropdown__item" style="width: 8%">
+            <div class="select">
+              <select data-filter='company__provincial-sources' id="table-dropdown__provincial-sources" class="dropdown-content">
+                <option id="all">---</option>
+                {% for item in page.levels %}
+                <option id="{{ item | slugify }}">{{item}}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </th>
+
+          <th class="" style="width: auto">&nbsp;</th>
+
+          <th class="table-dropdown__item" style="width: 12%">
+            <div class="select">
+              <select data-filter='company__data-sources' id="table-dropdown__other-sources" class="dropdown-content">
+                <option id="all">---</option>
+                {% for item in page.engagement_types %}
+                <option id="{{ item | slugify }}">{{item}}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </th>
+
+          <th class="table-dropdown__item" style="width: 12%">
+            <div class="select">
+              <select data-filter='company__data-sectors' id="table-dropdown__data-sectors" class="dropdown-content">
+                <option id="all">---</option>
+                {% for item in page.progress_stages %}
+                <option id="{{ item | slugify }}">{{item}}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </th>
+
+          <th class="" style="width: 4%">&nbsp;</th>
+          <th class="" style="width: 0%">&nbsp;</th>
+        </thead>
+      </table>
+    </div>
+
   </div>
+
 
   <div id="company_data">
 
