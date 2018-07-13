@@ -3,7 +3,7 @@ var ghPages = require('gulp-gh-pages');
 var shell = require('gulp-shell');
 var runSequence     = require('run-sequence').use(gulp);
 var browserSync = require('browser-sync').create();
-// var ghPages = require('gulp-gh-pages');
+const yaml = require('gulp-yaml');
 
 // Task for building blog when something changed:
 // gulp.task('build', shell.task(['bundle exec jekyll build --watch']));
@@ -15,6 +15,12 @@ gulp.task('serve', function () {
     browserSync.init({server: {baseDir: '_site/'}});
     // Reloads page when some of the already built files changed:
     gulp.watch('_site/**/*.*').on('change', browserSync.reload);
+});
+
+gulp.task('yaml', function () {
+  return gulp.src('./src/*.yml')
+  .pipe(yaml({ schema: 'DEFAULT_SAFE_SCHEMA' }))
+  .pipe(gulp.dest('./dist/'))
 });
 
 gulp.task('push-gh-master', shell.task(['git push origin master']));

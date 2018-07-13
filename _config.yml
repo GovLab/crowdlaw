@@ -41,6 +41,7 @@ contentful:
 
 
 exclude: [node_modules, gulpfile.js]
+include: [_data]
 
 sass:
   style: compressed
