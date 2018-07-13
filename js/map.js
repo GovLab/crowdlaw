@@ -193,7 +193,7 @@ $(document).ready(function(){
   }
 
   var w = 1000;
-  var h = 800;
+  var h = 520;
   var circleR = 20;
   var pinW = 2;
   var pinH = 20;

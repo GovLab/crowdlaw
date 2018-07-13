@@ -16,8 +16,8 @@ page_title: 'Crowdlaw'
     </div>
   </div>
 
-<!--   <div class="table-dropdown page-section">
-  <h4>Filters</h4>
+  <div class="table-dropdown page-section">
+    <h4>Filters</h4>
 
     <div class="dropdown-wrapper">
       <div class="row dropdown large-unstack">
@@ -95,9 +95,9 @@ page_title: 'Crowdlaw'
     <table class="table-sortable table-sortable--main-color">
 
       <thead class="company">
-        <th class="table-sortable__head-cell">&nbsp;</th>
-        <th class="table-sortable__head-cell company__name">
-          <span>Company</span>
+        <th class="table-sortable__head-cell" style="width: 2%">&nbsp;</th>
+        <th class="table-sortable__head-cell company__name" style="width: auto">
+          <span>Name</span>
 
           <div class="table-sortable__control-group">
             <span class="table-sortable__control table-sortable__control--simple js-open-table-search" data-target="#company__name--input"><i class="material-icons">search</i></span>
@@ -109,79 +109,69 @@ page_title: 'Crowdlaw'
           </form>
         </th>
 
-        <th class="table-sortable__head-cell company__category">
-          <span>Category</span>
+        <th class="table-sortable__head-cell company__category" style="width: 10%">
+          <span>Country</span>
           <div class="table-sortable__control-group">
             <span class="table-sortable__control table-sortable__control--simple sort" data-sort="company__category"><i class="material-icons">keyboard_arrow_down</i></span>
           </div>
         </th>
 
-        <th class="table-sortable__head-cell company__founded">
-          <span>Founded</span>
+        <th class="table-sortable__head-cell company__founded" style="width: 8%">
+          <span>Region</span>
           <div class="table-sortable__control-group">
             <span class="table-sortable__control table-sortable__control--simple sort" data-sort="company__founded"><i class="material-icons">keyboard_arrow_down</i></span>
           </div>
         </th>
-        <th class="table-sortable__head-cell company__location">
-          <span>Location</span>
+
+        <th class="table-sortable__head-cell company__founded" style="width: 8%">
+          <span>Level</span>
           <div class="table-sortable__control-group">
-            <span class="table-sortable__control table-sortable__control--simple js-open-table-search" data-target="#company__location--input"><i class="material-icons">search</i></span>
-            <span class="table-sortable__control table-sortable__control--simple sort" data-sort="company__location"><i class="material-icons">keyboard_arrow_down</i></span>
+            <span class="table-sortable__control table-sortable__control--simple sort" data-sort="company__founded"><i class="material-icons">keyboard_arrow_down</i></span>
           </div>
-          <form class="table-sortable__search ">
-            <input id="company__location--input" class="fuzzy-search" type="text" placeholder="Filter by text">
-            <button type="submit" class=""><i class="material-icons">close</i></button>
-          </form>
         </th>
-        <th class="table-sortable__head-cell">&nbsp;</th>
+
+        <th class="table-sortable__head-cell company__founded" style="width: auto">
+          <span>Organization</span>
+          <div class="table-sortable__control-group">
+            <span class="table-sortable__control table-sortable__control--simple sort" data-sort="company__founded"><i class="material-icons">keyboard_arrow_down</i></span>
+          </div>
+        </th>
+
+        <th class="table-sortable__head-cell company__founded" style="width: 12%">
+          <span>Engagement</span>
+        </th>
+
+        <th class="table-sortable__head-cell company__founded" style="width: 12%">
+          <span>Progress</span>
+        </th>
+
+
+        <th class="table-sortable__head-cell company__location" style="width: 4%">
+          <span>Link</span>
+        </th>
+        <th class="table-sortable__head-cell" style="width: 0%">&nbsp;</th>
       </thead>
       <tbody class="list">
-        {% for i in site.data.companies %}
-        <tr class="company" id="{{i.company_name_id}}" >
-          <td class="filter" data-location="all {{i.province | map_locations_to_en | slugify }}"></td>
-          <td class="company__name" data-target="{{i.company_name}}"><a class="company-name" href="./companies/{{i.company_name_id}}.html" target="_blank">{{i.company_name | capitalize}}</a></td>
+        {% for i in site.data.contentful.spaces.entries.entry %}
+        <tr class="" id="{{i.sys.id}}" >
 
-          <td class="company__category">
-            {% assign categories = "" %}
-            {% for item in i.what_industry_best_describes_your_company limit:2 %}
-            {% capture categories %}{{ categories | append: item | append: "|" }}{% endcapture %}
-            {% endfor %}
+          <td class="filter" data-location=""></td>
+          <td class="" data-target="{{i.name}}"><a class="company-name" href="#">{{i.name}}</a></td>
+          <td class="" data-target="{{i.country}}"><a class="company-name" href="#">{{i.country}}</a></td>
+          <td class="" data-target="{{i.region}}"><a class="company-name" href="#">{{i.region}}</a></td>
+          <td class="" data-target="{{i.implementation_level}}"><a class="company-name" href="#">{{i.implementation_level | capitalize}}</a></td>
+          <td class="" data-target="{{i.organization}}"><a class="company-name" href="#">{{i.organization}}</a></td>
+          <td class="" data-target="{{i.type_of_engagement}}"><a class="company-name" href="#">{{i.type_of_engagement}}</a></td>
+          <td class="" data-target="{{i.implementation_progress}}"><a class="company-name" href="#">{{i.implementation_progress}}</a></td>
+          <td class="" data-target="{{i.url}}"><a class="company-name" href="{{i.url}}" target="_blank"><i class="material-icons">open_in_new</i></a></td>
 
-            {{ categories | split: "|" | join: ", "  | replace:"other, please specify...","Other" }}
-          </td>
-
-          <td class="company__founded" data-timestamp={{i.year_founded_year_opened_in_canada}}>{{i.year_founded_year_opened_in_canada}}</td>
-
-          <td class="company__location" data-target="{{i.city | map_locations_to_en }}, {{ i.province | map_locations_to_en }}"> {{ i.city | strip | map_locations_to_en}}, {{ i.province | map_locations_to_en }} </td>
-
-          {% assign federal_sources = i.please_select_all_of_your_federal_sources_of_open_data%}
-          <td class="company__federal-sources" data-target="all {% for d in federal_sources %} {% if d != nil %}{{d | replace: 'other, please specify...', 'Other Federal Data Sources' | slugify}} {% endif %} {% endfor %}">
-            {{i.please_select_all_of_your_federal_sources_of_open_data | join: ', ' | truncatewords: 4 | replace: 'other, please specify...', 'Other'}}
-          </td>
-
-          {% assign provincial_sources = i.please_select_all_of_your_provincial_sources_of_open_data %}
-          <td class="company__provincial-sources" data-target="all {% for d in provincial_sources %} {% if d != nil %} {{d | replace: 'other, please specify...', 'Other Provincial Data Sources' | slugify}} {%endif %} {% endfor%}">
-            {{i.please_select_all_of_your_provincial_sources_of_open_data | join: ', ' | truncatewords: 4 | replace: 'other, please specify...', 'Other'}}
-          </td>
-
-          {% assign other_sources = i | other_fields_to_array %}
-          <td class="company__other-sources" data-target="all {% for d in other_sources %} {% if d != nil %} {{d | replace: 'other, please specify...', 'Other Data Sources' | slugify }} {% endif %} {% endfor%}">
-            {{ other_sources | join: ', ' | truncatewords: 4 | replace: 'other, please specify...', 'Other'}}
-          </td>
-
-          {% assign data_sectors = i.what_types_of_open_data_does_your_company_use %}
-          <td class="company__data-sectors" data-target="all {% for d in data_sectors %} {% if d != nil %} {{d | replace: 'other, please specify...', 'Other Sector' | slugify}} {% endif %} {% endfor%}">
-            {{i.what_types_of_open_data_does_your_company_use | join: ', ' | truncatewords: 4 | replace: 'other, please specify...', 'Other'}}
-          </td>
-
-
-          <td></td>
+          <td>&nbsp;</td>
         </tr>
         {% endfor %}
       </tbody>
 
     </table>
-  </div> -->
+  </div>
 </div>
 
 <script src="https://d3js.org/d3.v3.min.js"></script>

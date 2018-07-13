@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="{{'/scripts/slick.css' | relative_url }}"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="{{'/css/custom-styles.css' | relative_url}}"/>
-        <script sr c="https://use.typekit.net/mvc3cdb.js"></script>
+        <script src="https://use.typekit.net/mvc3cdb.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
         <script src="{{'/scripts/jquery-2.1.4.min.js' | relative_url}}"></script>
         <script src="{{'/scripts/slick.min.js' | relative_url}}"></script>
@@ -40,8 +40,8 @@
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-40012093-11', 'auto');
-      ga('send', 'pageview');
+      // ga('create', 'UA-40012093-11', 'auto');
+      // ga('send', 'pageview');
   </script>
     </head>
 
@@ -53,18 +53,6 @@
         </nav>
 
         <a class="top-bar__logo" href=""><img src="/img/govlab-logo-white.png" alt="The GovLab"></a>
-
-        {% if page.page_title == 'Open Data 500: Canada' %}
-        <div class='lang-select'>
-        {% capture link1 %}{{ site.baseurl_root }}{{ page.url }}{% endcapture %}
-        {% capture link2 %}{{ site.baseurl_root }}/fr{{ page.url }}{% endcapture %}
-        {% if site.lang == "fr" %}
-            <a href="{{ link1 }}" >EN</a> | <a class="lang_select-active" href="{{ link2 }}">FR</a>
-        {% else %}
-            <a class="lang_select-active" href="{{ link1 }}">EN</a> | <a href="{{ link2 }}">FR</a>
-        {% endif %}
-        </div>
-        {% endif %}
 
         </header>
 

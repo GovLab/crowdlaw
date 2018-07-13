@@ -30,10 +30,15 @@ markdown: kramdown
 #     name: company_name_id
 #     template: company-page
 
-jekyll_get:
-  - data: companies
-    json: 'https://od500-api.herokuapp.com/api/v1/results/Canada'
-    cache: true
+contentful:
+  spaces:
+    - entries: # Jekyll _data folder identifier - Required
+        space: h96qvckp021n         # Required
+        access_token: 75985f7c583124647e5905e7ff6b1e945a6faccf7c8fcc995cd87ee732b3c6e2
+        # base_path:         # Optional - Defaults to Current directory
+        # destination: ./source/_data/contentful/spaces # Optional - Defaults to _data/contentful/spaces
+        all_entries: true
+
 
 exclude: [node_modules, gulpfile.js]
 

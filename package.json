@@ -1,5 +1,5 @@
 {
-  "name": "od500",
+  "name": "crowdlaw",
   "version": "1.0.0",
   "description": "`bundle install`",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GovLab/od500-jekyll.git"
+    "url": "git+https://github.com/GovLab/crowdlaw.git"
   },
-  "author": "David Naffis <davidnaffis@gmail.com>",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/GovLab/od500-jekyll/issues"
+    "url": "https://github.com/GovLab/crowdlaw/issues"
   },
-  "homepage": "https://github.com/GovLab/od500-jekyll",
+  "homepage": "https://github.com/GovLab/crowdlaw",
   "devDependencies": {
     "browser-sync": "^2.18.6",
     "gulp": "^3.9.1",

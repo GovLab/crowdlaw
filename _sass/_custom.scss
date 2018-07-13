@@ -468,3 +468,9 @@
     margin-bottom: 0;
   }
 }
+
+.main-menu {
+  &:not(.js-active-menu) {
+    box-shadow: none;
+  }
+}
