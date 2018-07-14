@@ -258,6 +258,7 @@ $(document).ready(function(){
       // data=data.sort(function(a,b) { return b.count - a.count; })
       data = data.entry;
       data = prefilter(data);
+      console.log('entries: ' + data.length);
       svg.selectAll("circle")
       .data(data)
       .enter()
@@ -266,6 +267,7 @@ $(document).ready(function(){
       .attr("id", function(d) { return 'circle-' + getid(d.sys.id);})
       .attr("data-province", function(d) { return d.name;})
       .attr("cx", function(d) {
+        console.log(d);
         return randomPointWithinBounds(svg, getid(diacritics(d.country)))[0];
       })
       .attr("cy", function(d) {

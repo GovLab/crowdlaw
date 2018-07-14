@@ -1808,3 +1808,1553 @@ entry:
   url: http://participedia.net/en/cases/tuscany-regional-participation-policy-italy
   latitude: 40.840387
   longitude: 15.675905
+- sys:
+    id: 11nNeduYKuAa4WeuGaeo40
+    created_at: !ruby/object:DateTime 2018-07-14 11:40:56.741000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:40:56.741000000 Z
+    content_type_id: entry
+  name: Reforme.ma
+  country: Morocco
+  region: AF
+  implementation_level: National
+  description: |-
+    Reforme was a platform encouraging public participation in Morocco’s legislative process. Moroccans could register with a Facebook account. Anyone could propose legislation for editing on the platform, which fell under the stewardship of a law facilitator (i.e. the stakeholders who propose and oversees the legislative process). Reforme.ma was used by the public to provide opinions on Morocco’s proposed constitutional changes; for that process, the platform received 200,000 visitors and over 10,000 proposals.
+
+    [Read more about Reforme.ma](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.fgaerec1v1rr)
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Solution
+  - Drafting
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  - Actions
+  organization: Legislation Lab, a product of GovRight
+  url: http://legislationlab.org/en/
+  latitude: 33.406954
+  longitude: -4.942252
+- sys:
+    id: 4pCXdst8qIoWCig4ga0qyi
+    created_at: !ruby/object:DateTime 2018-07-14 11:41:38.963000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:41:38.963000000 Z
+    content_type_id: entry
+  name: Montevideo Decide
+  country: Uruguay
+  region: SA
+  implementation_level: Local
+  description: |-
+    The ruling political party in Montevideo, Uruguay, implemented this program in 1990 after winning the 1989 election. The program entailed the transference and distribution of social, political and economic power, allowing citizens to make decisions on matters of interest to the community. The program consists of several offline council meetings.
+
+    [Read more about Montevideo Decide](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.zhczm1eoqjml)
+  platforms:
+  - Offline
+  institutionalization: false
+  implementation_progress:
+  - Solution
+  - Drafting
+  - Implementation
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Government of Uruguay
+  url: http://www.montevideo.gub.uy/
+  image:
+    sys:
+      id: 2XjvDPirRu6IKk6C2o02w4
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:36.063000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:36.063000000 Z
+    title: MontevideoDecide
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/2XjvDPirRu6IKk6C2o02w4/b259926b7615345096771528a30eecbb/MontevideoDecide.png"
+  latitude: -33.007847
+  longitude: -55.832105
+- sys:
+    id: 24NdZnAGkYqe4UkcUEGqie
+    created_at: !ruby/object:DateTime 2018-07-14 11:42:18.236000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:42:18.236000000 Z
+    content_type_id: entry
+  name: Parlement & Citoyens
+  country: France
+  region: EU
+  implementation_level: National
+  description: |-
+    Parlement & Citoyens is an online platform which brings together representatives and citizens to discuss policy issues and collaboratively draft legislation. On the platform, representatives can host a consultation consisting of three to five different participation opportunities. For instance, a representative poses a problem that citizens help define, generate solutions for, and for which they then help evaluate the proposed solutions. Citizens may also engage in video discussions with the representative. At the end of the process, a conclusory report explains if, when, and how citizen input was incorporated into the resulting draft law.
+
+    [Read more about Parlement & Citoyens](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.ii9xd7cmguje)
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Solution
+  - Drafting
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  - Evidence
+  organization: Cap Collectif, a startup for participatory applications
+  url: http://www.parlement-et-citoyens.fr
+  image:
+    sys:
+      id: 4xGKZT7GW4sEQc6a8agwyq
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:35.076000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:35.076000000 Z
+    title: ParlementsEtCitoyens
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/4xGKZT7GW4sEQc6a8agwyq/a42d356deafa0a2d1c90b0836f9aa2ee/ParlementsEtCitoyens.png"
+  latitude: 43.934153
+  longitude: 5.181511
+- sys:
+    id: 6OCMJBBOmWUqsYIYwoQaUe
+    created_at: !ruby/object:DateTime 2018-07-14 11:42:29.769000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:42:29.769000000 Z
+    content_type_id: entry
+  name: Madame Mayor, I Have an Idea
+  country: France
+  region: EU
+  implementation_level: Local
+  description: "Madame Mayor, I Have an Idea is a participatory budget program enacted
+    in the city of Paris. Parisians can submit budget proposals online, and the proposals
+    are subsequently refined both in offline citizen working groups as well as through
+    the program’s web portal. After the submission period elapses, the City selects
+    qualified proposals based on a number of criteria (including public benefit, technical
+    feasibility, and budgetary scope), and then puts those proposals to a final citizen
+    vote. \n\n[Read more about Madame Mayor, I Have an Idea](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.p3i0swt6um9u)"
+  platforms:
+  - Web
+  - Offline
+  institutionalization: true
+  implementation_progress:
+  - Problem
+  - Solution
+  - Decision
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Mairie de Paris on Cap Collectif’s platform
+  url: https://idee.paris.fr/
+  image:
+    sys:
+      id: 3UxCdggnuEa64CUkeIEI6
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:37.125000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:37.125000000 Z
+    title: MadamMayorParis
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/3UxCdggnuEa64CUkeIEI6/659c19636ab9bc76162ccfcc771075ca/MadamMayorParis.png"
+  latitude: 45.724725
+  longitude: 1.040935
+- sys:
+    id: 4FuceBoaN2Ic0a2aSgQcoE
+    created_at: !ruby/object:DateTime 2018-07-14 11:42:51.588000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:42:51.588000000 Z
+    content_type_id: entry
+  name: e-Democracia
+  country: Brazil
+  region: SA
+  implementation_level: National
+  description: |-
+    e-Democracia provides multiple participatory mechanisms for Brazilian citizens to engage members of Congress during live meetings (Interactive Audiences); identify and discuss possible solutions to policy problems (Expressions); and comment on and draft legislation (Wikilegis). The most success so far has come from the youth statute community.
+
+    [Read more about eDemocracia](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.vps9ujdxfayb)
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Problem
+  - Solution
+  - Drafting
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: LABHacker, the parliamentary in-house innovation unit of the Brazilian
+    Chamber of Deputies
+  url: https://edemocracia.camara.leg.br/home
+  image:
+    sys:
+      id: 3kzMVXnkkMqKMa60cesKMi
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:44.115000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:44.115000000 Z
+    title: e-Democracia
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/3kzMVXnkkMqKMa60cesKMi/0f7fadee18775028ed96744f2912c97b/e-Democracia.png"
+  latitude: -22.226108
+  longitude: -51.662646
+- sys:
+    id: 544L5gFJDGi6cAe2qiyEWG
+    created_at: !ruby/object:DateTime 2018-07-14 11:45:45.969000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:45:45.969000000 Z
+    content_type_id: entry
+  name: Decide Madrid
+  country: Spain
+  region: EU
+  implementation_level: Local
+  description: "An online portal, launched in 2015, which allows citizens (limited
+    to Madrid residents further in the process) to submit and vote on proposals for
+    draft legislation, participate in public dialogue, engage in participatory budgeting,
+    and vote on processes posed by the City Council. All proposals that gather signatures
+    from 1% of the city's population with the right to vote (currently ~27,000) are
+    reviewed by the Council and either implemented or a report is published providing
+    reasons for its rejection. \n\n[Read more about Decide Madrid](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.z3fadckkkiv1)"
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Problem
+  - Solution
+  - Decision
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: City Council of Madrid
+  url: https://decide.madrid.es
+  image:
+    sys:
+      id: 6QB0gsPkfSIeeK8ygQog24
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:45.104000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:45.104000000 Z
+    title: DecideMadrid
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/6QB0gsPkfSIeeK8ygQog24/acba9df202692358f17b95b98d52435a/DecideMadrid.jpg"
+  latitude: 39.390084
+  longitude: -0.455428
+- sys:
+    id: Cg1LFfYszAuQoKsOaOkIc
+    created_at: !ruby/object:DateTime 2018-07-14 11:46:19.626000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:46:19.626000000 Z
+    content_type_id: entry
+  name: Constitutional Assembly Public Participation Programme (CAPPP)
+  country: South Africa
+  region: AF
+  implementation_level: National
+  description: |-
+    Following the end of apartheid, the newly instituted South African government initiated a participatory constitution drafting campaign. The government endeavored to make the campaign as inclusive as possible with participatory workshops and outreach involving a telephone talk-line and an internet home page.
+
+    [Read more about the Constitutional Assembly Public Participation Programme](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.73pfpe17xyl7)
+  platforms:
+  - Web
+  - Mobile
+  - Offline
+  institutionalization: false
+  implementation_progress:
+  - Drafting
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Federal Government of South Africa
+  url: http://www.parliament.gov.za/live/content.php?Item_ID=299
+  latitude: -26.298806
+  longitude: 27.464542
+- sys:
+    id: 7CGiiIgOeQYaMiiAS2acau
+    created_at: !ruby/object:DateTime 2018-07-14 11:46:35.869000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:46:35.869000000 Z
+    content_type_id: entry
+  name: MindLab
+  country: Denmark
+  region: EU
+  implementation_level: National
+  description: MindLab is a cross-Ministry innovation lab that enables collaboration
+    by involving citizens and businesses in developing solutions to public problems.
+    These stakeholders collectively participate in decision-making and the development
+    of prototypes and large scale experiments. MindLab facilitates the exectution
+    of every step of these projects and undergoes research to learn what worked and
+    what did not.
+  platforms:
+  - Offline
+  institutionalization: false
+  implementation_progress:
+  - Implementation
+  type_of_engagement:
+  - Ideas
+  - Expertise
+  - Opinions
+  - Actions
+  organization: Danish Ministries of Industry, Employment, and Education
+  url: http://mind-lab.dk/en
+  image:
+    sys:
+      id: 5nKoOv3jEsqY2866CYuO6u
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:36.165000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:36.165000000 Z
+    title: MindLab
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/5nKoOv3jEsqY2866CYuO6u/1637ab46426a42c71d04d9f3fe2cea49/MindLab.jpg"
+  latitude: 56.09966
+  longitude: 9.498024
+- sys:
+    id: I07p8ZEEwe6OMCiM0Ic8K
+    created_at: !ruby/object:DateTime 2018-07-14 11:46:59.123000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:46:59.123000000 Z
+    content_type_id: entry
+  name: e-Savjetovanja
+  country: Croatia
+  region: EU
+  implementation_level: National
+  description: |-
+    e-Savjetovanja's platform allows Croatian citizens to be directly involved with the drafting of laws, regulations, and other acts by directly commenting on them and being notified of any new consultations, which are visible to everyone.  Amendments to the Right to Access Information Act established the legislative framework for the system, which also allows citizens to track government responses to their submitted comments and suggestions.
+
+    [Read more about Croatia's public consultation policies](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.7rb1kt2280pl)
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Drafting
+  type_of_engagement:
+  - Opinions
+  organization: Croatia’s Government Office for Cooperation with NGOs as part of the
+    National Open Government Partnership (OGP) action plan
+  url: https://esavjetovanja.gov.hr/ECon/Dashboard
+  image:
+    sys:
+      id: 1Ggool2LZSKWI666COkmkA
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:44.338000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:44.338000000 Z
+    title: e-Savjetovanja
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/1Ggool2LZSKWI666COkmkA/091801596a4e815ec55d71fd98f2632d/e-Savjetovanja.jpg"
+  latitude: 45.103418
+  longitude: 15.404891
+- sys:
+    id: 4cQORPqZlm6CccaMGWG8CG
+    created_at: !ruby/object:DateTime 2018-07-14 11:47:15.160000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:47:15.160000000 Z
+    content_type_id: entry
+  name: Open Ministry
+  country: Finland
+  region: EU
+  implementation_level: National
+  description: |-
+    Started through The Citizens’ Initiative Act, Open Ministry helps people crowdsource law proposals into Finland’s parliament. Initiatives submitted must acquire a 50,000 vote threshold to be considered further. Selected proposals are considered by Ministry’s volunteer professionals (researchers, professors, lawyers, etc.) to evaluate potential impact of the initiative. Once the proposal has been furthered to the Parliament for consideration, citizens can also obtain a detailed information of how their representatives have commented and voted on the proposal. Finland’s same sex marriage initiative was signed on Open Ministry by more than 100,000 people and passed by parliament in 2015.
+
+    [Read more about Open Ministry](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.tlfgqoy9bjvw)
+  platforms:
+  - Web
+  - Offline
+  institutionalization: false
+  implementation_progress:
+  - Solution
+  type_of_engagement:
+  - Ideas
+  - Expertise
+  - Opinions
+  organization: Open Ministry, a non-profit
+  url: https://avoinministerio.fi/
+  image:
+    sys:
+      id: 2p6wYRonp2SqyMWKwcwEgM
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:35.368000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:35.368000000 Z
+    title: OpenMinistryFinland
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/2p6wYRonp2SqyMWKwcwEgM/3e41b9c16e67772ba45afbb4f3248d5e/OpenMinistryFinland.png"
+  latitude: 66.547759
+  longitude: 27.241402
+- sys:
+    id: 6Tt2uPiF2w2U0Iqo4YOGcG
+    created_at: !ruby/object:DateTime 2018-07-14 11:47:36.142000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:47:36.142000000 Z
+    content_type_id: entry
+  name: Better Reykjavik/My Neighbourhood
+  country: Iceland
+  region: EU
+  implementation_level: Local
+  description: |
+    The Better Reykjavik platform is used to stimulate civic engagement in the decision-making process by giving citizens the opportunity to upload ideas on issues regarding services and operations of the city and vote (up or down) ideas that are appealing or unappealing. Following the success of Better Reykjavik, My Neighbourhood (formerly Better Neighbourhoods) was launched as an e-participatory budgeting platform, allowing participation in the allocation of funds for projects.
+
+    [Read more about Better Reykjavik/My Neighbourhood](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.q16mlm3z1ajp)
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Solution
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Citizens Foundation, a non-profit
+  url: https://betrireykjavik.is/domain/1
+  image:
+    sys:
+      id: 3slJG5QiP6IOgcosOw800Q
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:47.131000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:47.131000000 Z
+    title: BetterReykjavik
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/3slJG5QiP6IOgcosOw800Q/9753c2e87f35d9f4426af7b22829dc92/BetterReykjavik.png"
+  latitude: 65.593673
+  longitude: -17.992227
+- sys:
+    id: 52QWjtoxNuqiQwo66gqgKc
+    created_at: !ruby/object:DateTime 2018-07-14 11:47:49.435000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:47:49.435000000 Z
+    content_type_id: entry
+  name: ManaBalss (MyVoice)
+  country: Latvia
+  region: EU
+  implementation_level: National
+  description: ManaBalss.lv is a digital petitioning platform that enables the user
+    (any person age 16 and older) to post both broadly grasped initiatives and concrete
+    law amendments to be voted on by other such users. When a post reaches 10,000
+    signatures, the initiative is submitted in the Parliament (Saeima) and must be
+    reviewed as a collection submission according to the Rules of Procedure of the
+    Saeima. As of 2016, 8 initiatives from ManaBalss had become law or amendments
+    to the law though several popular initiatives were also rejected by the Latvian
+    parliament.
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Problem
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Foundation for Public Participation, a non-profit
+  url: https://manabalss.lv/
+  image:
+    sys:
+      id: 5orjAnJhIIYMcyycq4SOie
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:37.018000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:37.018000000 Z
+    title: manabalss
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/5orjAnJhIIYMcyycq4SOie/6b4ea303565cf991232935c17ac0b9bf/manabalss.png"
+  latitude: 56.715664
+  longitude: 26.388731
+- sys:
+    id: 2FXuYSDmHeKGYWsMeYEGMM
+    created_at: !ruby/object:DateTime 2018-07-14 11:48:01.115000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:48:01.115000000 Z
+    content_type_id: entry
+  name: Majlis Nameh
+  country: Iran
+  region: AS
+  implementation_level: National
+  description: Partnering with asl19.org, MySociety set up Majlis Nameh to allow Iranian
+    citizens to ask questions of their MPs, online, in public, and anonymously.
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Problem
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: MySociety, a not-for-profit social enterprise
+  url: https://iran.namehbeanha.com/fa/
+  latitude: 32.901128
+  longitude: 54.560141
+- sys:
+    id: 5a4E9wjo9G00cOI2iKEc8g
+    created_at: !ruby/object:DateTime 2018-07-14 11:48:16.543000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:48:16.543000000 Z
+    content_type_id: entry
+  name: Decidim Barcelona
+  country: Spain
+  region: EU
+  implementation_level: Local
+  description: |-
+    Decidim Barcelona is a platform which aims to to allow city residents to make proposals for the Municipal Action Plan (PAM) for Barcelona and keep up-to-date with the debate on the program from 2015-2019. Users can comment on, support, argue against, and share proposals, as well as attend in-person meetings about the proposals.
+
+    [Read more about Decidim Barcelona](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.aqp2y9nu6rrl)
+  platforms:
+  - Web
+  - Offline
+  institutionalization: false
+  implementation_progress:
+  - Solution
+  - Drafting
+  - Decision
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: City Council of Barcelona
+  url: https://www.decidim.barcelona
+  image:
+    sys:
+      id: JYhsZErNimUcmy8M8gguc
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:44.507000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:44.507000000 Z
+    title: DecidimBarcelona
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/JYhsZErNimUcmy8M8gguc/be1655d27ccfe17bf4e629e13a39dad7/DecidimBarcelona.png"
+  latitude: 40.466489
+  longitude: -3.422089
+- sys:
+    id: 1jM11bJMDeeCKAigUoMy0G
+    created_at: !ruby/object:DateTime 2018-07-14 11:48:35.867000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:48:35.867000000 Z
+    content_type_id: entry
+  name: Magna Carta for Philippine Internet Freedom
+  country: Philippines
+  region: AS
+  implementation_level: National
+  description: 'A number of Filipino netizens, on publicly-viewable and editable Google
+    Docs files, began laying down the framework of what they began to call the Magna
+    Carta for Philippine Internet Freedom, or #MCPIF. Members of the Facebook group
+    provided suggestions, discussed positions, and gained consensus over the fundamental
+    principles of the draft as it was taking shape. Communicated with Filipino Senators
+    during the drafting process.'
+  platforms:
+  - Web
+  - Offline
+  institutionalization: false
+  implementation_progress:
+  - Drafting
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: N/A
+  url: https://alpha.propinoy.net/2012/11/26/crowdsourcing-the-story-of-the-drafting-of-the-magna-carta-for-philippine-internet-freedom/
+  latitude: 11.254785
+  longitude: 122.41026
+- sys:
+    id: 6yf54TcUfuKyOmgUSQaege
+    created_at: !ruby/object:DateTime 2018-07-14 11:49:24.867000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:49:24.867000000 Z
+    content_type_id: entry
+  name: Oireachtas Pilot eConsultation
+  country: Ireland
+  region: EU
+  implementation_level: National
+  description: This pilot enabled citizens to submit comments and debate on a draft
+    of the Broadcasting Bill. The website included background information on the pilot,
+    broadcasting, and the submission process. A large number of submissions from interest
+    groups and members of the public were received in a format that allowed them to
+    be evaluated quickly and to have a significant impact on the Hearings.
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Drafting
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Joint Committee of Communications and the Office of the Houses of
+    the Oireachtas e-Consultation Working Group
+  latitude: 53.889219
+  longitude: -8.429595
+- sys:
+    id: 4uRkXDZZBuqOKUc48oSAiK
+    created_at: !ruby/object:DateTime 2018-07-14 11:50:04.698000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:50:04.698000000 Z
+    content_type_id: entry
+  name: Legislation Lab NYC
+  country: USA
+  region: NA
+  implementation_level: Local
+  description: This platform allowed the New York community to co-draft the “The Anti-Tenant
+    Black List” bill with the New York City Council. There was also an opportunity
+    to discuss priorities and strategies in person with Council member Ben Kallos.
+    This was Legislation Lab’s first project at the local level.
+  platforms:
+  - Web
+  - Offline
+  institutionalization: false
+  implementation_progress:
+  - Drafting
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Legislation Lab
+  url: http://legislationlab.org/en/
+  image:
+    sys:
+      id: 4SIdHnv4nKiW6sYauqK8UI
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:37.182000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:37.182000000 Z
+    title: legislation lab
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/4SIdHnv4nKiW6sYauqK8UI/b7cd506cf3f17795fb980ad20bcb80aa/legislation_lab.jpg"
+  latitude: 38.880325
+  longitude: -85.053292
+- sys:
+    id: 5ZpK89Jyaky6e8OkyksMo4
+    created_at: !ruby/object:DateTime 2018-07-14 11:50:18.348000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:50:18.348000000 Z
+    content_type_id: entry
+  name: Gobierto
+  country: Spain
+  region: EU
+  implementation_level: Local
+  description: Gobierto is an open-government platform for Barcelona with tools for
+    transparency and resident participation. Gobierto provides modules to view politicians
+    and their agendas; examine government statistics and budgets; and track planning
+    progress. For participation, Gobierto allows government offices to define their
+    participatory processes and launch polls. Residents can also ideate on discussion
+    forums. Gobierto operates in a number of cities including Madrid, Barcelona, Valencia,
+    Alcobendas, Getafe, Sant Feliu, and Catalonia.
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Solution
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Populate
+  url: http://gobierto.es/
+  image:
+    sys:
+      id: 6R9aueDPNuqWcoIei2C4yW
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:43.129000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:43.129000000 Z
+    title: Gobierto
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/6R9aueDPNuqWcoIei2C4yW/4fc5ada1c3db6cfb1150d17b14030aaf/Gobierto.png"
+  latitude: 42.028213
+  longitude: -1.193863
+- sys:
+    id: 6skwXeRoOcQ6aaWMQWUgMy
+    created_at: !ruby/object:DateTime 2018-07-14 11:50:36.599000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:50:36.599000000 Z
+    content_type_id: entry
+  name: Laboratori di Quartiere
+  country: Italy
+  region: EU
+  implementation_level: Regional
+  description: The 6 laboratories serve as hubs of collaboration and innovation, where
+    Bolognese city staff connect with residents and co-design initiatives driven by
+    the talents and ideas of citizens. The city has a number of tools to develop citizens’
+    ideas that are unearthed through the laboratories, including a participatory budgeting
+    process and IncrediBOL, a competitive program that supports creative startups
+    with free space from the city, or consulting services from staff and partners.
+  platforms:
+  - Offline
+  institutionalization: false
+  implementation_progress:
+  - Implementation
+  type_of_engagement:
+  - Ideas
+  - Actions
+  organization: Ufficio per I’Immaginazione Civica (Office of Civic Imagination) and
+    the University of Bologna
+  url: http://www.comune.bologna.it/pianoinnovazioneurbana/
+  latitude: 43.669438
+  longitude: 12.116334
+- sys:
+    id: sM7kTVetUWasMcCWEUgYQ
+    created_at: !ruby/object:DateTime 2018-07-14 11:50:49.158000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:50:49.158000000 Z
+    content_type_id: entry
+  name: Iceland's Constitution Initiative
+  country: Iceland
+  region: EU
+  implementation_level: National
+  description: After the 2008 financial crisis, the country named 25 citizens to a
+    Constitutional Council. The council used Twitter, Facebook and other sites to
+    crowdsource provisions for a new Icelandic constitution. A first draft was made
+    available online in April 2011 and citizens could comment through a Facebook page.
+    Iceland held a referendum asking voters if they agreed to using the crowdsourced
+    document as the frame for the new constitution — 66% voted yes. Half of Iceland’s
+    235,000 eligible voters took part in the referendum, according to reports.
+  short_description: https://mashable.com/2012/10/23/iceland-approve-constitution/#4H5FKDAAi5qu
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Drafting
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Constitutional Council of Iceland
+  url: http://blog.openingparliament.org/post/45227421464/crowdsourcing-the-icelandic-constitution-myth-or
+  latitude: 64.682187
+  longitude: -15.096781
+- sys:
+    id: 6DOkHFwyekicuuouO8miI6
+    created_at: !ruby/object:DateTime 2018-07-14 11:51:02.417000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:51:02.417000000 Z
+    content_type_id: entry
+  name: Mudamos
+  country: Brazil
+  region: SA
+  implementation_level: National
+  description: Since 1988, the Brazilian Constitution has permitted grassroots citizen
+    proposals to be presented in a legislative class. However, with the great difficulty
+    of collecting and verifying paper signatures, no proposal has ever reached the
+    legislature. Mudamos allows citizens to e-sign popular initiative bills in a simple,
+    free and secure way, revolutionizing the relationship between voters and their
+    representatives. Users can also propose their own popular initiative bill.
+  platforms:
+  - Web
+  institutionalization: true
+  implementation_progress:
+  - Problem
+  - Solution
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Institute of Technology and Society of Rio de Janeiro (ITS Rio)
+  url: https://www.mudamos.org/
+  image:
+    sys:
+      id: 1lSv8PRyEQCm4mw8qSWsGu
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:36.296000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:36.296000000 Z
+    title: Mudamos
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/1lSv8PRyEQCm4mw8qSWsGu/9068586afc478dc562302d310ff89e61/Mudamos.png"
+  latitude: -23.552433
+  longitude: -46.335592
+- sys:
+    id: 4eF1n4KgFqKwKMAYkaSGEi
+    created_at: !ruby/object:DateTime 2018-07-14 11:51:15.417000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:51:15.417000000 Z
+    content_type_id: entry
+  name: MyGov India
+  country: India
+  region: AS
+  implementation_level: National
+  description: MyGov is a citizen engagement platform founded by the Government of
+    India to crowdsource governance ideas from citizens. Users discuss policy issues
+    and propose ideas in topical “Groups” connected to their respective national agency.
+    Users can directly ask questions and demand action from politicians on the “Talk”
+    feature. In “Creative Corner,” users can submit to online and offline challenges
+    in government projects. Lastly, users can also participate in government polls.
+    A mobile phone application for MyGov is currently under development.
+  platforms:
+  - Web
+  institutionalization: true
+  implementation_progress:
+  - Problem
+  - Solution
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  - Actions
+  organization: National Informatics Centre (NIC), an agency of the Government of
+    India
+  url: https://www.mygov.in/
+  image:
+    sys:
+      id: 22dAvrkHC0wQKEUwuEsokw
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:36.045000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:36.045000000 Z
+    title: MyGovIndia
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/22dAvrkHC0wQKEUwuEsokw/493863cffceeea084a969dbae06efc0a/MyGovIndia.png"
+  latitude: 23.968781
+  longitude: 79.266775
+- sys:
+    id: 1ePwjhS5NuwIseSyI68k2k
+    created_at: !ruby/object:DateTime 2018-07-14 11:51:27.223000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:51:27.223000000 Z
+    content_type_id: entry
+  name: Future Melbourne
+  country: Australia
+  region: OC
+  implementation_level: Local
+  description: In 2007, the Melbourne city government set up "Future Melbourne," a
+    wiki for residents to collaboratively read, edit, and discuss the draft of the
+    city's official ten-year plan. The Future Melbourne team, along with key experts,
+    reviewed the contributions and organized/incorporated the range of ideas into
+    a formal draft. This plan was then considered by the the City of Melbourne's Executive
+    Team and the Future Melbourne Reference Group before finally selected in September
+    2008.
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Drafting
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: City of Melbourne
+  url: http://www.futuremelbourne.com.au/wiki/view/FMPlan/HowYouCanParticipate
+  image:
+    sys:
+      id: 5h0Ybg168wWCOUKA6ImI8S
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:38.128000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:38.128000000 Z
+    title: FutureMelbourne
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/5h0Ybg168wWCOUKA6ImI8S/9c8ccab655dacce7da52a6f73f71d131/FutureMelbourne.jpg"
+  latitude: -32.44812
+  longitude: 142.197278
+- sys:
+    id: o9fN4fHL0GSUaykYymMA8
+    created_at: !ruby/object:DateTime 2018-07-14 11:51:38.402000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:51:38.402000000 Z
+    content_type_id: entry
+  name: Open Government Idea Forum
+  country: USA
+  region: NA
+  implementation_level: National
+  description: This 2012 initiative allowed users to submit ideas, add comments, or
+    vote on existing ideas to strengthen transparency, participation, and collaboration
+    at the National Archives.
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Solution
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: National Archives
+  url: http://naraopengov.ideascale.com
+  image:
+    sys:
+      id: 4h9cfO6X0sEQWgCUso2w8u
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:36.043000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:36.043000000 Z
+    title: OpenGovernmentIdeasForum
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/4h9cfO6X0sEQWgCUso2w8u/408bb4c05730e527e3575490d22e4c7e/OpenGovernmentIdeasForum.png"
+  latitude: 38.587828
+  longitude: -77.22446
+- sys:
+    id: 58pd2eXvRYI08ySOEWwKiY
+    created_at: !ruby/object:DateTime 2018-07-14 11:51:49.536000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:51:49.536000000 Z
+    content_type_id: entry
+  name: Osoigo
+  country: Spain
+  region: EU
+  implementation_level: Local
+  description: Osoigo is a web platform creating bridges between political representatives
+    and citizens. Users can ask questions to politicians, political parties, and government
+    bodies who have committed to the platform. Users can directly seek responses from
+    one individual or post to the ‘Agora’ for politicians to debate. Users can also
+    ‘support’ other users’ questions, encouraging politicians to address the topic
+    at hand. The platform further allows political stakeholders to use Osoigo’s API
+    on their respective webpage. Osoigo has achieved the participation of more than
+    670 Spanish politicians with 13,000 answers and more than 20,000 questions from
+    citizens.
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Problem
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Osoigo
+  url: https://www.osoigo.com/
+  image:
+    sys:
+      id: 2gtKK4q6N2im0qgCgKQkK2
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:35.099000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:35.099000000 Z
+    title: Osoigo
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/2gtKK4q6N2im0qgCgKQkK2/812c8bdce0ab88860e33b2ec2cf690cd/Osoigo.jpg"
+  latitude: 37.78201
+  longitude: -5.921162
+- sys:
+    id: 5zryGTYvsIcWWeCm00sWu8
+    created_at: !ruby/object:DateTime 2018-07-14 11:52:17.660000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:52:17.660000000 Z
+    content_type_id: entry
+  name: Petitti
+  country: Romania
+  region: EU
+  implementation_level: National
+  description: Petitti empowers Romanian citizens to get involved in the decision-making
+    process by informing the Government on what the main concerns and issues are and
+    by thus obliging it to issue an official response.
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Problem
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: The Department for Online Services and Design (DOSD)
+  latitude: 46.220039
+  longitude: 22.6853
+- sys:
+    id: 60YVf0fFRYQccQiycaeCSE
+    created_at: !ruby/object:DateTime 2018-07-14 11:52:48.472000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:52:48.472000000 Z
+    content_type_id: entry
+  name: DesafíosSP
+  country: Mexico
+  region: NA
+  implementation_level: Local
+  description: DesafíosSP, or Challenges, launched in 2016 to invite the public to
+    collaborate in the creation of better policies and services with the municipality.
+    With the help of Codeando Mexico and the GovLab, Desafíos sought online proposals
+    to solve the mobility crisis, pollution, government inefficiency, and enhanced
+    public spaces. The public formed teams and were encouraged to use open data to
+    develop their proposal. The commitment from the government was to implement the
+    10 best rated proposals from a team of experts, and to help develop the selected
+    ideas through online coaching and mentoring from academics and leaders in the
+    region. The success of the pilot led San Pedro legislate civic challenges into
+    a new Citizen Participation Law.
+  platforms:
+  - Web
+  institutionalization: true
+  implementation_progress:
+  - Solution
+  - Implementation
+  type_of_engagement:
+  - Ideas
+  - Actions
+  organization: City of San Pedro
+  url: http://desafios.sanpedro.gob.mx
+  image:
+    sys:
+      id: 769YLB3dug6AKGAE2MeaqK
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:44.118000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:44.118000000 Z
+    title: DefasiosSP
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/769YLB3dug6AKGAE2MeaqK/ec256be096c1c14b620f4c77f19166f5/DefasiosSP.png"
+  latitude: 27.187923
+  longitude: -102.727703
+- sys:
+    id: 6oJSND2uk0Eq6yooYYqeM4
+    created_at: !ruby/object:DateTime 2018-07-14 11:53:09.150000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:53:09.150000000 Z
+    content_type_id: entry
+  name: PlaceSpeak
+  country: Canada
+  region: NA
+  implementation_level: Local
+  description: PlaceSpeak empowers residents to make a meaningful impact on the communities
+    where they live, work, and exist by participating in public consultations. The
+    City of Calgary has used the platform to ask for residents to vote on sites for
+    a future skatepark and evaluate new flooding plans. Vancouver polled its residents
+    on ways to become a more equitable, efficient and affordable city.
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Solution
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: PlaceSpeak, a startup
+  url: https://www.placespeak.com/en/
+  image:
+    sys:
+      id: 1CpnxmMcfyCEqWeskgyUqi
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:35.039000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:35.039000000 Z
+    title: PlaceSpeaks
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/1CpnxmMcfyCEqWeskgyUqi/7069ce52122bc7e3ddde32333083ba5a/PlaceSpeaks.png"
+  latitude: 61.000682
+  longitude: -121.156235
+- sys:
+    id: 5mFSyI3Z5KcuoGGSKA2Q4m
+    created_at: !ruby/object:DateTime 2018-07-14 11:53:27.627000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:53:27.627000000 Z
+    content_type_id: entry
+  name: Plebiscito Digital
+  country: Colombia
+  region: SA
+  implementation_level: National
+  description: Plebiscito Digital allows Colombians living abroad to cast symbolic
+    votes. Around 7,000 people in 76 countries contacted participated in their first
+    project - the Digital Referendum. In this use case, Plebiscito Digital tested
+    for liquid democracy. Instead of giving a voter binary options, each voter had
+    100 votes that they could distribute towards any of the 7 open decisions on the
+    referendum. Votes operated in the system as tokens.
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Problem
+  type_of_engagement:
+  - Opinions
+  organization: Plebiscito Digital is a project by Democracy Earth, a group building
+    open source gov tech
+  url: http://plebiscitodigital.co
+  image:
+    sys:
+      id: 6Ktit84oFyiYaOoIiccqec
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:35.121000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:35.121000000 Z
+    title: PlebiscitoDigital
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/6Ktit84oFyiYaOoIiccqec/8b39e0f3cbf1055853b2a4b90ba94986/PlebiscitoDigital.jpg"
+  latitude: 9.740314
+  longitude: -75.007185
+- sys:
+    id: 3Anzj03evSGu8YG0U0gicK
+    created_at: !ruby/object:DateTime 2018-07-14 11:53:39.766000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:53:39.766000000 Z
+    content_type_id: entry
+  name: Politicopia
+  country: USA
+  region: NA
+  implementation_level: Regional
+  description: Politicopia presents a wiki-based forum for the compilation and presentation
+    of information on actual bills pending before the Legislature. If a citizen wants
+    to learn about an issue and shape the dialogue, Politicopia will provide a quick
+    and solid handle on the process. And if a legislator wants to hear unfiltered
+    suggestions from interested citizens — instead of mainly hearing from organized
+    special interests — Politicopia will give him or her a new source of input.
+  short_description: https://personaldemocracy.com/content/revolution-will-be-wikified
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Problem
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Utah State Representative Steve Urquhart, Chairman of the Rules Committee
+  url: http://www.socialtext.com/blog/2007/01/165/
+  latitude: 34.998644
+  longitude: -106.674723
+- sys:
+    id: 4rpqiu0fSwwu0e8kAymU4u
+    created_at: !ruby/object:DateTime 2018-07-14 11:53:53.829000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 12:08:49.842000000 Z
+    content_type_id: entry
+  name: Crowdsourced Kurdish Constitution
+  country: Iraq
+  region: AS
+  implementation_level: National
+  description: In 2015, three Kurdish civil society organizations (The Alliance of
+    Iraqi Minorities, the Kurdish Instutute for Elections and the Brave Youth Organization)
+    engaged Kurdish citizens on the constitutional drafting process using Legislation
+    Lab’s platform. Each of the three organizations had their own dedicated website
+    for citizens to vote and comment on the draft constitution. While each organization
+    focused on specific topics, all the feedback was integrated and centralized by
+    Legislation Lab. This enabled an unprecedented way for CSOs to collaborate as
+    they mined citizens feedback from different angles.The findings were submitted
+    to the Kurdish parliament as a contribution on the drafting process.
+  short_description: http://govright.org/debating-the-draft-kurdish-constitution/
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Drafting
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Legislation Lab from GovRight, PeaceTech Lab, The Alliance of Iraqi
+    Minorities, the Kurdish Institute for Elections and the Brave Youth Organization
+  url: http://govright.org/debating-the-draft-kurdish-constitution/
+  image:
+    sys:
+      id: 49ohTkE0swkW4CEA8OKk0w
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:45.141000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:45.141000000 Z
+    title: CrowdsourcedKurdishConstitution
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/49ohTkE0swkW4CEA8OKk0w/c1953540fc9a66696fdab3e42cfbd749/CrowdsourcedKurdishConstitution.jpg"
+  latitude: 35.722426
+  longitude: 43.385393
+- sys:
+    id: 3Qw1v7iwdGwaKCCoaIyuwk
+    created_at: !ruby/object:DateTime 2018-07-14 11:54:07.423000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:54:07.423000000 Z
+    content_type_id: entry
+  name: Crowd.mos.ru
+  country: Russia
+  region: AS
+  implementation_level: Local
+  description: Crowd.mos.ru is a platform that gives citizens the opportunity to offer
+    their ideas how to improve life in Moscow. Experts select the most effective,
+    which they bring to the discussion of the project participants. Citizens vote
+    for the projects they like and, according to the results of crowdsourcing, put
+    the best proposals into practice. The crowdsourcing platform has already implemented
+    13 projects, which involved more than 131,000 residents.
+  platforms:
+  - Web
+  - Offline
+  institutionalization: false
+  implementation_progress:
+  - Solution
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: The IT Department of the Moscow Government (DIT)
+  url: https://crowd.mos.ru/
+  image:
+    sys:
+      id: 3vNYBQyZcQ26CA0yOCKigm
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:45.151000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:45.151000000 Z
+    title: crowd.mos.ru
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/3vNYBQyZcQ26CA0yOCKigm/0c0c1a740eda91aaa5b9c0a1810d40b6/crowd.mos.ru.jpg"
+  latitude: 62.645528
+  longitude: 87.030595
+- sys:
+    id: 5fKeYqyq00K8ue8QmEI02c
+    created_at: !ruby/object:DateTime 2018-07-14 11:54:34.837000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:54:34.837000000 Z
+    content_type_id: entry
+  name: Rahvaalgatus
+  country: Estonia
+  region: EU
+  implementation_level: National
+  description: People in Estonia can submit legislative ideas to parliament. Rahvaalgatus.ee
+    enables citizens to directly create, discuss and vote on legal initiatives, bypassing
+    more traditional, roundabout methods of lobbying for legal change. Any initiative
+    with at least 1000 pro votes is sent to the national parliament, Riigikogu, which
+    is legally obligated to discuss it. Numerous initiatives have been passed to the
+    parliament, with many dozens under discussion.
+  platforms:
+  - Web
+  implementation_progress:
+  - Problem
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: CitizenOS
+  url: http://rahvaalgatus.ee
+  image:
+    sys:
+      id: 1wZxQDb6niEmI44AkMkWYW
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:34.064000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:34.064000000 Z
+    title: Rahvaalgatus
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/1wZxQDb6niEmI44AkMkWYW/f64fcbdbcdf9c18b46a1cea567b226ab/Rahvaalgatus.png"
+  latitude: 58.400542
+  longitude: 24.674369
+- sys:
+    id: 48GT8DaLDGOckacIEMMSEU
+    created_at: !ruby/object:DateTime 2018-07-14 11:54:49.343000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:54:49.343000000 Z
+    content_type_id: entry
+  name: Revision Tracker
+  country: Morocco
+  region: AF
+  implementation_level: National
+  description: Revision Tracker allowed Moroccan citizens to participate in reviewing
+    Morocco’s penal code in 2015. Through the online platform, citizens could vote
+    and comment on the changes related to every article of the penal law. The votes
+    and comments were submitted to the Ministry of Justice. One of its main innovative
+    features allowed users to compare the old version and the new version of the law
+    articles using color-coding (green for the new text, and barred red for the removed
+    text).
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Solution
+  - Drafting
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Legislation Lab from GovRight and the ICT4Dev Research Center of Mundiapolis
+    University
+  url: http://legislationlab.org/en/
+  latitude: 31.665815
+  longitude: -8.238151
+- sys:
+    id: 2lj8JuYStGeuCuMyIQ6AuS
+    created_at: !ruby/object:DateTime 2018-07-14 11:55:01.637000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:55:01.637000000 Z
+    content_type_id: entry
+  name: CitizenOS
+  country: Estonia
+  region: EU
+  implementation_level: Local
+  description: CitizenOS platform is a digital platform for Estonian citizens to discuss
+    and propose solutions to pressing community issues. Anyone can add their own proposal;
+    users can vote, comment, make suggestions and list pros and cons on the proposals
+    in question. CitizenOS aims to galvanize the public to advocate for proposals
+    discussed on the platform at a state and community level.
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Solution
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Let’s Do It! World, DUX, Estonian Debating Society, Estonian Cooperation
+    Assembly, Open Estonia Foundation
+  url: http://www.citizenos.com/
+  image:
+    sys:
+      id: 3t3UPHe4CAcQ6eOY44iyqI
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:46.173000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:46.173000000 Z
+    title: CitizenOS
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/3t3UPHe4CAcQ6eOY44iyqI/ea89e8cc31f7ed02c4a61b18181c6073/CitizenOS.png"
+  latitude: 59.446005
+  longitude: 24.888802
+- sys:
+    id: 1Qp3QA7iCMC0mCC8yki4Og
+    created_at: !ruby/object:DateTime 2018-07-14 11:55:14.018000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:55:14.018000000 Z
+    content_type_id: entry
+  name: Cities of Service
+  country: USA
+  region: NA
+  implementation_level: Local
+  description: Cities of Service is a national nonprofit organization that helps mayors
+    build stronger cities by changing the way local government and citizens work together.
+    Their coalition includes Anchorage, Boston, Detroit, El Paso, Richmond and more.
+    Their Impact Volunteering strategy helps cities tap into the knowledge, creativity,
+    and service of their citizens to help identify and solve pressing local challenges.
+    Some methods include citizens contributing policy ideas, leading community groups,
+    and providing feedback to improve existing city programs and services.
+  platforms:
+  - Web
+  - Offline
+  implementation_progress:
+  - Problem
+  - Solution
+  - Implementation
+  - Assessment
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  - Actions
+  - Evidence
+  organization: Bloomberg Philanthropies
+  url: https://citiesofservice.org/
+  image:
+    sys:
+      id: 2jjTM2S7eYmyM6AM4cwY0s
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:46.163000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:46.163000000 Z
+    title: CitiesOfService
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/2jjTM2S7eYmyM6AM4cwY0s/e85b4ec0def650fc12dce7e9c35e3570/CitiesOfService.jpg"
+  latitude: 36.279795
+  longitude: -98.85711
+- sys:
+    id: 6DrENjPNQI8emoKss6uCy4
+    created_at: !ruby/object:DateTime 2018-07-14 11:55:25.475000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:55:25.475000000 Z
+    content_type_id: entry
+  name: Cap Collectif
+  country: France
+  region: EU
+  implementation_level: Local
+  description: 'Cap Collectif’s platform offers six participatory applications: “Consultation,”
+    to involve the public in reflecting on preexisting proposals; “Survey,” to collect
+    information through citizen surveys or voting; “Suggestion Box,” to solicit creative
+    ideas form the community; “Call for Projects,” to solicit potential policies and
+    proposals from the community; “Petition,” for users to raise issues and collect
+    the votes necessary to trigger deliberation and consideration by a government
+    body; and “Participatory Budgeting,” for citizens to help allocate defined government
+    funds. Cap Collectif has 80 clients including the City of Le Mans, the French
+    Ministry of Social Affairs and Health, and France’s Startup Project.'
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Problem
+  - Solution
+  - Decision
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  - Evidence
+  organization: Cap Collectif, a startup for participatory applications
+  url: http://www.citizenos.com/
+  image:
+    sys:
+      id: 4Gu47UO2akEqq2a8k6S0Y8
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:46.245000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:46.245000000 Z
+    title: CapCollectif
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/4Gu47UO2akEqq2a8k6S0Y8/abde3559a968ee6260e3f3ba56f1c356/CapCollectif.png"
+  latitude: 48.79483
+  longitude: 2.541634
+- sys:
+    id: 2AGKojDgwE2GOMmYOcSqMa
+    created_at: !ruby/object:DateTime 2018-07-14 11:55:38.753000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:55:38.753000000 Z
+    content_type_id: entry
+  name: UK Constitution Initiative
+  country: UK
+  region: EU
+  implementation_level: National
+  description: Various LSE policy and law departments pioneered the crowdsourcing
+    of a new UK constitution. Through their joint website, they asked members of the
+    public to submit and vote on ideas. In the next phase, live-streamed videos on
+    the website aimed to foster discussion and debate over the proposed content, with
+    a draft document further honed at a constitutional carnival in spring 2014.
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Problem
+  - Drafting
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: LSE’s Institute of Public Affairs (IPA), LSE Department of Law, LSE
+    Public Policy Group, LSE Democratic Audit
+  url: http://blogs.lse.ac.uk/constitutionuk/contribute/
+  latitude: 55.56102
+  longitude: -2.457607
+- sys:
+    id: 5a17mKoXReCqACEQcOqOiw
+    created_at: !ruby/object:DateTime 2018-07-14 11:55:50.831000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:55:50.831000000 Z
+    content_type_id: entry
+  name: Vota Inteligente
+  country: Chile
+  region: SA
+  implementation_level: National
+  description: Vota Inteligente is a platform where any person, organization, or group
+    of people can generate their own policy proposals. People vote on proposals to
+    indicate and non-governmental organizations that participate on the platform can
+    sponsor proposals. Ciudadano Inteligente will send the most popular proposals
+    that to all the presidential and parliamentary candidates.
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Problem
+  - Solution
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Fundación Ciudadano Inteligente in partnership with Omidyar, Open
+    Society, Unicef, and UN
+  url: https://votainteligente.cl/
+  image:
+    sys:
+      id: 6RlAlOIBJmi0a2asWqOQ0k
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:33.275000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:33.275000000 Z
+    title: VotaInteligente
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/6RlAlOIBJmi0a2asWqOQ0k/7b4815159639c6c208a7f7b69890c7f2/VotaInteligente.jpg"
+  latitude: -23.623832
+  longitude: -69.7737
+- sys:
+    id: 4yO70uwdtKgiAk22A0YwOK
+    created_at: !ruby/object:DateTime 2018-07-14 11:56:03.469000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:56:03.469000000 Z
+    content_type_id: entry
+  name: Bogotá Abierta
+  country: Colombia
+  region: SA
+  implementation_level: Local
+  description: Bogota residents participate on the platform by responding to open
+    challenges launched by the District Government with ideas and proposals. Points
+    can be earned for commenting or voting on proposed ideas, as well as having the
+    highest voted idea for each challenge. Originally, points could be redeemed for
+    things like tickets to sporting events. More recently, rewards have been in line
+    with opportunities to advance citizens' ideas, such as meetings with the city's
+    policy formulation team. Comments are analyzed by the DPAC team and distributed
+    to the relevant government agencies.
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Solution
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Participación Bogotá (District Institute for Participation and Community
+    Action)
+  url: https://bogotaabierta.co/retos
+  image:
+    sys:
+      id: 5WevVW1TIkIiUEwmOcQquU
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:47.092000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:47.092000000 Z
+    title: BogotaAbierta
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/5WevVW1TIkIiUEwmOcQquU/7c1c3b257dcafb1aac788be505f35f8e/BogotaAbierta.png"
+  latitude: 4.75729
+  longitude: -73.780963
+- sys:
+    id: 2dTO1t1nIo4EyUakwIqkQu
+    created_at: !ruby/object:DateTime 2018-07-14 11:56:15.004000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:56:15.004000000 Z
+    content_type_id: entry
+  name: Wikispaces California
+  country: USA
+  region: NA
+  implementation_level: Local
+  description: Assemblyman Mike Gatto of LA created a wikispaces account in order
+    to let users participate in bill drafting. Users can log in, make changes to the
+    bill, offer suggestions and self-police their work.
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Drafting
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: LA Assemblyman Mike Gatto
+  url: http://www.latimes.com/tn-gnp-gatto-opens-up-wiki-bill-20131225-story.html
+  latitude: 41.771784
+  longitude: -88.067063
+- sys:
+    id: 18ZoBdqJLAQESmcUWSO4GQ
+    created_at: !ruby/object:DateTime 2018-07-14 11:56:27.041000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:56:27.041000000 Z
+    content_type_id: entry
+  name: Your Priorities (YRPRI)
+  country: Iceland
+  region: EU
+  implementation_level: Local
+  description: Your Priorities is an eDemocracy web application designed to help groups
+    speak with one voice. A host of municipal governments use YRPRI for participatory
+    projects, such as crowdsourcing ideas or participatory budgeting. The community
+    has over 11,000 registered users, with more than 6,000 proposals generated and
+    over 10,000 arguments for and against proposals submitted.
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Solution
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Citizens Foundation, a non-profit
+  url: https://yrpri.org/domain
+  image:
+    sys:
+      id: 1KUK6gGSS4YOoucKgMuOCo
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:33.051000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:33.051000000 Z
+    title: YourPriorities
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/1KUK6gGSS4YOoucKgMuOCo/54d5da8e20a2c1b299f1377116f59666/YourPriorities.png"
+  latitude: 64.161578
+  longitude: -21.637906
+- sys:
+    id: 3OomubZghauMkIUSY648O4
+    created_at: !ruby/object:DateTime 2018-07-14 11:56:48.264000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:56:48.264000000 Z
+    content_type_id: entry
+  name: AI Democracy
+  country: USA
+  region: NA
+  implementation_level: National
+  description: A concept described by MIT Media Lab’s Cesar Hidalgo during TED 2018
+    in Vancouver. In an AI Democracy, voters are connected to an individualized “digital
+    agent” that would collect information on our needs, views, and politics via the
+    data we feed into social platforms and search - essentially work as a political
+    Spotify. Digital agents would read our data in such a way that it would be able
+    to directly vote on issues on our behalf as an automated Congress.
+  short_description: https://www.fastcompany.com/40557688/this-plan-for-an-ai-based-direct-democracy-outsources-votes-to-a-predictive-algorithm
+  platforms:
+  - Web
+  - Mobile
+  institutionalization: false
+  implementation_progress:
+  - Decision
+  type_of_engagement:
+  - Opinions
+  organization: Cesar Hidalgo, MIT Media Lab
+  url: https://www.fastcompany.com/40557688/this-plan-for-an-ai-based-direct-democracy-outsources-votes-to-a-predictive-algorithm
+  latitude: 33.796665
+  longitude: -84.197015
+- sys:
+    id: 3bcoN0RdRmQGyMuAOmy8GE
+    created_at: !ruby/object:DateTime 2018-07-14 11:56:59.613000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:56:59.613000000 Z
+    content_type_id: entry
+  name: YourSAy
+  country: Australia
+  region: OC
+  implementation_level: Regional
+  description: 'YourSAy is an online consultation hub where citizens can influence
+    government decisions. Some of the ways users can participate: GOVchat, a community
+    engagement event where users can chat with senior leaders through digital and
+    mobile formats about specific issues; YourSAy Engagements, to take part in online
+    discussions; voting in polls; and Fund My Community for local participatory budgeting
+    efforts.'
+  platforms:
+  - Web
+  - Offline
+  institutionalization: false
+  implementation_progress:
+  - Problem
+  - Solution
+  - Decision
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Better Together team, which is a part of the Department of the Premier
+    and Cabinet in South Australia
+  url: https://yoursay.sa.gov.au/
+  image:
+    sys:
+      id: 66dnj1HkwEIWeoCM2eCSeM
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:33.051000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:33.051000000 Z
+    title: yourSAy
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/66dnj1HkwEIWeoCM2eCSeM/14dcfa94cc25140693b6f23ce01b67ad/yourSAy.png"
+  latitude: -23.939559
+  longitude: 123.212903
+- sys:
+    id: 62kcu4aTley684M0IM4E6O
+    created_at: !ruby/object:DateTime 2018-07-14 11:57:17.553000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:57:17.553000000 Z
+    content_type_id: entry
+  name: "#RevoluciónCR"
+  country: Costa Rica
+  region: NA
+  implementation_level: National
+  description: "#RevoluciónCR sought policy proposals from Costa Ricans via an Internet-based
+    platform. More than 600 citizens proposed ideas and thousands voted on them; 36
+    finalists were selected from the most popular proposals by 39 experts. Project
+    owners attended event and worked with experts from institutions like GovLab to
+    improve their projects. IDEAS signed a memorandum of understanding with Costa
+    Rica’s Ministry of Commerce to help reform key policies with input from #RevoluciónCR."
+  platforms:
+  - Web
+  - Offline
+  institutionalization: false
+  implementation_progress:
+  - Solution
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Institute for Business Development and Social Action (IDEAS), a non-profit
+    fostering market-liberal public policy reforms in Latin America
+  url: http://www.revolucioncr.com/
+  image:
+    sys:
+      id: 3dpWCBbTHOqa4mGuaoYucY
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:49.501000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:49.501000000 Z
+    title: "#RevolucionCR"
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/3dpWCBbTHOqa4mGuaoYucY/6836c4849817ad6c37b8dc8804123eaf/_RevolucionCR.png"
+  latitude: 9.913467
+  longitude: -84.03295
+- sys:
+    id: 2qyQv4juu084I4amai0YUO
+    created_at: !ruby/object:DateTime 2018-07-14 11:57:28.432000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 11:57:28.432000000 Z
+    content_type_id: entry
+  name: "#CultureIsDigital - Have Your Say"
+  country: UK
+  region: EU
+  implementation_level: National
+  description: "#CultureisDigital posed challenges to examine how the UK government,
+    tech companies, civil society organizations and citizens can use digital technology
+    to unleash the creative potential and boost the capability of cultural organisations.
+    Users could post ideas, rate and comment as well as share case studies/examples
+    of work already being delivered in this area."
+  platforms:
+  - Web
+  institutionalization: false
+  implementation_progress:
+  - Solution
+  - Decision
+  type_of_engagement:
+  - Ideas
+  - Expertise
+  - Opinions
+  organization: UK Department for Digital, Culture, Media & Sport
+  url: https://cultureisdigital.dialogue-app.com/
+  image:
+    sys:
+      id: 6tcMfDE9uEecqiMouuQ4Mi
+      created_at: !ruby/object:DateTime 2018-07-13 15:33:49.503000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-13 15:33:49.503000000 Z
+    title: "#CultureIsDigital"
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/6tcMfDE9uEecqiMouuQ4Mi/0048db0a0b6ec83c034f41eb055bd5cd/_CultureIsDigital.png"
+  latitude: 51.520167
+  longitude: -0.64296
