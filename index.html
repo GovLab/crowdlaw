@@ -249,7 +249,7 @@ progress_stages:
 </div>
 
 {% for i in site.data.contentful.spaces.entries.entry %}
-<div class="modal js-target-modal" id="modal-{{i.sys.id}}">
+<div class="modal modal--catalog-entry js-target-modal" id="modal-{{i.sys.id}}">
   <header class="modal__header modal--top-section">
 
     <span class="modal__close js-close-modal"><i class="material-icons">close</i></span>
@@ -265,7 +265,7 @@ progress_stages:
 
   <div class="modal__content">
     <div class="result-item__short-description">
-      <p>{{i.description}}</p>
+      <p>{{ i.description | markdownify }}</p>
     </div>
     <div class="result-item__short-description">
       <p>{{i.organization}}</p>
