@@ -52,11 +52,13 @@
 
   .active { fill: $theme-green; }
 
-  .number {
+  .text {
     fill: rgba(white, .8);
     font-size: 18px;
+    transform: translateY(-10px);
     font-weight: 400;
     pointer-events: none;
+    visibility: hidden;
   }
 
 }

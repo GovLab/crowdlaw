@@ -162,6 +162,18 @@ $(document).ready(function(){
   var pinH = 20;
   active = d3.select(null);
 
+  var scaling = {
+    'Local' : 0.5,
+    'Regional' : 1,
+    'National' : 1
+  };
+
+  // calculate circle radius
+  var cr = function(d) {
+    return circleR*scaling[(d.implementation_level === undefined) ? 'Local' : d.implementation_level];
+    // return circleR;
+  }
+
   var svg = d3.select("#map")
   .append("svg")
   .attr("width", w)
@@ -213,12 +225,21 @@ $(document).ready(function(){
     var shape12 = file12.getElementsByTagName("svg")[0];
 
     var shapeTypes = {
-      'Ideas' : shape1,
-      'Expertise' : shape2,
-      'Opinions' : shape3,
-      'Actions' : shape4,
-      'Evidence' : shape5
+      'Ideas' : [shape3],
+      'Expertise' : [shape5],
+      'Opinions' : [shape4, shape7, shape11],
+      'Actions' : [shape1, shape2, shape8, shape9, shape10, shape12],
+      'Evidence' : [shape6]
     };
+
+    var getshape = function (d) {
+      // choose random type of engagement from list
+      var t = Math.floor(Math.random()*d.type_of_engagement.length);
+      // choose random icon for type of engagement
+      var i = shapeTypes[d.type_of_engagement[t]][Math.floor(Math.random()*shapeTypes[d.type_of_engagement[t]].length)];
+      // clone svg object for icon so that multiple can be inserted into DOM
+      return i.cloneNode(true);
+    }
 
     d3.json("./static/world.geo.json", function(map) {
       svg.selectAll("append")
@@ -251,8 +272,7 @@ $(document).ready(function(){
         return randomPointWithinBounds(svg, getid(diacritics(d.country)))[1] - pinH;
       })
       .attr("r", function(d) {
-        // return Math.sqrt(d.count)*15;
-        return circleR;
+        return cr(d);
       })
 
       // .on("mouseover", function(d) {
@@ -309,12 +329,12 @@ $(document).ready(function(){
         return getcirclecenter(svg, 'circle-' + getid(d.sys.id))[0];
       })
       .attr("y", function(d) {
-        return getcirclecenter(svg, 'circle-' + getid(d.sys.id))[1];
+        return getcirclecenter(svg, 'circle-' + getid(d.sys.id))[1] - cr(d);
       })
       .attr("text-anchor", "middle")
       .attr("dy", "6")
       .text(function(d) { return d.name; })
-      .attr("class", "map-text")
+      .attr("class", "text")
 
       svg.selectAll("rect")
       .data(data)
@@ -325,7 +345,7 @@ $(document).ready(function(){
         return getcirclecenter(svg, 'circle-' + getid(d.sys.id))[0] - pinW / 2;
       })
       .attr("y", function(d) {
-        return getcirclecenter(svg, 'circle-' + getid(d.sys.id))[1] + circleR;
+        return getcirclecenter(svg, 'circle-' + getid(d.sys.id))[1] + cr(d);
       })
       .attr("width", pinW)
       .attr("height", pinH)
@@ -335,19 +355,17 @@ $(document).ready(function(){
       .data(data)
       .enter()
       .select(function(d) {
-        var t = Math.floor(Math.random()*d.type_of_engagement.length);
-        // console.log(t, d.type_of_engagement[t], d.type_of_engagement);
-        return this.appendChild(shapeTypes[d.type_of_engagement[t]].cloneNode(true));
+        return this.appendChild(getshape(d));
       })
       .attr("id", function(d) { return  'icon-' + getid(d.sys.id);})
       .attr("x", function(d) {
-        return getcirclecenter(svg, 'circle-' + getid(d.sys.id))[0] - circleR;
+        return getcirclecenter(svg, 'circle-' + getid(d.sys.id))[0] - cr(d);
       })
       .attr("y", function(d) {
-        return getcirclecenter(svg, 'circle-' + getid(d.sys.id))[1] - circleR;
+        return getcirclecenter(svg, 'circle-' + getid(d.sys.id))[1] - cr(d);
       })
-      .attr("width", circleR*2)
-      .attr("height", circleR*2)
+      .attr("width", function(d) { return cr(d)*2 })
+      .attr("height", function(d) { return cr(d)*2 })
       .attr("class", "icon")
 
     });
