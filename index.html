@@ -137,7 +137,7 @@ progress_stages:
             </div>
           </th>
 
-          <th class="table-dropdown__item" style="width: 12%">
+          <th class="table-dropdown__item" style="width: 18%">
             <div class="select">
               <select data-filter='company__data-sectors' id="table-dropdown__data-sectors" class="dropdown-content">
                 <option id="all">---</option>
@@ -148,7 +148,7 @@ progress_stages:
             </div>
           </th>
 
-          <th class="" style="width: 4%">&nbsp;</th>
+          <th class="" style="width: 3%">&nbsp;</th>
           <th class="" style="width: 0%">&nbsp;</th>
         </thead>
       </table>
@@ -205,13 +205,13 @@ progress_stages:
           <span>Engagement</span>
         </th>
 
-        <th class="table-sortable__head-cell company__founded" style="width: 12%">
+        <th class="table-sortable__head-cell company__founded" style="width: 18%">
           <span>Progress</span>
         </th>
 
 
-        <th class="table-sortable__head-cell company__location" style="width: 4%">
-          <span>Link</span>
+        <th class="table-sortable__head-cell company__location" style="width: 3%">
+          <span><i class="material-icons">open_in_new</i></span>
         </th>
         <th class="table-sortable__head-cell" style="width: 0%">&nbsp;</th>
       </thead>
@@ -220,14 +220,25 @@ progress_stages:
         <tr class="" id="{{i.sys.id}}" >
 
           <td class="filter" data-location=""></td>
-          <td class="" data-target="{{i.name}}"><a class="company-name" href="#">{{i.name}}</a></td>
-          <td class="" data-target="{{i.country}}"><a class="company-name" href="#">{{i.country}}</a></td>
-          <td class="" data-target="{{i.region}}"><a class="company-name" href="#">{{i.region}}</a></td>
-          <td class="" data-target="{{i.implementation_level}}"><a class="company-name" href="#">{{i.implementation_level | capitalize}}</a></td>
-          <td class="" data-target="{{i.organization}}"><a class="company-name" href="#">{{i.organization}}</a></td>
-          <td class="" data-target="{{i.type_of_engagement}}"><a class="company-name" href="#">{{i.type_of_engagement}}</a></td>
-          <td class="" data-target="{{i.implementation_progress}}"><a class="company-name" href="#">{{i.implementation_progress}}</a></td>
-          <td class="" data-target="{{i.url}}"><a class="company-name" href="{{i.url}}" target="_blank"><i class="material-icons">open_in_new</i></a></td>
+          <td class="data" data-target="{{i.name}}"><a class="company-name" href="#">{{i.name}}</a></td>
+          <td class="data" data-target="{{i.country}}"><a class="company-name" href="#">{{i.country}}</a></td>
+          <td class="data" data-target="{{i.region}}"><a class="company-name" href="#">{{i.region}}</a></td>
+          <td class="data" data-target="{{i.implementation_level}}"><a class="company-name" href="#">{{i.implementation_level | capitalize}}</a></td>
+          <td class="data" data-target="{{i.organization}}"><a class="company-name" href="#">{{i.organization}}</a></td>
+          <td class="tags" data-target="{{i.type_of_engagement | split: ' '}}">
+            {% for d in i.type_of_engagement %}
+            <span class="tag tag__type tag__type--{{d | slugify}}">{{ d | slice: 0 }}</span>
+            {% endfor %}
+          </td>
+          <td class="tags" data-target="{{i.implementation_progress | split: ' '}}">
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Problem' %}tag__progress--active{% endif %}{% endfor %}">P</span>
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Solution' %}tag__progress--active{% endif %}{% endfor %}">S</span>
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Drafting' %}tag__progress--active{% endif %}{% endfor %}">D</span>
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Decision' %}tag__progress--active{% endif %}{% endfor %}">D</span>
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Implementation' %}tag__progress--active{% endif %}{% endfor %}">I</span>
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Assessment' %}tag__progress--active{% endif %}{% endfor %}">A</span>
+          </td>
+          <td class="icon" data-target="{{i.url}}"><a class="company-name" href="{{i.url}}" target="_blank"><i class="material-icons">open_in_new</i></a></td>
 
           <td>&nbsp;</td>
         </tr>
