@@ -38,7 +38,10 @@
   }
 
   &__logo {
-    margin-left: -54px;
+    margin: 8px auto;
+    transform: translateX(-27px);
+    width: 200px;
+    flex: unset;
   }
 }
 

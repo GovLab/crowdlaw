@@ -13,7 +13,6 @@ $theme-yellow: #ffd489;
 $main-color: $theme-purple;
 $accent-color: $theme-green;
 
-
 $ideas-color: #F2F2F2;
 $opinions-color: #7DE2E1;
 $expertise-color: #495056;
@@ -23,6 +22,8 @@ $evidence-color: #FED136;
 $progress-color: lighten(#523080, 10);
 // $progress-color: #523080;
 $progress-inactive: #CCC;
+
+$highlight-color: lighten(#6DBEC4, 25);
 
 // Breakpoints
 $small-only-screen: (max-width 40em);

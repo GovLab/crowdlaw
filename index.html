@@ -216,20 +216,20 @@ progress_stages:
       </thead>
       <tbody class="list">
         {% for i in site.data.contentful.spaces.entries.entry %}
-        <tr class="" id="entry-{{i.sys.id}}" >
+        <tr class="entry" id="entry-{{i.sys.id}}" >
 
           <td class="filter" data-location=""></td>
           <td class="data js-open-modal" data-modal="{{i.sys.id}}" data-target="{{i.name}}">{{i.name}}</td>
-          <td class="data" data-target="{{i.country}}"><a class="company-name" href="">{{i.country}}</a></td>
-          <td class="data" data-target="{{i.region}}"><a class="company-name" href="">{{i.region}}</a></td>
-          <td class="data" data-target="{{i.implementation_level}}"><a class="company-name" href="">{{i.implementation_level | capitalize}}</a></td>
-          <td class="data" data-target="{{i.organization}}"><a class="company-name" href="">{{i.organization}}</a></td>
-          <td class="tags" data-target="{{i.type_of_engagement | split: ' '}}">
+          <td class="data js-open-modal" data-modal="{{i.sys.id}}" data-target="{{i.country}}">{{i.country}}</td>
+          <td class="data js-open-modal" data-modal="{{i.sys.id}}" data-target="{{i.region}}">{{i.region}}</td>
+          <td class="data js-open-modal" data-modal="{{i.sys.id}}" data-target="{{i.implementation_level}}">{{i.implementation_level | capitalize}}</td>
+          <td class="data js-open-modal" data-modal="{{i.sys.id}}" data-target="{{i.organization}}">{{i.organization}}</td>
+          <td class="tags js-open-modal" data-modal="{{i.sys.id}}" data-target="{{i.type_of_engagement | split: ' '}}">
             {% for d in i.type_of_engagement %}
             <span class="tag tag__type tag__type--{{d | slugify}}">{{ d | slice: 0 }}</span>
             {% endfor %}
           </td>
-          <td class="tags" data-target="{{i.implementation_progress | split: ' '}}">
+          <td class="tags js-open-modal" data-modal="{{i.sys.id}}" data-target="{{i.implementation_progress | split: ' '}}">
             <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Problem' %}tag__progress--active{% endif %}{% endfor %}">P</span>
             <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Solution' %}tag__progress--active{% endif %}{% endfor %}">S</span>
             <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Drafting' %}tag__progress--active{% endif %}{% endfor %}">D</span>
