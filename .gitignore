@@ -1,7 +1,0 @@
-.DS_Store
-_site
-.sass-cache
-.jekyll-metadata
-node_modules
-_data/test.json
-.publish
