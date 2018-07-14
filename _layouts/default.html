@@ -24,15 +24,6 @@
     <script src="{{'/scripts/scripts.js' | relative_url}}"></script>
     <script src="{{'/scripts/list.fuzzysearch.min.js' | relative_url}}" type="text/javascript"></script>
 
-    <script>
-        $(document).ready(function () {
-            $( ".timeline-boxes li" ).hover(function() {
-                $('.timeline-boxes').toggleClass('timeline-boxes--active-' + $(this).index());
-            });
-            document.documentElement.setAttribute("data-browser", navigator.userAgent);
-        });
-    </script>
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40012093-20"></script>
     <script>

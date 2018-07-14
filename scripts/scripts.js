@@ -21,13 +21,17 @@ $(document).ready(function () {
     });
 
     // Modal Click Behavior
-    $('.js-open-modal').click(function () {
-        $('.js-target-modal').addClass('js-active');
+    $('.js-open-modal').click(function (e) {
+        console.log('hello');
+        e.preventDefault();
+        $('#modal-' + $(this).attr('data-modal')).addClass('js-active');
         $('#overlay').addClass('js-active');
         $('body').addClass('js-body-modal-active');
     });
 
-    $('.js-close-modal').click(function () {
+    $('.js-close-modal').click(function (e) {
+        console.log('bye');
+        e.preventDefault();
         $('.js-target-modal').removeClass('js-active');
         $('#overlay').removeClass('js-active');
         $('body').removeClass('js-body-modal-active');
@@ -201,12 +205,12 @@ $(document).ready(function () {
             if ($(".circle.active").length > 0) {
                 //filter with map selections
                 searchQueries["filter"] = $(".circle.active").attr("id");
-                if (item.values()["filter"] !== null 
-                && item.values()["company__provincial-sources"] !== null 
-                && item.values()["company__other-sources"] !== null 
-                && item.values()["company__provinces"] !== null 
-                && item.values()["company__data-sectors"] !== null 
-                && item.values()["company__federal-sources"] !== null 
+                if (item.values()["filter"] !== null
+                && item.values()["company__provincial-sources"] !== null
+                && item.values()["company__other-sources"] !== null
+                && item.values()["company__provinces"] !== null
+                && item.values()["company__data-sectors"] !== null
+                && item.values()["company__federal-sources"] !== null
                 && (item.values()["filter"].indexOf(searchQueries["filter"]) != -1)
                 && (item.values()["company__provincial-sources"].indexOf(searchQueries["company__provincial-sources"]) != -1)
                 && (item.values()["company__other-sources"].indexOf(searchQueries["company__data-sources"]) != -1 )
@@ -218,11 +222,11 @@ $(document).ready(function () {
                 }
             } else {
                 // filter with dropdowns
-                if (item.values()["company__provinces"] !== null 
-                && item.values()["company__provincial-sources"] !== null 
-                && item.values()["company__other-sources"] !== null 
-                && item.values()["company__data-sectors"] !== null 
-                && item.values()["company__federal-sources"] !== null 
+                if (item.values()["company__provinces"] !== null
+                && item.values()["company__provincial-sources"] !== null
+                && item.values()["company__other-sources"] !== null
+                && item.values()["company__data-sectors"] !== null
+                && item.values()["company__federal-sources"] !== null
                 && (item.values()["company__provincial-sources"].indexOf(searchQueries["company__provincial-sources"]) != -1 )
                 && (item.values()["company__other-sources"].indexOf(searchQueries["company__data-sources"]) != -1 )
                 && (item.values()["company__data-sectors"].indexOf(searchQueries["company__data-sectors"]) != -1 )

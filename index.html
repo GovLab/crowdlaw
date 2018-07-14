@@ -216,14 +216,14 @@ progress_stages:
       </thead>
       <tbody class="list">
         {% for i in site.data.contentful.spaces.entries.entry %}
-        <tr class="" id="{{i.sys.id}}" >
+        <tr class="" id="entry-{{i.sys.id}}" >
 
           <td class="filter" data-location=""></td>
-          <td class="data" data-target="{{i.name}}"><a class="company-name" href="#">{{i.name}}</a></td>
-          <td class="data" data-target="{{i.country}}"><a class="company-name" href="#">{{i.country}}</a></td>
-          <td class="data" data-target="{{i.region}}"><a class="company-name" href="#">{{i.region}}</a></td>
-          <td class="data" data-target="{{i.implementation_level}}"><a class="company-name" href="#">{{i.implementation_level | capitalize}}</a></td>
-          <td class="data" data-target="{{i.organization}}"><a class="company-name" href="#">{{i.organization}}</a></td>
+          <td class="data js-open-modal" data-modal="{{i.sys.id}}" data-target="{{i.name}}">{{i.name}}</td>
+          <td class="data" data-target="{{i.country}}"><a class="company-name" href="">{{i.country}}</a></td>
+          <td class="data" data-target="{{i.region}}"><a class="company-name" href="">{{i.region}}</a></td>
+          <td class="data" data-target="{{i.implementation_level}}"><a class="company-name" href="">{{i.implementation_level | capitalize}}</a></td>
+          <td class="data" data-target="{{i.organization}}"><a class="company-name" href="">{{i.organization}}</a></td>
           <td class="tags" data-target="{{i.type_of_engagement | split: ' '}}">
             {% for d in i.type_of_engagement %}
             <span class="tag tag__type tag__type--{{d | slugify}}">{{ d | slice: 0 }}</span>
@@ -247,6 +247,37 @@ progress_stages:
     </table>
   </div>
 </div>
+
+{% for i in site.data.contentful.spaces.entries.entry %}
+<div class="modal js-target-modal" id="modal-{{i.sys.id}}">
+  <header class="modal__header modal--top-section">
+
+    <span class="modal__close js-close-modal"><i class="material-icons">close</i></span>
+    <h1 class="modal__title">{{i.name}}</h1>
+    <h2 class="modal__authors">{{i.country}}, {{i.region}}</h2>
+
+    <div class="floating-button">
+      <div class="floating-button__wrapper">
+        <a class="button button--floating button--black" target="_blank" href="{{i.url}}" title="">Website</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="modal__content">
+    <div class="result-item__short-description">
+      <p>{{i.description}}</p>
+    </div>
+    <div class="result-item__short-description">
+      <p>{{i.organization}}</p>
+    </div>
+    <p>{{i.implementation_level}}</p>
+    <p>{{i.implementation_progress}}</p>
+    <p>{{i.type_of_engagement}}</p>
+    <p>{{i.platforms}}</p>
+    <p><img src="{{i.image.url}}" title="{{i.image.title}}"></p>
+  </div>
+</div>
+{% endfor %}
 
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script src="https://d3js.org/topojson.v1.min.js"></script>
