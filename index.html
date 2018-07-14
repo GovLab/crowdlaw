@@ -30,7 +30,6 @@ progress_stages:
     <h3>Catalog</h3>
     <div class="map-wrapper">
       <div id="map"></div>
-      <div id="caption"></div>
     </div>
   </div>
 
@@ -137,8 +136,8 @@ progress_stages:
             </div>
           </th>
 
-          <th class="table-dropdown__item" style="width: 18%">
-            <div class="select">
+          <th class="table-dropdown__item" style="width: 18%; padding-right: 7px;">
+            <div class="select" style="">
               <select data-filter='company__data-sectors' id="table-dropdown__data-sectors" class="dropdown-content">
                 <option id="all">---</option>
                 {% for item in page.progress_stages %}
