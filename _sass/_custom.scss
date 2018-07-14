@@ -38,7 +38,7 @@
   }
 
   &__logo {
-    margin: 8px auto;
+    margin: 0 auto;
     transform: translateX(-27px);
     width: 200px;
     flex: unset;
@@ -483,7 +483,12 @@
 }
 
 body {
-  background-color: $main-color;
+  // background-color: $main-color;
+}
+
+.table-dropdown,
+#company_data {
+  overflow-x: hidden !important;
 }
 
 #overlay {
