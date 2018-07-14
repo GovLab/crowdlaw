@@ -281,17 +281,16 @@ entry:
 - sys:
     id: 3AN6exbFxYEqoWuSAoYwsu
     created_at: !ruby/object:DateTime 2018-07-13 15:32:20.723000000 Z
-    updated_at: !ruby/object:DateTime 2018-07-13 15:32:20.723000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 04:56:36.974000000 Z
     content_type_id: entry
   name: vTaiwan
   country: Taiwan
   region: AS
   implementation_level: National
-  description: 'An independently run citizen engagement platform that coordinates
-    consultations with the Taiwanese government. Although offline consultations are
-    key element of the process, vTaiwan also relies heavily on technology: the vTaiwan
-    website serves a central hub for relevant information, discussion forums, and
-    user surveys.'
+  description: |-
+    An independently run citizen engagement platform that coordinates consultations with the Taiwanese government. Although offline consultations are key element of the process, vTaiwan also relies heavily on technology: the vTaiwan website serves a central hub for relevant information, discussion forums, and user surveys.
+
+    [Read more about vTaiwan](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.768doafmsokj)
   platforms:
   - Web
   - Offline
@@ -453,19 +452,16 @@ entry:
 - sys:
     id: zmQ4Ul1wC4u4euiUQ0kQu
     created_at: !ruby/object:DateTime 2018-07-13 15:32:21.686000000 Z
-    updated_at: !ruby/object:DateTime 2018-07-13 15:32:21.686000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 04:56:37.905000000 Z
     content_type_id: entry
   name: Lisboa Participa
   country: Portugal
   region: EU
   implementation_level: Local
-  description: Lisbon’s participatory budgeting law allows citizens to propose and
-    subsequently vote on potential line items in the City of Lisbon’s budget. Proposals
-    are solicited across thirteen thematic areas covering science, culture, agriculture,
-    and education, and citizens are invited to participate both through physical meetings
-    and an online web portal. After the submission period has elapsed, government
-    officials conduct a review of the submissions, combining similar ones and ultimately
-    selecting the most meritorious to be put to a final public vote.
+  description: |-
+    Lisbon’s participatory budgeting law allows citizens to propose and subsequently vote on potential line items in the City of Lisbon’s budget. Proposals are solicited across thirteen thematic areas covering science, culture, agriculture, and education, and citizens are invited to participate both through physical meetings and an online web portal. After the submission period has elapsed, government officials conduct a review of the submissions, combining similar ones and ultimately selecting the most meritorious to be put to a final public vote.
+
+    [Read more about Lisboa Participa](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.g9lfa07bediq)
   platforms:
   - Web
   - Offline
@@ -720,18 +716,16 @@ entry:
 - sys:
     id: 4cSkqLi0ZyguKEKusCeMSK
     created_at: !ruby/object:DateTime 2018-07-13 15:32:22.687000000 Z
-    updated_at: !ruby/object:DateTime 2018-07-13 15:32:22.687000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 04:56:37.934000000 Z
     content_type_id: entry
   name: Ley 3de3
   country: Mexico
   region: NA
   implementation_level: National
-  description: 'Ley 3de3 is a comprehensive reform about the management rules of the
-    public administration and the ethical principles that must follow any government
-    official. It asks all officials, including the President himself, to make three
-    declarations public: their assets, potential conflicts of interest and taxes.
-    It was the first citizen bill to be discussed and approved by Mexican Congress,
-    after receiving 634,000 citizen signatures.'
+  description: |-
+    Ley 3de3 is a comprehensive reform about the management rules of the public administration and the ethical principles that must follow any government official. It asks all officials, including the President himself, to make three declarations public: their assets, potential conflicts of interest and taxes. It was the first citizen bill to be discussed and approved by Mexican Congress, after receiving 634,000 citizen signatures.
+
+    [Read more about Ley 3 de 3](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.fk7e64hbl4r6)
   platforms:
   - Web
   - Offline
@@ -919,16 +913,16 @@ entry:
 - sys:
     id: 1tjHRIHvgw8u4gG0OE8K2m
     created_at: !ruby/object:DateTime 2018-07-13 15:33:01.875000000 Z
-    updated_at: !ruby/object:DateTime 2018-07-13 15:33:01.875000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 04:56:37.938000000 Z
     content_type_id: entry
   name: Mi Senado
   country: Colombia
   region: SA
   implementation_level: National
-  description: A mobile phone app, available on iOS and Android devices. Via the app,
-    users have access to attendance and voting records for all their elected representatives.
-    Push notifications alert users to when live plenary sessions are scheduled to
-    occur so that they can provide their feedback and vote on bills in real-time.
+  description: |-
+    A mobile phone app, available on iOS and Android devices. Via the app, users have access to attendance and voting records for all their elected representatives. Push notifications alert users to when live plenary sessions are scheduled to occur so that they can provide their feedback and vote on bills in real-time.
+
+    [Read more about Mi Senado](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.m87khcnwqy5j)
   platforms:
   - Mobile
   institutionalization: false
@@ -1197,17 +1191,16 @@ entry:
 - sys:
     id: 1ApKGgxNQoqiAU6muuy8iC
     created_at: !ruby/object:DateTime 2018-07-13 15:33:04.840000000 Z
-    updated_at: !ruby/object:DateTime 2018-07-13 15:33:04.840000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 04:56:36.952000000 Z
     content_type_id: entry
   name: Public Reading Stage Pilot
   country: UK
   region: EU
   implementation_level: National
-  description: Three bills were made available online for public comment in advance
-    of a vote. A web-based commenting platform made it easy for users to comment and
-    mark-up legislation that was included in the pilot. Although the pilot was not
-    ultimately adopted as a permanent program, the experience of the pilot program
-    informed the government’s future citizen engagement strategies.
+  description: |-
+    Three bills were made available online for public comment in advance of a vote. A web-based commenting platform made it easy for users to comment and mark-up legislation that was included in the pilot. Although the pilot was not ultimately adopted as a permanent program, the experience of the pilot program informed the government’s future citizen engagement strategies.
+
+    [Read more about Public Reading Stage Pilot](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.k2ql7p7s6ix1)
   platforms:
   - Web
   implementation_progress:
@@ -1492,18 +1485,16 @@ entry:
 - sys:
     id: 5rUjqu8Rl6wE8qysIcYSQ4
     created_at: !ruby/object:DateTime 2018-07-13 15:33:11.123000000 Z
-    updated_at: !ruby/object:DateTime 2018-07-13 15:33:11.123000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 04:56:36.903000000 Z
     content_type_id: entry
   name: UK Parliament's Evidence Checks
   country: UK
   region: EU
   implementation_level: National
-  description: The Evidence Check programme ascertains “what evidence underpins which
-    policy in specific areas, how robust that evidence is, what the gaps are, and
-    to determine how closely based on the evidence policies are.” The program uses
-    a basic web forum to collect submissions and evidence from contributors; once
-    the forum is closed to submissions, the committee publishes next steps on the
-    issue.
+  description: |-
+    The Evidence Check programme ascertains “what evidence underpins which policy in specific areas, how robust that evidence is, what the gaps are, and to determine how closely based on the evidence policies are.” The program uses a basic web forum to collect submissions and evidence from contributors; once the forum is closed to submissions, the committee publishes next steps on the issue.
+
+    [Read more about UK Parliament's Evidence Checks](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.z5peujp93tbv)
   platforms:
   - Web
   institutionalization: false
@@ -1518,24 +1509,16 @@ entry:
 - sys:
     id: GjxLIvwaAMa6g8Q6gWY2i
     created_at: !ruby/object:DateTime 2018-07-13 15:33:11.209000000 Z
-    updated_at: !ruby/object:DateTime 2018-07-13 15:33:11.209000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 04:56:36.881000000 Z
     content_type_id: entry
   name: We the Citizens
   country: Ireland
   region: EU
   implementation_level: National
-  description: 'We the Citizens was created to test whether a citizens’ assembly might
-    be an effective public participation mechanism in Ireland. The program had three
-    key components: a series of regional meetings, a trial Citizens Assembly, and
-    a comprehensive survey to identify citizens’ views and opinions regarding the
-    participation process. Citizens wishing to participate in the regional meetings
-    could indicate their interest by signing up online. Regional meetings offered
-    a number of general themes to provide a starting point for group discussions,
-    but otherwise left space for participants to discuss matters most important to
-    them. The Citizens Assembly was also focused on specific issues rather than general
-    themes; participants were provided with briefing documents, and then asked to
-    propose recommendations after engaging in group deliberation. No results were
-    binding.'
+  description: |-
+    We the Citizens was created to test whether a citizens’ assembly might be an effective public participation mechanism in Ireland. The program had three key components: a series of regional meetings, a trial Citizens Assembly, and a comprehensive survey to identify citizens’ views and opinions regarding the participation process. Citizens wishing to participate in the regional meetings could indicate their interest by signing up online. Regional meetings offered a number of general themes to provide a starting point for group discussions, but otherwise left space for participants to discuss matters most important to them. The Citizens Assembly was also focused on specific issues rather than general themes; participants were provided with briefing documents, and then asked to propose recommendations after engaging in group deliberation. No results were binding.
+
+    [Read more about We the Citizens](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.qilnf6qw5ju0)
   platforms:
   - Offline
   institutionalization: false
@@ -1695,15 +1678,6 @@ entry:
   latitude: -2.247935
   longitude: -65.362363
 - sys:
-    id: zOKllb4LkWGKGKmse42Oc
-    created_at: !ruby/object:DateTime 2018-07-13 15:33:13.431000000 Z
-    updated_at: !ruby/object:DateTime 2018-07-13 15:33:13.431000000 Z
-    content_type_id: entry
-  implementation_progress:
-  - Solution
-  - Drafting
-  - Decision
-- sys:
     id: 5zSLzPx86A4Kwcu6U6OgIG
     created_at: !ruby/object:DateTime 2018-07-13 15:33:13.934000000 Z
     updated_at: !ruby/object:DateTime 2018-07-13 15:33:13.934000000 Z
@@ -1808,3 +1782,29 @@ entry:
     title: DeepLinkingDemocracy
     description: 
     url: "//images.ctfassets.net/h96qvckp021n/35hYAbLllKs4eo48IEc4e2/a74ca45a318354583101a0ad626362d4/DeepLinkingDemocracy.png"
+- sys:
+    id: bwrSCXpBReUUKeAiagQqW
+    created_at: !ruby/object:DateTime 2018-07-14 04:56:37.881000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-14 04:56:37.881000000 Z
+    content_type_id: entry
+  name: Tuscany Regional Participation Policy (TRPP)
+  country: Italy
+  region: EU
+  implementation_level: Regional
+  description: |-
+    This Tuscany law was designed through a meta-participatory process in which local stakeholders (e.g. authorities, interest groups, associations, academics, citizens) helped to define the content, features, and goals of the law -- all culminating in a “21st Century Town Meeting.” The law focused not on processes of participation, but that institutions promote “methodological pluralism” for engaging the public in public policies. The law is a prime example of institutionalizing crowdlaw practices and is the first law in the world passed at the regional level to proactively promote citizen engagement.
+
+    [Read more about Tuscany Regional Participation Policy (TRPP)](https://docs.google.com/document/d/1O78APjyL2wArEUgsZLYjnDnbWY23eh7NNjiVfLBvXZU/edit#heading=h.hmvgc3jmxlxo)
+  platforms:
+  - Web
+  - Offline
+  institutionalization: true
+  implementation_progress:
+  - Drafting
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Regional Authority for the Promotion of Participation in Tuscany
+  url: http://participedia.net/en/cases/tuscany-regional-participation-policy-italy
+  latitude: 40.840387
+  longitude: 15.675905

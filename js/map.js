@@ -2,10 +2,10 @@
 
 $(document).ready(function(){
 
-  var apiUrl = './static/map-test-data.json';
+  var apiUrl = './json/contentful/spaces/entries.json';
+  // var apiUrl = './static/map-test-data.json';
 
   var diacritics = function (str) {
-
     var defaultDiacriticsRemovalMap = [
     {'base':'A', 'letters':/[\u0041\u24B6\uFF21\u00C0\u00C1\u00C2\u1EA6\u1EA4\u1EAA\u1EA8\u00C3\u0100\u0102\u1EB0\u1EAE\u1EB4\u1EB2\u0226\u01E0\u00C4\u01DE\u1EA2\u00C5\u01FA\u01CD\u0200\u0202\u1EA0\u1EAC\u1EB6\u1E00\u0104\u023A\u2C6F]/g},
     {'base':'AA','letters':/[\uA732]/g},
@@ -100,59 +100,22 @@ $(document).ready(function(){
     return str;
   }
 
-  // mapping of fr placenames to en
-  var enMap = [
-  {'fr':'Québec', 'en':'Quebec'},
-  {'fr':'Nouveau-Brunswick', 'en':'New Brunswick'}
-  ];
-
-  // convert s to en placename
-  var toEn = function(s) {
-    for (i in enMap) {
-      if (s === enMap[i].fr) {
-        s = enMap[i].en;
-      }
-    }
-    return s;
-  }
-
-  // check if s is an fr placename
-  var isFr = function(s) {
-    for (i in enMap) {
-      if (s === enMap[i].fr) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  // prefilter data to collate counts from fr and eng provinces
+  // apply various filtering / transformation logic to data
   var prefilter = function(data) {
-    var filteredData = [];
+    var result = [];
     for (d in data) {
-      // if the province name is fr
-      if (isFr(data[d].name)) {
-        // loop over the filtered data and add the count of the fr name to the eng name if present
-        var found = false;
-        for (e in filteredData) {
-          if (filteredData[e].name == toEn(data[d].name)) {
-            filteredData[e].count += data[d].count;
-            found = true;
-          }
-        }
-        // if not already present, push eng translated name and count to filtered data
-        if (!found) {
-          var x = data[d];
-          x.name = (toEn(x.name));
-          filteredData.push(x);
-        }
-      // else if the province name is eng
-    } else {
-        // just push it to the filtered array
-        filteredData.push(data[d]);
+      if (data[d].country == "USA") {
+        data[d].country = "United States";
       }
+      else if (data[d].country == "UK") {
+        data[d].country = "United Kingdom";
+      }
+      else if (data[d].country == "Europe") {
+        data[d].country = "Belgium";
+      }
+      result.push(data[d]);
     }
-    return filteredData;
+    return result;
   }
 
   // clean id string
@@ -250,18 +213,11 @@ $(document).ready(function(){
     var shape12 = file12.getElementsByTagName("svg")[0];
 
     var shapeTypes = {
-      1 : shape1,
-      2 : shape2,
-      3 : shape3,
-      4 : shape4,
-      5 : shape5,
-      6 : shape6,
-      7 : shape7,
-      8 : shape8,
-      9 : shape9,
-      10 : shape10,
-      11 : shape11,
-      12 : shape12
+      'Ideas' : shape1,
+      'Expertise' : shape2,
+      'Opinions' : shape3,
+      'Actions' : shape4,
+      'Evidence' : shape5
     };
 
     d3.json("./static/world.geo.json", function(map) {
@@ -278,14 +234,15 @@ $(document).ready(function(){
       console.log(apiUrl)
 
       d3.json(apiUrl, function(data) {
-      // data = prefilter(data);
-      data=data.sort(function(a,b) { return b.count - a.count; })
+      // data=data.sort(function(a,b) { return b.count - a.count; })
+      data = data.entry;
+      data = prefilter(data);
       svg.selectAll("circle")
       .data(data)
       .enter()
       .append("circle")
       .attr("class", "circle")
-      .attr("id", function(d) { return getid(d.name) + '-circle';})
+      .attr("id", function(d) { return 'circle-' + getid(d.sys.id);})
       .attr("data-province", function(d) { return d.name;})
       .attr("cx", function(d) {
         return randomPointWithinBounds(svg, getid(diacritics(d.country)))[0];
@@ -347,28 +304,28 @@ $(document).ready(function(){
       .data(data)
       .enter()
       .append("text")
-      .attr("id", function(d) { return getid(d.name) + '-text';})
+      .attr("id", function(d) { return 'text-' + getid(d.sys.id) ;})
       .attr("x", function(d) {
-        return getcirclecenter(svg, getid(d.name) + '-circle' )[0];
+        return getcirclecenter(svg, 'circle-' + getid(d.sys.id))[0];
       })
       .attr("y", function(d) {
-        return getcirclecenter(svg, getid(d.name) + '-circle' )[1];
+        return getcirclecenter(svg, 'circle-' + getid(d.sys.id))[1];
       })
       .attr("text-anchor", "middle")
       .attr("dy", "6")
       .text(function(d) { return d.name; })
-      .attr("class", "number")
+      .attr("class", "map-text")
 
       svg.selectAll("rect")
       .data(data)
       .enter()
       .append("rect")
-      .attr("id", function(d) { return getid(d.name) + '-pin';})
+      .attr("id", function(d) { return  'pin-' + getid(d.sys.id);})
       .attr("x", function(d) {
-        return getcirclecenter(svg, getid(d.name) + '-circle' )[0] - pinW / 2;
+        return getcirclecenter(svg, 'circle-' + getid(d.sys.id))[0] - pinW / 2;
       })
       .attr("y", function(d) {
-        return getcirclecenter(svg, getid(d.name) + '-circle' )[1] + circleR;
+        return getcirclecenter(svg, 'circle-' + getid(d.sys.id))[1] + circleR;
       })
       .attr("width", pinW)
       .attr("height", pinH)
@@ -378,14 +335,16 @@ $(document).ready(function(){
       .data(data)
       .enter()
       .select(function(d) {
-        return this.appendChild(shapeTypes[d.type].cloneNode(true));
+        var t = Math.floor(Math.random()*d.type_of_engagement.length);
+        // console.log(t, d.type_of_engagement[t], d.type_of_engagement);
+        return this.appendChild(shapeTypes[d.type_of_engagement[t]].cloneNode(true));
       })
-      .attr("id", function(d) { return getid(d.name) + '-icon';})
+      .attr("id", function(d) { return  'icon-' + getid(d.sys.id);})
       .attr("x", function(d) {
-        return getcirclecenter(svg, getid(d.name) + '-circle' )[0] - circleR;
+        return getcirclecenter(svg, 'circle-' + getid(d.sys.id))[0] - circleR;
       })
       .attr("y", function(d) {
-        return getcirclecenter(svg, getid(d.name) + '-circle' )[1] - circleR;
+        return getcirclecenter(svg, 'circle-' + getid(d.sys.id))[1] - circleR;
       })
       .attr("width", circleR*2)
       .attr("height", circleR*2)
