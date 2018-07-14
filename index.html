@@ -4,23 +4,29 @@ page_id: 'list-page'
 namespace: list_page
 page_title: 'Crowdlaw'
 regions:
-  - US
+  - NA
+  - SA
   - EU
+  - AS
+  - AF
+  - OC
 levels:
   - National
   - Regional
   - Local
 engagement_types:
   - Ideas
+  - Expertise
   - Opinions
   - Actions
-  - Expertise
+  - Evidence
 progress_stages:
   - Problem
   - Solution
-  - Assessment
   - Drafting
+  - Decision
   - Implementation
+  - Assessment
 ---
 
 <div class="list-page">
@@ -250,32 +256,29 @@ progress_stages:
 
 {% for i in site.data.contentful.spaces.entries.entry %}
 <div class="modal modal--catalog-entry js-target-modal" id="modal-{{i.sys.id}}">
-  <header class="modal__header modal--top-section">
 
-    <span class="modal__close js-close-modal"><i class="material-icons">close</i></span>
-    <h1 class="modal__title">{{i.name}}</h1>
-    <h2 class="modal__authors">{{i.country}}, {{i.region}}</h2>
+  <span class="modal__close js-close-modal"><i class="material-icons">close</i></span>
+    <div class="modal__image" style="background: center / contain no-repeat url({{i.image.url}});">&nbsp;</div>
+    <h1 class="modal__name">{{i.name}}</h1>
+    <br>
+    <h2 class="modal__location">{{i.country}}, {{i.region}}</h2>
 
-    <div class="floating-button">
-      <div class="floating-button__wrapper">
-        <a class="button button--floating button--black" target="_blank" href="{{i.url}}" title="">Website</a>
+    <div class="row expanded">
+      <div class="large-6 columns" style="padding-left: 0">
+        <div class="result-item__short-description">
+          <p>{{ i.description | markdownify }}</p>
+        </div>
+      </div>
+      <div class="large-6 columns" style="padding-right: 0">
+        <p><b>Organization Information:</b> {{i.organization}}</p>
+        <p><b>Implementation Level:</b> {{i.implementation_level}}</p>
+        <p><b>Implementation Progress:</b> {{i.implementation_progress}}</p>
+        <p><b>Types of Engagement:</b> {{i.type_of_engagement}}</p>
+        <p><b>Available Platforms:</b> {{i.platforms}}</p>
       </div>
     </div>
-  </header>
 
-  <div class="modal__content">
-    <div class="result-item__short-description">
-      <p>{{ i.description | markdownify }}</p>
-    </div>
-    <div class="result-item__short-description">
-      <p>{{i.organization}}</p>
-    </div>
-    <p>{{i.implementation_level}}</p>
-    <p>{{i.implementation_progress}}</p>
-    <p>{{i.type_of_engagement}}</p>
-    <p>{{i.platforms}}</p>
-    <p><img src="{{i.image.url}}" title="{{i.image.title}}"></p>
-  </div>
+    <a class="button modal__button button--black" target="_blank" href="{{i.url}}" title="">More Information <i class="material-icons">open_in_new</i></a>
 </div>
 {% endfor %}
 

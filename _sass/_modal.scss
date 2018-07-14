@@ -2,10 +2,48 @@
     display: none;
     background: #fff;
     position: fixed;
-    top: 50px;
+    top: 5%;
     width: 90%;
+    height: 90%;
     left: 5%;
     margin: unset;
     box-shadow: unset;
     z-index: 11;
+    padding: 40px;
+
+    .modal {
+        &__close {
+            color: $black;
+            .material-icons {
+                margin-left: 0;
+            }
+        }
+        &__name {
+            display: inline-block;
+            padding: 10px;
+            font-size: 3rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            background-color: lighten($theme-pink, 20);
+            max-width: 75%;
+        }
+        &__location {
+            display: inline-block;
+            padding: 10px;
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            background-color: lighten($theme-pink, 20);
+        }
+        &__button {
+            background-color: transparentize($main-color, 0.9);
+        }
+        &__image {
+            width: 180px;
+            height: 180px;
+            position: absolute;
+            top: 40px;
+            right: 104px;
+        }
+    }
 }
