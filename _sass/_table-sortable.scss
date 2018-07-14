@@ -40,6 +40,10 @@
 
   table-layout: fixed;
 
+  tbody {
+    background-color: $white;
+  }
+
   td { padding: 15px 0; }
     tr {
       &:nth-child(odd) {
