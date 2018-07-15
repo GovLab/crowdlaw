@@ -161,10 +161,9 @@ $(document).ready(function () {
     });
 
     // SORT ICON
-    var sortClickButtons = $(".table-sortable__control > i:contains('keyboard_arrow_down')");
+    var sortClickButtons = $(".sort");
     sortClickButtons.on("click", function() {
-        $(this).text() == "keyboard_arrow_down" ? $(this).text("keyboard_arrow_up") : $(this).text("keyboard_arrow_down");
-
+        $(this).children('i.material-icons').text() == "keyboard_arrow_down" ? $(this).children('i.material-icons').text("keyboard_arrow_up") : $(this).children('i.material-icons').text("keyboard_arrow_down");
     });
 
     // FILTER WITH MAP
