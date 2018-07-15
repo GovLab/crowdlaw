@@ -267,7 +267,6 @@ $(document).ready(function(){
       .attr("id", function(d) { return 'circle-' + getid(d.sys.id);})
       .attr("data-province", function(d) { return d.name;})
       .attr("cx", function(d) {
-        console.log(d);
         return randomPointWithinBounds(svg, getid(diacritics(d.country)))[0];
       })
       .attr("cy", function(d) {

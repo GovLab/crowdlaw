@@ -108,11 +108,13 @@ $(document).ready(function () {
         multiSearch: true
     };
     var options = {
-    valueNames: [ {name:'company__name', attr:'data-target'}, 'company__category', 'company__type', 'company__founded', {name:'company__location', attr:'data-target'}, 'company__last-update', { attr: 'data-location', name: 'filter' }, {name: 'company__other-sources', attr: 'data-target'}, {name:'company__data-sectors',attr:'data-target'}, {name:'company__federal-sources', attr: 'data-target'}, {name:'company__provincial-sources', attr: 'data-target'} ],
+    valueNames: [ {name:'name', attr:'data-target'}, {name:'country', attr:'data-target'}, {name:'region', attr:'data-target'}, {name:'level', attr:'data-target'}, {name:'organization', attr:'data-target'}, {name:'engagement', attr:'data-target'}, {name:'prog', attr:'data-target'} ],
         plugins: [ ListFuzzySearch() ]
     };
 
     var companyList = new List('company_data', options);
+
+    console.log(companyList);
 
     function searchReset() {
         $(".fuzzy-search").val("");
@@ -202,41 +204,43 @@ $(document).ready(function () {
                 var filterSelection = $(this).attr("data-filter");
                 var option = $(this).children(":selected").attr("id");
                 searchQueries[filterSelection] = option;
+                console.log('searchQueries', searchQueries);
             });
         });
         companyList.filter(function(item) {
             if ($(".circle.active").length > 0) {
-                //filter with map selections
-                searchQueries["filter"] = $(".circle.active").attr("id");
-                if (item.values()["filter"] !== null
-                && item.values()["company__provincial-sources"] !== null
-                && item.values()["company__other-sources"] !== null
-                && item.values()["company__provinces"] !== null
-                && item.values()["company__data-sectors"] !== null
-                && item.values()["company__federal-sources"] !== null
-                && (item.values()["filter"].indexOf(searchQueries["filter"]) != -1)
-                && (item.values()["company__provincial-sources"].indexOf(searchQueries["company__provincial-sources"]) != -1)
-                && (item.values()["company__other-sources"].indexOf(searchQueries["company__data-sources"]) != -1 )
-                && (item.values()["company__data-sectors"].indexOf(searchQueries["company__data-sectors"]) != -1)
-                && (item.values()["company__federal-sources"].indexOf(searchQueries["company__federal-sources"]) != -1 )) {
-                    return true;
-                } else {
-                    return false;
-                }
+                // //filter with map selections
+                // searchQueries["filter"] = $(".circle.active").attr("id");
+                // if (item.values()["filter"] !== null
+                // && item.values()["company__provincial-sources"] !== null
+                // && item.values()["company__other-sources"] !== null
+                // && item.values()["company__provinces"] !== null
+                // && item.values()["company__data-sectors"] !== null
+                // && item.values()["company__federal-sources"] !== null
+                // && (item.values()["filter"].indexOf(searchQueries["filter"]) != -1)
+                // && (item.values()["company__provincial-sources"].indexOf(searchQueries["company__provincial-sources"]) != -1)
+                // && (item.values()["company__other-sources"].indexOf(searchQueries["company__data-sources"]) != -1 )
+                // && (item.values()["company__data-sectors"].indexOf(searchQueries["company__data-sectors"]) != -1)
+                // && (item.values()["company__federal-sources"].indexOf(searchQueries["company__federal-sources"]) != -1 )) {
+                //     return true;
+                // } else {
+                //     return false;
+                // }
             } else {
                 // filter with dropdowns
-                if (item.values()["company__provinces"] !== null
-                && item.values()["company__provincial-sources"] !== null
-                && item.values()["company__other-sources"] !== null
-                && item.values()["company__data-sectors"] !== null
-                && item.values()["company__federal-sources"] !== null
-                && (item.values()["company__provincial-sources"].indexOf(searchQueries["company__provincial-sources"]) != -1 )
-                && (item.values()["company__other-sources"].indexOf(searchQueries["company__data-sources"]) != -1 )
-                && (item.values()["company__data-sectors"].indexOf(searchQueries["company__data-sectors"]) != -1 )
-                && (item.values()["company__federal-sources"].indexOf(searchQueries["company__federal-sources"]) != -1 )
-                && (item.values()["filter"].indexOf(searchQueries["company__provinces"])   != -1 )) {
+                console.log('item', item.values()["region"], searchQueries["region"], item.values()["region"].toLowerCase().indexOf(searchQueries["region"].toLowerCase()), item);
+                if (item.values()["region"] !== null
+                && item.values()["level"] !== null
+                && item.values()["engagement"] !== null
+                && item.values()["prog"] !== null
+                && (item.values()["region"].toLowerCase().indexOf(searchQueries["region"].toLowerCase()) != -1 )
+                && (item.values()["level"].toLowerCase().indexOf(searchQueries["level"].toLowerCase()) != -1 )
+                && (item.values()["engagement"].toLowerCase().indexOf(searchQueries["engagement"].toLowerCase()) != -1 )
+                && (item.values()["prog"].toLowerCase().indexOf(searchQueries["prog"].toLowerCase())   != -1 )) {
+                    console.log(true);
                     return true;
                 } else {
+                    console.log(false);
                     return false;
                 }
             }
