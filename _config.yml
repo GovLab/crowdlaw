@@ -26,10 +26,10 @@ github_username:  GovLab
 markdown: kramdown
 # theme: minima
 
-page_gen:
-  - data: companies
-    name: company_name_id
-    template: company-page
+# page_gen:
+#   - data: companies
+#     name: company_name_id
+#     template: company-page
 
 contentful:
   spaces:

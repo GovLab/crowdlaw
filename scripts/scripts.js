@@ -113,8 +113,7 @@ $(document).ready(function () {
     };
 
     var companyList = new List('company_data', options);
-
-    console.log(companyList);
+    companyList.sort('name', { order: "asc" });
 
     function searchReset() {
         $(".fuzzy-search").val("");
@@ -204,7 +203,6 @@ $(document).ready(function () {
                 var filterSelection = $(this).attr("data-filter");
                 var option = $(this).children(":selected").attr("id");
                 searchQueries[filterSelection] = option;
-                console.log('searchQueries', searchQueries);
             });
         });
         companyList.filter(function(item) {
@@ -228,7 +226,7 @@ $(document).ready(function () {
                 // }
             } else {
                 // filter with dropdowns
-                console.log('item', item.values()["region"], searchQueries["region"], item.values()["region"].toLowerCase().indexOf(searchQueries["region"].toLowerCase()), item);
+                // console.log('item', item.values()["region"], searchQueries["region"], item.values()["region"].toLowerCase().indexOf(searchQueries["region"].toLowerCase()), item);
                 if (item.values()["region"] !== null
                 && item.values()["level"] !== null
                 && item.values()["engagement"] !== null
@@ -237,10 +235,8 @@ $(document).ready(function () {
                 && (item.values()["level"].toLowerCase().indexOf(searchQueries["level"].toLowerCase()) != -1 )
                 && (item.values()["engagement"].toLowerCase().indexOf(searchQueries["engagement"].toLowerCase()) != -1 )
                 && (item.values()["prog"].toLowerCase().indexOf(searchQueries["prog"].toLowerCase())   != -1 )) {
-                    console.log(true);
                     return true;
                 } else {
-                    console.log(false);
                     return false;
                 }
             }
@@ -249,7 +245,7 @@ $(document).ready(function () {
 
 
     // DROPDOWN FILTERS
-    var allFilters = $(".table-dropdown select");
+    var allFilters = $(".filters select");
     var searchQueries = {};
     allFilters.on("change", function() {
         filterList();
@@ -258,12 +254,13 @@ $(document).ready(function () {
     // CLEAR ALL FILTERS
     $(".clear_filters").on("click", function() {
         allFilters.each(function(idx,filter) {
+            console.log(filter.id);
             $('#'+filter.id).prop('selectedIndex',0);
         });
-        $(".circle.active").attr("class","circle");
+        // $(".circle.active").attr("class","circle");
         companyList.filter();
         searchReset();
-        companyList.sort('company__name', { order: "asc" });
+        companyList.sort('name', { order: "asc" });
     });
 
 

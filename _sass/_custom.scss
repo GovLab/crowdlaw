@@ -491,6 +491,12 @@ body {
   overflow-x: hidden !important;
 }
 
+#clear-filters-button {
+  padding: 0;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
 #overlay {
   background-color: rgba(0,0,0,0.4);
 }
