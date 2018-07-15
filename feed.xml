@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/crowdlaw/</link>
     <atom:link href="http://localhost:4000/crowdlaw/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 14 Jul 2018 08:37:52 -0400</pubDate>
-    <lastBuildDate>Sat, 14 Jul 2018 08:37:52 -0400</lastBuildDate>
+    <pubDate>Sun, 15 Jul 2018 19:26:56 -0400</pubDate>
+    <lastBuildDate>Sun, 15 Jul 2018 19:26:56 -0400</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
   </channel>

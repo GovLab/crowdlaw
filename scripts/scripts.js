@@ -22,7 +22,6 @@ $(document).ready(function () {
 
     // Modal Click Behavior
     $('.js-open-modal').click(function (e) {
-        console.log('hello');
         e.preventDefault();
         $('#modal-' + $(this).attr('data-modal')).addClass('js-active');
         $('#overlay').addClass('js-active');
@@ -30,7 +29,6 @@ $(document).ready(function () {
     });
 
     $('.js-close-modal').click(function (e) {
-        console.log('bye');
         e.preventDefault();
         $('.js-target-modal').removeClass('js-active');
         $('#overlay').removeClass('js-active');
@@ -104,15 +102,16 @@ $(document).ready(function () {
       searchClass: "fuzzy-search",
       location: 0,
       distance: 100,
-      threshold: 0.4,
-        multiSearch: true
+      threshold: 0.0,
+      multiSearch: true
     };
     var options = {
-    valueNames: [ {name:'company__name', attr:'data-target'}, 'company__category', 'company__type', 'company__founded', {name:'company__location', attr:'data-target'}, 'company__last-update', { attr: 'data-location', name: 'filter' }, {name: 'company__other-sources', attr: 'data-target'}, {name:'company__data-sectors',attr:'data-target'}, {name:'company__federal-sources', attr: 'data-target'}, {name:'company__provincial-sources', attr: 'data-target'} ],
-        plugins: [ ListFuzzySearch() ]
+    valueNames: [ {name:'name', attr:'data-target'}, {name:'country', attr:'data-target'}, {name:'region', attr:'data-target'}, {name:'level', attr:'data-target'}, {name:'organization', attr:'data-target'}, {name:'engagement', attr:'data-target'}, {name:'prog', attr:'data-target'} ],
+        plugins: [ ListFuzzySearch(fuzzyOptions) ]
     };
 
     var companyList = new List('company_data', options);
+    companyList.sort('name', { order: "asc" });
 
     function searchReset() {
         $(".fuzzy-search").val("");
@@ -120,15 +119,10 @@ $(document).ready(function () {
         companyList.search();
     }
 
-    // Filter by name and location
+    // Filter by name
     $(".fuzzy-search").keyup(function() {
-        if (this.id=="company__name--input") {
-            var searchString = $(this).val();
-            companyList.fuzzySearch.search(searchString, ["company__name"]);
-        } else if (this.id=="company__location--input") {
-            var searchString = $(this).val();
-            companyList.fuzzySearch.search(searchString, ["company__location"]);
-        }
+        var searchString = $(this).val();
+        companyList.fuzzySearch.search(searchString, ["name"]);
     });
 
     $(".js-open-table-search").on("click", function(e) {
@@ -160,10 +154,9 @@ $(document).ready(function () {
     });
 
     // SORT ICON
-    var sortClickButtons = $(".table-sortable__control > i:contains('keyboard_arrow_down')");
+    var sortClickButtons = $(".sort");
     sortClickButtons.on("click", function() {
-        $(this).text() == "keyboard_arrow_down" ? $(this).text("keyboard_arrow_up") : $(this).text("keyboard_arrow_down");
-
+        $(this).children('i.material-icons').text() == "keyboard_arrow_down" ? $(this).children('i.material-icons').text("keyboard_arrow_up") : $(this).children('i.material-icons').text("keyboard_arrow_down");
     });
 
     // FILTER WITH MAP
@@ -206,35 +199,34 @@ $(document).ready(function () {
         });
         companyList.filter(function(item) {
             if ($(".circle.active").length > 0) {
-                //filter with map selections
-                searchQueries["filter"] = $(".circle.active").attr("id");
-                if (item.values()["filter"] !== null
-                && item.values()["company__provincial-sources"] !== null
-                && item.values()["company__other-sources"] !== null
-                && item.values()["company__provinces"] !== null
-                && item.values()["company__data-sectors"] !== null
-                && item.values()["company__federal-sources"] !== null
-                && (item.values()["filter"].indexOf(searchQueries["filter"]) != -1)
-                && (item.values()["company__provincial-sources"].indexOf(searchQueries["company__provincial-sources"]) != -1)
-                && (item.values()["company__other-sources"].indexOf(searchQueries["company__data-sources"]) != -1 )
-                && (item.values()["company__data-sectors"].indexOf(searchQueries["company__data-sectors"]) != -1)
-                && (item.values()["company__federal-sources"].indexOf(searchQueries["company__federal-sources"]) != -1 )) {
-                    return true;
-                } else {
-                    return false;
-                }
+                // //filter with map selections
+                // searchQueries["filter"] = $(".circle.active").attr("id");
+                // if (item.values()["filter"] !== null
+                // && item.values()["company__provincial-sources"] !== null
+                // && item.values()["company__other-sources"] !== null
+                // && item.values()["company__provinces"] !== null
+                // && item.values()["company__data-sectors"] !== null
+                // && item.values()["company__federal-sources"] !== null
+                // && (item.values()["filter"].indexOf(searchQueries["filter"]) != -1)
+                // && (item.values()["company__provincial-sources"].indexOf(searchQueries["company__provincial-sources"]) != -1)
+                // && (item.values()["company__other-sources"].indexOf(searchQueries["company__data-sources"]) != -1 )
+                // && (item.values()["company__data-sectors"].indexOf(searchQueries["company__data-sectors"]) != -1)
+                // && (item.values()["company__federal-sources"].indexOf(searchQueries["company__federal-sources"]) != -1 )) {
+                //     return true;
+                // } else {
+                //     return false;
+                // }
             } else {
                 // filter with dropdowns
-                if (item.values()["company__provinces"] !== null
-                && item.values()["company__provincial-sources"] !== null
-                && item.values()["company__other-sources"] !== null
-                && item.values()["company__data-sectors"] !== null
-                && item.values()["company__federal-sources"] !== null
-                && (item.values()["company__provincial-sources"].indexOf(searchQueries["company__provincial-sources"]) != -1 )
-                && (item.values()["company__other-sources"].indexOf(searchQueries["company__data-sources"]) != -1 )
-                && (item.values()["company__data-sectors"].indexOf(searchQueries["company__data-sectors"]) != -1 )
-                && (item.values()["company__federal-sources"].indexOf(searchQueries["company__federal-sources"]) != -1 )
-                && (item.values()["filter"].indexOf(searchQueries["company__provinces"])   != -1 )) {
+                // console.log('item', item.values()["region"], searchQueries["region"], item.values()["region"].toLowerCase().indexOf(searchQueries["region"].toLowerCase()), item);
+                if (item.values()["region"] !== null
+                && item.values()["level"] !== null
+                && item.values()["engagement"] !== null
+                && item.values()["prog"] !== null
+                && (item.values()["region"].toLowerCase().indexOf(searchQueries["region"].toLowerCase()) != -1 )
+                && (item.values()["level"].toLowerCase().indexOf(searchQueries["level"].toLowerCase()) != -1 )
+                && (item.values()["engagement"].toLowerCase().indexOf(searchQueries["engagement"].toLowerCase()) != -1 )
+                && (item.values()["prog"].toLowerCase().indexOf(searchQueries["prog"].toLowerCase())   != -1 )) {
                     return true;
                 } else {
                     return false;
@@ -245,7 +237,7 @@ $(document).ready(function () {
 
 
     // DROPDOWN FILTERS
-    var allFilters = $(".table-dropdown select");
+    var allFilters = $(".filters select");
     var searchQueries = {};
     allFilters.on("change", function() {
         filterList();
@@ -256,10 +248,10 @@ $(document).ready(function () {
         allFilters.each(function(idx,filter) {
             $('#'+filter.id).prop('selectedIndex',0);
         });
-        $(".circle.active").attr("class","circle");
+        // $(".circle.active").attr("class","circle");
         companyList.filter();
         searchReset();
-        companyList.sort('company__name', { order: "asc" });
+        companyList.sort('name', { order: "asc" });
     });
 
 
