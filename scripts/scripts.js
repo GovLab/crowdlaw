@@ -22,7 +22,6 @@ $(document).ready(function () {
 
     // Modal Click Behavior
     $('.js-open-modal').click(function (e) {
-        console.log('hello');
         e.preventDefault();
         $('#modal-' + $(this).attr('data-modal')).addClass('js-active');
         $('#overlay').addClass('js-active');
@@ -30,7 +29,6 @@ $(document).ready(function () {
     });
 
     $('.js-close-modal').click(function (e) {
-        console.log('bye');
         e.preventDefault();
         $('.js-target-modal').removeClass('js-active');
         $('#overlay').removeClass('js-active');
@@ -104,12 +102,12 @@ $(document).ready(function () {
       searchClass: "fuzzy-search",
       location: 0,
       distance: 100,
-      threshold: 0.4,
-        multiSearch: true
+      threshold: 0.0,
+      multiSearch: true
     };
     var options = {
     valueNames: [ {name:'name', attr:'data-target'}, {name:'country', attr:'data-target'}, {name:'region', attr:'data-target'}, {name:'level', attr:'data-target'}, {name:'organization', attr:'data-target'}, {name:'engagement', attr:'data-target'}, {name:'prog', attr:'data-target'} ],
-        plugins: [ ListFuzzySearch() ]
+        plugins: [ ListFuzzySearch(fuzzyOptions) ]
     };
 
     var companyList = new List('company_data', options);
@@ -121,15 +119,10 @@ $(document).ready(function () {
         companyList.search();
     }
 
-    // Filter by name and location
+    // Filter by name
     $(".fuzzy-search").keyup(function() {
-        if (this.id=="company__name--input") {
-            var searchString = $(this).val();
-            companyList.fuzzySearch.search(searchString, ["company__name"]);
-        } else if (this.id=="company__location--input") {
-            var searchString = $(this).val();
-            companyList.fuzzySearch.search(searchString, ["company__location"]);
-        }
+        var searchString = $(this).val();
+        companyList.fuzzySearch.search(searchString, ["name"]);
     });
 
     $(".js-open-table-search").on("click", function(e) {
@@ -253,7 +246,6 @@ $(document).ready(function () {
     // CLEAR ALL FILTERS
     $(".clear_filters").on("click", function() {
         allFilters.each(function(idx,filter) {
-            console.log(filter.id);
             $('#'+filter.id).prop('selectedIndex',0);
         });
         // $(".circle.active").attr("class","circle");
