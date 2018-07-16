@@ -2021,9 +2021,9 @@ entry:
 - sys:
     id: Cg1LFfYszAuQoKsOaOkIc
     created_at: !ruby/object:DateTime 2018-07-14 11:46:19.626000000 Z
-    updated_at: !ruby/object:DateTime 2018-07-14 11:46:19.626000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-16 05:19:56.874000000 Z
     content_type_id: entry
-  name: Constitutional Assembly Public Participation Programme (CAPPP)
+  name: Constitutional Assembly Public Participation Programme
   country: South Africa
   region: AF
   implementation_level: National
