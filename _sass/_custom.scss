@@ -641,6 +641,12 @@ body {
   }
 }
 
+#list-page > header > span.top-bar__button.top-bar--pink.js-trigger-menu {
+  &:hover {
+    background-color: lighten($theme-pink, 10);
+  }
+}
+
 #overlay {
   background-color: rgba(0,0,0,0.4);
 }
