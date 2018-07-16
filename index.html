@@ -50,10 +50,10 @@ progress_stages:
 
           <div class="columns table-dropdown__item company__federal-sources">
             <div class="select" id=''>
-              <select data-filter="region" id="region-mobile" class="dropdown-content">
+              <select data-filter="region" id="region-mobile" class="dropdown-content dropdown-mobile">
                 <option id="all">Region</option>
                 {% for item in page.regions%}
-                <option id="{{ item | slugify }}">{{item}}</option>
+                <option id="{{ item | slugify }}-mobile">{{item}}</option>
                 {% endfor %}
               </select>
             </div>
@@ -61,10 +61,10 @@ progress_stages:
 
           <div class="columns table-dropdown__item company__provincial-sources">
             <div class="select">
-              <select data-filter='level' id="level-mobile" class="dropdown-content">
+              <select data-filter='level' id="level-mobile" class="dropdown-content dropdown-mobile">
                 <option id="all">Implementation Level</option>
                 {% for item in page.levels %}
-                <option id="{{ item | slugify }}">{{item}}</option>
+                <option id="{{ item | slugify }}-mobile">{{item}}</option>
                 {% endfor %}
               </select>
             </div>
@@ -72,10 +72,10 @@ progress_stages:
 
           <div class="columns table-dropdown__item company__other-sources">
             <div class="select">
-              <select data-filter='engagement' id="engagement-mobile" class="dropdown-content">
+              <select data-filter='engagement' id="engagement-mobile" class="dropdown-content dropdown-mobile">
                 <option id="all">Type of Engagement</option>
                 {% for item in page.engagement_types %}
-                <option id="{{ item | slugify }}">{{item}}</option>
+                <option id="{{ item | slugify }}-mobile">{{item}}</option>
                 {% endfor %}
               </select>
             </div>
@@ -83,10 +83,10 @@ progress_stages:
 
           <div class="columns table-dropdown__item company__data-sectors">
             <div class="select">
-              <select data-filter='prog' id="prog-mobile" class="dropdown-content">
+              <select data-filter='prog' id="prog-mobile" class="dropdown-content dropdown-mobile">
                 <option id="all">Stage</option>
                 {% for item in page.progress_stages %}
-                <option id="{{ item | slugify }}">{{item}}</option>
+                <option id="{{ item | slugify }}-mobile">{{item}}</option>
                 {% endfor %}
               </select>
             </div>
