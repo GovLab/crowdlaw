@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>{{ page.page_title }}</title>
 
+    <meta property="og:title" content="{{site.title}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{site.url}}{{site.baseurl}}{{page.url}}" />
+    <meta property="og:image" content="{{'/img/crowdlaw-flat-mono.png' | relative_url}}" />
+    <meta property="og:description" content="{{site.description}}"/>
+
     <link rel="icon" type="image/png" href="{{'/img/icon.png' | relative_url}}">
     <link rel="apple-touch-icon" type="image/png" href="{{'/img/icon.png' | relative_url}}">
     <link rel="icon" sizes="144x144" href="{{'/img/icon.png' | relative_url}}">
@@ -22,6 +28,13 @@
     <script src="https://d3js.org/topojson.v1.min.js"></script>
     <script src="{{'/scripts/scripts.js' | relative_url}}"></script>
     <script src="{{'/scripts/list.fuzzysearch.min.js' | relative_url}}" type="text/javascript"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{'/apple-touch-icon.png' | relative_url}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{'/favicon-32x32.png' | relative_url}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{'/favicon-16x16.png' | relative_url}}">
+    <link rel="mask-icon" href="{{'/safari-pinned-tab.svg' | relative_url}}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40012093-20"></script>
@@ -41,10 +54,10 @@
         <span class="top-bar__button top-bar--pink js-trigger-menu">menu</span>
         <nav class="main-menu js-target-menu main-menu--left">
           <a href="{{ '/index.html' | relative_url }}">Catalog</a>
-          <a href="{{ '/about.html' | relative_url }}">About Crowdlaw</a>
+          <a href="{{ '/about.html' | relative_url }}">About CrowdLaw</a>
           <a href="{{ '/about.html#catalog' | relative_url }}">About the Catalog</a>
-          <a href="{{ '/about.html#taxonomy' | relative_url }}">Crowdlaw Taxonomy</a>
-          <a href="mailto:crowdlaw@thegovlab.org" target="_blank">Contact Us <i class="material-icons" style="padding-right: 10px; vertical-align: middle; transform: translateY(-2px);">email</i></a>
+          <a href="{{ '/about.html#taxonomy' | relative_url }}">CrowdLaw Taxonomy</a>
+          <a href="mailto:crowdlaw@thegovlab.org" target="_blank">Contact Us <i class="material-icons" style="padding-left: 10px; vertical-align: middle; transform: translateY(-2px);">email</i></a>
       </nav>
 
       <a class="top-bar__logo" href="{{ '/index.html' | relative_url }}"><img src="{{ '/img/govlab-logo-white.png' | relative_url}}" alt="The GovLab"></a>
