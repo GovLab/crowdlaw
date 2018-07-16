@@ -129,7 +129,7 @@ progress_stages:
             </div>
           </th>
 
-          <th class="" style="width: auto">&nbsp;</th>
+          <th class="header--hide-responsive" style="width: auto">&nbsp;</th>
 
           <th class="table-dropdown__item" style="width: 12%">
             <div class="select">
@@ -171,7 +171,7 @@ progress_stages:
 
       <thead class="company">
         <th class="table-sortable__head-cell" style="width: 2%">&nbsp;</th>
-        <th class="table-sortable__head-cell company__name" style="width: auto">
+        <th class="table-sortable__head-cell header__name" style="width: auto">
           <span>Name</span>
 
           <div class="table-sortable__control-group">
@@ -184,41 +184,41 @@ progress_stages:
           </form>
         </th>
 
-        <th class="table-sortable__head-cell company__category" style="width: 10%">
+        <th class="table-sortable__head-cell header__country" style="width: 10%">
           <span>Country</span>
           <div class="table-sortable__control-group">
-            <span class="table-sortable__control table-sortable__control--simple sort" data-sort="country"><i class="material-icons">keyboard_arrow_down</i></span>
+            <span class="table-sortable__control table-sortable__control--simple sort sort--hide-responsive" data-sort="country"><i class="material-icons">keyboard_arrow_down</i></span>
           </div>
         </th>
 
-        <th class="table-sortable__head-cell company__founded" style="width: 8%">
+        <th class="table-sortable__head-cell header__region" style="width: 8%">
           <span>Region</span>
           <div class="table-sortable__control-group">
-            <span class="table-sortable__control table-sortable__control--simple sort" data-sort="region"><i class="material-icons">keyboard_arrow_down</i></span>
+            <span class="table-sortable__control table-sortable__control--simple sort sort--hide-responsive" data-sort="region"><i class="material-icons">keyboard_arrow_down</i></span>
           </div>
         </th>
 
-        <th class="table-sortable__head-cell company__founded" style="width: 8%">
+        <th class="table-sortable__head-cell header__level" style="width: 8%">
           <span>Level</span>
           <div class="table-sortable__control-group">
-            <span class="table-sortable__control table-sortable__control--simple sort" data-sort="level"><i class="material-icons">keyboard_arrow_down</i></span>
+            <span class="table-sortable__control table-sortable__control--simple sort sort--hide-responsive" data-sort="level"><i class="material-icons">keyboard_arrow_down</i></span>
           </div>
         </th>
 
-        <th class="table-sortable__head-cell company__founded" style="width: auto">
+        <th class="table-sortable__head-cell header__organization" style="width: auto">
           <span>Organization Info</span>
         </th>
 
-        <th class="table-sortable__head-cell company__founded" style="width: 12%">
+        <th class="table-sortable__head-cell header__engagement" style="width: 12%">
           <span>Engagement</span>
         </th>
 
-        <th class="table-sortable__head-cell company__founded" style="width: 18%">
+        <th class="table-sortable__head-cell header__prog" style="width: 18%">
           <span>Progress</span>
         </th>
 
 
-        <th class="table-sortable__head-cell company__location" style="width: 3%">
+        <th class="table-sortable__head-cell header__url" style="width: 3%">
           <span><i class="material-icons">open_in_new</i></span>
         </th>
         <th class="table-sortable__head-cell" style="width: 0%">&nbsp;</th>
@@ -247,7 +247,7 @@ progress_stages:
             <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Implementation' %}tag__progress--active{% endif %}{% endfor %}">I</span>
             <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Assessment' %}tag__progress--active{% endif %}{% endfor %}">A</span>
           </td>
-          <td class="icon" data-target="all"><a class="company-name" href="{{i.url}}" target="_blank"><i class="material-icons">open_in_new</i></a></td>
+          <td class="url icon" data-target="all"><a class="company-name" href="{{i.url}}" target="_blank"><i class="material-icons">open_in_new</i></a></td>
 
           <td>&nbsp;</td>
         </tr>

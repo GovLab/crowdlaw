@@ -498,8 +498,68 @@ body {
 }
 
 .sort {
-
+    cursor: pointer;
+    &:hover { background-color: initial; }
 }
+
+.sort--hide-responsive {
+    @include breakpoint(max-width 1200px) { display: none; }
+}
+
+.header--hide-responsive {
+    @include breakpoint(max-width 1200px) { display: none; }
+}
+
+.list {
+  .name {
+  }
+  .country {
+    @include breakpoint(max-width 500px) { display: none; }
+  }
+  .region {
+    @include breakpoint(max-width 740px) { display: none; }
+  }
+  .level {
+    @include breakpoint(max-width 870px) { display: none; }
+  }
+  .organization {
+    @include breakpoint(max-width 1200px) { display: none; }
+  }
+  .engagement {
+  }
+  .prog {
+  }
+  .url {
+    @include breakpoint(max-width 870px) { display: none; }
+  }
+}
+
+.header__name {
+}
+.header__country {
+  @include breakpoint(max-width 500px) { display: none; }
+  span { @include breakpoint(max-width 740px) { display: none; } }
+}
+.header__region {
+  @include breakpoint(max-width 740px) { display: none; }
+}
+.header__level {
+  @include breakpoint(max-width 870px) { display: none; }
+}
+.header__organization {
+  @include breakpoint(max-width 1200px) { display: none; }
+}
+.header__engagement {
+  span { @include breakpoint(max-width 740px) { display: none; } }
+}
+.header__prog {
+  @include breakpoint(max-width 1023px) { text-align: center }
+  span { @include breakpoint(max-width 740px) { display: none; } }
+}
+.header__url {
+  @include breakpoint(max-width 870px) { display: none; }
+}
+
 
 #overlay {
   background-color: rgba(0,0,0,0.4);

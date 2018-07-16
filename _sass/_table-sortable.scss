@@ -29,7 +29,7 @@
 
 .table-dropdown.page-section {
   padding: 0;
-  @include breakpoint($small-only)  {
+  @include breakpoint(max-width 1050px)  {
   padding: 20px 0;
 }
 }
@@ -39,6 +39,10 @@
   @extend .u-table; // Added .u-table to t
 
   table-layout: fixed;
+
+  th, td {
+    font-size: 16px;
+  }
 
   tbody {
     background-color: $white;
@@ -212,8 +216,7 @@
                     .mobile-filters {
                       display: none;
                     }
-                    @include breakpoint($small-only)  {
-                    font-size: 12px;
+                    @include breakpoint(max-width 1050px)  {
                     color: white;
                     .filters {
                       display: none;
@@ -278,14 +281,14 @@
                 }
 
                 .close.clear_filters {
-                  @include breakpoint($touch) {
+                  @include breakpoint(max-width 1050px) {
                   display: none;
                 }
               }
               .button.clear_filters {
                 text-align: center;
                 display:none;
-                @include breakpoint($small-only) {
+                @include breakpoint(max-width 1050px) {
                 display: inline-block;
               }
             }
@@ -328,18 +331,3 @@
             display: inline-block;
           }
         }
-        // .select::before {
-        //   color: $white;
-        //   z-index: 1;
-        //   pointer-events: none;
-        // }
-
-        // .table-sortable--fixed {
-        //   thead {
-        //     position: fixed;
-        //     left: 0;
-        //     right: 0;
-        //     top: 0;
-        //     width: 100%;
-        //   }
-// }
