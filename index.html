@@ -82,7 +82,7 @@ progress_stages:
           <div class="columns table-dropdown__item company__data-sectors">
             <div class="select">
               <select data-filter='prog' id="prog-mobile" class="dropdown-content">
-                <option id="all">Progress</option>
+                <option id="all">Stage</option>
                 {% for item in page.progress_stages %}
                 <option id="{{ item | slugify }}">{{item}}</option>
                 {% endfor %}
@@ -214,7 +214,7 @@ progress_stages:
         </th>
 
         <th class="table-sortable__head-cell header__prog" style="width: 18%">
-          <span>Progress</span>
+          <span>Stage</span>
         </th>
 
 
@@ -247,7 +247,7 @@ progress_stages:
             <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Implementation' %}tag__progress--active{% endif %}{% endfor %}">I</span>
             <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Assessment' %}tag__progress--active{% endif %}{% endfor %}">A</span>
           </td>
-          <td class="url icon" data-target="all"><a class="company-name" href="{{i.url}}" target="_blank"><i class="material-icons">open_in_new</i></a></td>
+          <td class="url icon" data-target="all"><a class="company-name" href="{{i.url}}" target="_blank" title="Go to Website"><i class="material-icons">open_in_new</i></a></td>
 
           <td>&nbsp;</td>
         </tr>
@@ -268,21 +268,45 @@ progress_stages:
     <h2 class="modal__location">{{i.country}}, {{i.region}}</h2>
 
     <div class="row expanded">
-      <div class="large-6 columns" style="padding-left: 0">
-        <div class="result-item__short-description">
-          <p>{{ i.description | markdownify }}</p>
+      <div class="large-6 small-12 columns" style="padding-left: 0">
+        <div class="result-item__short-description modal__description">
+          <div class="modal__description__scroll">{{ i.description | markdownify }}</div>
+          <a class="button modal__button button--black" target="_blank" href="{{i.url}}" title="">More Information <i class="material-icons">open_in_new</i></a>
         </div>
       </div>
-      <div class="large-6 columns" style="padding-right: 0">
-        <p><b>Organization Information:</b> {{i.organization}}</p>
-        <p><b>Implementation Level:</b> {{i.implementation_level}}</p>
-        <p><b>Implementation Progress:</b> {{i.implementation_progress}}</p>
-        <p><b>Types of Engagement:</b> {{i.type_of_engagement}}</p>
-        <p><b>Available Platforms:</b> {{i.platforms}}</p>
+      <div class="large-6 small-12 columns modal__meta-container" style="padding-right: 0">
+        <div class="row expanded">
+          <div class="large-12 columns modal__meta modal__meta--left"><b class="modal__meta-header">Organization Information</b> <span class="modal__meta-content">{{i.organization}}</span></div>
+        </div>
+        <div class="row expanded">
+          <div class="large-6 columns modal__meta modal__meta--half"><b class="modal__meta-header">Implementation Level</b> <span class="modal__meta-content">{{i.implementation_level}}</span></div>
+          <div class="large-6 columns modal__meta modal__meta--half"><b class="modal__meta-header">Stage of Lawmaking Process</b>
+          <span class="modal__meta-content">
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Problem' %}tag__progress--active{% endif %}{% endfor %}">Problem</span>
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Solution' %}tag__progress--active{% endif %}{% endfor %}">Solution</span>
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Drafting' %}tag__progress--active{% endif %}{% endfor %}">Drafting</span>
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Decision' %}tag__progress--active{% endif %}{% endfor %}">Decision</span>
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Implementation' %}tag__progress--active{% endif %}{% endfor %}">Implementation</span>
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Assessment' %}tag__progress--active{% endif %}{% endfor %}">Assessment</span>
+          </span></div>
+        </div>
+        <div class="row expanded">
+          <div class="large-6 columns modal__meta modal__meta--half modal__meta--right"><b class="modal__meta-header">Types of Engagement</b>
+            <span class="modal__meta-content">
+              {% for d in i.type_of_engagement %}
+              <span class="tag tag__type tag__type--{{d | slugify}}">{{ d }}</span>
+              {% endfor %}
+            </span>
+          </div>
+          <div class="large-6 columns modal__meta modal__meta--half modal__meta--right"><b class="modal__meta-header">Available Platforms</b> <span class="modal__meta-content">
+            {% for d in i.platforms %}
+            <span class="tag tag__type tag__type--{{d | slugify}}" title="{{d}}"><i class="modal__meta-content__icon material-icons">{{ d | slugify | replace: 'web', 'language' | replace: 'mobile', 'phone_android' | replace: 'offline', 'place'}}</i></span>
+            {% endfor %}
+          </span></div>
+        </div>
       </div>
     </div>
 
-    <a class="button modal__button button--black" target="_blank" href="{{i.url}}" title="">More Information <i class="material-icons">open_in_new</i></a>
 </div>
 {% endfor %}
 

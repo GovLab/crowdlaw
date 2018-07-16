@@ -10,6 +10,18 @@
     box-shadow: unset;
     z-index: 11;
     padding: 40px;
+    overflow: hidden;
+
+    @include breakpoint (max-width 1023px) {
+        width: 100%;
+        height: 95%;
+        left: 0;
+        top: 100%;
+        transition: top 0.4s;
+        &.js-transition {
+            top: 5%;
+        }
+    }
 
     .modal {
         &__close {
@@ -21,11 +33,14 @@
         &__name {
             display: inline-block;
             padding: 10px;
-            font-size: 3rem;
+            font-size: 2.6rem;
             margin-top: 0;
             margin-bottom: 10px;
             background-color: lighten($theme-pink, 20);
             max-width: 70%;
+            @include breakpoint(max-width 740px) {
+                font-size: 1.8rem;
+            }
         }
         &__location {
             display: inline-block;
@@ -34,16 +49,100 @@
             margin-top: 0;
             margin-bottom: 10px;
             background-color: lighten($theme-pink, 20);
+            @include breakpoint(max-width 740px) {
+                font-size: 1.4rem;
+            }
+        }
+        &__description {
+            &__scroll {
+                max-height: 280px;
+                overflow-y: scroll;
+            }
         }
         &__button {
-            background-color: transparentize($main-color, 0.9);
+            margin-top: 20px;
+            background-color: rgba(0,0,0,0.04);
+            border: dotted 1px rgba(0,0,0,0.1);
+            &:hover {
+                background-color: rgba(0,0,0,0.1);
+            }
         }
         &__image {
-            width: 180px;
-            height: 180px;
+            width: 170px;
+            height: 170px;
             position: absolute;
             top: 40px;
             right: 104px;
+            @include breakpoint(max-width 740px) {
+                width: 138px;
+                height: 138px;
+            }
         }
+        &__meta-container {
+            margin-top: 16px;
+        }
+        &__meta {
+            display: table-cell;
+            background-color: rgba(0,0,0,0.04);
+            padding: 45px 10px 10px 10px;
+            position: relative;
+            text-align: left;
+            border: dotted 1px rgba(0,0,0,0.1);
+            &--left {
+                text-align: left;
+            }
+            &--right {
+                text-align: right;
+            }
+        }
+        &__meta-header {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: rgba(0,0,0,0.4);
+            font-weight: normal;
+        }
+        &__meta-content {
+            display: inline-block;
+            &__icon {
+                color: $black;
+            }
+        }
+    }
+    .tag {
+      display: inline-block;
+      text-align: center;
+      padding: 1px 5px 0 5px;
+      color: $white;
+      margin: 2px 0px 2px 2px;
+      &__type {
+        &--ideas {
+          color: $black;
+          background-color: $ideas-color;
+          border: dotted 1px rgba(0,0,0,0.2);
+        }
+        &--opinions {
+          background-color: $opinions-color;
+          border: dotted 1px darken($opinions-color, 10);
+        }
+        &--expertise {
+          background-color: $expertise-color;
+          border: dotted 1px darken($expertise-color, 10);
+        }
+        &--actions {
+          background-color: $actions-color;
+          border: dotted 1px darken($actions-color, 10);
+        }
+        &--evidence {
+          background-color: $evidence-color;
+          border: dotted 1px darken($evidence-color, 10);
+        }
+      }
+      &__progress {
+        background-color: $progress-inactive;
+        &--active {
+          background-color: $progress-color
+        }
+      }
     }
 }

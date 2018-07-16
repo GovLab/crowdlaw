@@ -23,14 +23,21 @@ $(document).ready(function () {
     // Modal Click Behavior
     $('.js-open-modal').click(function (e) {
         e.preventDefault();
-        $('#modal-' + $(this).attr('data-modal')).addClass('js-active');
+        var modal = $('#modal-' + $(this).attr('data-modal'));
+        modal.addClass('js-active');
         $('#overlay').addClass('js-active');
         $('body').addClass('js-body-modal-active');
+
+        setTimeout(
+          function()
+          {
+            modal.addClass('js-transition');
+          }, 100);
     });
 
     $('.js-close-modal').click(function (e) {
         e.preventDefault();
-        $('.js-target-modal').removeClass('js-active');
+        $('.js-target-modal').removeClass('js-active js-transition');
         $('#overlay').removeClass('js-active');
         $('body').removeClass('js-body-modal-active');
     });
@@ -64,7 +71,7 @@ $(document).ready(function () {
     $('#overlay').click(function () {
         $('.js-active').removeClass('js-active');
         $('.js-active-menu').removeClass('js-active-menu');
-        $('.js-target-modal').removeClass('js-active');
+        $('.js-target-modal').removeClass('js-active js-transition');
         $('#overlay').removeClass('js-active');
         $('body').removeClass('js-body-modal-active');
     });
