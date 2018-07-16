@@ -74,7 +74,7 @@ progress_stages:
           <div class="columns table-dropdown__item company__other-sources">
             <div class="select">
               <select data-filter='engagement' id="engagement-mobile" class="dropdown-content dropdown-mobile">
-                <option id="all">Type of Engagement</option>
+                <option id="all">Participation Task</option>
                 {% for item in page.engagement_types %}
                 <option id="{{ item | slugify }}-mobile">{{item}}</option>
                 {% endfor %}
@@ -85,7 +85,7 @@ progress_stages:
           <div class="columns table-dropdown__item company__data-sectors">
             <div class="select">
               <select data-filter='prog' id="prog-mobile" class="dropdown-content dropdown-mobile">
-                <option id="all">Stage</option>
+                <option id="all">Stage of Lawmaking Process</option>
                 {% for item in page.progress_stages %}
                 <option id="{{ item | slugify }}-mobile">{{item}}</option>
                 {% endfor %}
