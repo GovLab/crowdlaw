@@ -463,12 +463,33 @@
 }
 
 .top-section {
-  &--title {
-    max-width: 400px;
+  &--title-container {
+    max-width: 90%;
     margin: 0 auto;
   }
-  h3 {
+  &--title {
+    max-width: 400px;
+    margin-right: 20px;
+    @include breakpoint(max-width 975px) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &--subtitle {
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 74px;
+    font-weight: 600;
+    text-transform: uppercase;
     margin-bottom: 0;
+    @include breakpoint(max-width 975px) {
+      display: block;
+      margin: 0 auto;
+      font-size: 40px;
+      font-weight: 100;
+      margin-top: 20px;
+      opacity: 0.8
+    }
   }
 }
 

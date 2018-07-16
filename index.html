@@ -32,8 +32,10 @@ progress_stages:
 <div class="list-page">
 
   <div class="top-section top-section--od500-header top-section--main-color top-section--map list-page__header">
-    <div class="top-section--title"><img src="{{ 'img/crowdlawlogo.svg' | relative_url }}"></div>
-    <h3>Catalog</h3>
+    <div class="top-section--title-container">
+      <img class="top-section--title" src="{{ 'img/crowdlawlogo.svg' | relative_url }}">
+      <span class="top-section--subtitle">Catalog</span>
+    </div>
     <div class="map-wrapper">
       <div id="map"></div>
     </div>
@@ -111,7 +113,7 @@ progress_stages:
           <th class="table-dropdown__item" style="width: 8%">
             <div class="select">
               <select data-filter="region" id="region" class="dropdown-content">
-                <option id="all">---</option>
+                <option id="all">View All</option>
                 {% for item in page.regions%}
                 <option id="{{ item | slugify }}">{{item}}</option>
                 {% endfor %}
@@ -121,7 +123,7 @@ progress_stages:
           <th class="table-dropdown__item" style="width: 8%">
             <div class="select">
               <select data-filter='level' id="level" class="dropdown-content">
-                <option id="all">---</option>
+                <option id="all">View All</option>
                 {% for item in page.levels %}
                 <option id="{{ item | slugify }}">{{item}}</option>
                 {% endfor %}
@@ -134,7 +136,7 @@ progress_stages:
           <th class="table-dropdown__item" style="width: 12%">
             <div class="select">
               <select data-filter='engagement' id="engagement" class="dropdown-content">
-                <option id="all">---</option>
+                <option id="all">View All</option>
                 {% for item in page.engagement_types %}
                 <option id="{{ item | slugify }}">{{item}}</option>
                 {% endfor %}
@@ -145,7 +147,7 @@ progress_stages:
           <th class="table-dropdown__item" style="width: 18%; padding-right: 7px;">
             <div class="select" style="">
               <select data-filter='prog' id="prog" class="dropdown-content">
-                <option id="all">---</option>
+                <option id="all">View All</option>
                 {% for item in page.progress_stages %}
                 <option id="{{ item | slugify }}">{{item}}</option>
                 {% endfor %}

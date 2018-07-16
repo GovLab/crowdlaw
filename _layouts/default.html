@@ -51,22 +51,25 @@
 
   {{ content }}
 
+{% comment %}
   <footer class='footer'>
     <div class="row">
         <div class="large-10 large-centered columns">
             <div class="row">
                 <div class="footer__content footer--sections medium-4 small-12 column">
                     <h2>Sections</h2>
-                    <!-- <a class="footer__menu-item" href="http://www.opendata500.com/"></a> -->
+                    <a class="footer__menu-item" href="http://www.opendata500.com/"></a>
                 </div>
                 <div class="footer__content medium-offset-2 medium-6 small-12 column">
                     <h2>Partners</h2>
-                    <!-- <a class="footer__partner-logo" href="http://www.opendata500.com/" target="_blank"><img src="{{'/img/od500-network-neg.png' | relative_url}}" alt="Open Data 500 Global Network"></a> -->
+                    <a class="footer__partner-logo" href="http://www.opendata500.com/" target="_blank"><img src="{{'/img/od500-network-neg.png' | relative_url}}" alt="Open Data 500 Global Network"></a>
                 </div>
             </div>
         </div>
     </div>
 </footer>
+{% endcomment %}
+
 <div class="copyright">
     <div class="row align-center">
         <div class="large-10 large-centered columns">
@@ -75,6 +78,7 @@
         </div>
     </div>
 </div>
+
 
 <div id="overlay" class="js-overlay"></div>
 </body>
