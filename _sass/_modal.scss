@@ -30,6 +30,12 @@
                 margin-left: 0;
             }
         }
+        &__container {
+            @include breakpoint(max-width 740px) {
+                max-height: 70vh;
+                overflow-y: scroll;
+            }
+        }
         &__name {
             display: inline-block;
             padding: 10px;
@@ -57,6 +63,10 @@
             &__scroll {
                 max-height: 280px;
                 overflow-y: scroll;
+                @include breakpoint(max-width 740px) {
+                    max-height: unset;
+                    overflow-y: unset;
+                }
             }
         }
         &__button {
@@ -77,9 +87,16 @@
                 width: 138px;
                 height: 138px;
             }
+            @include breakpoint(max-width 639px) {
+                display: none;
+            }
         }
         &__meta-container {
+            padding-right: 15px;
             margin-top: 16px;
+            @include breakpoint(max-width 740px) {
+                font-size: 12px;
+            }
         }
         &__meta {
             display: table-cell;

@@ -267,7 +267,7 @@ progress_stages:
     <br>
     <h2 class="modal__location">{{i.country}}, {{i.region}}</h2>
 
-    <div class="row expanded">
+    <div class="row expanded modal__container" style="">
       <div class="large-6 small-12 columns" style="padding-left: 0">
         <div class="result-item__short-description modal__description">
           <div class="modal__description__scroll">{{ i.description | markdownify }}</div>
@@ -275,10 +275,10 @@ progress_stages:
         </div>
       </div>
       <div class="large-6 small-12 columns modal__meta-container" style="padding-right: 0">
-        <div class="row expanded">
+        <div class="row ">
           <div class="large-12 columns modal__meta modal__meta--left"><b class="modal__meta-header">Organization Information</b> <span class="modal__meta-content">{{i.organization}}</span></div>
         </div>
-        <div class="row expanded">
+        <div class="row">
           <div class="large-6 columns modal__meta modal__meta--half"><b class="modal__meta-header">Implementation Level</b> <span class="modal__meta-content">{{i.implementation_level}}</span></div>
           <div class="large-6 columns modal__meta modal__meta--half"><b class="modal__meta-header">Stage of Lawmaking Process</b>
           <span class="modal__meta-content">
@@ -290,7 +290,7 @@ progress_stages:
             <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Assessment' %}tag__progress--active{% endif %}{% endfor %}">Assessment</span>
           </span></div>
         </div>
-        <div class="row expanded">
+        <div class="row ">
           <div class="large-6 columns modal__meta modal__meta--half modal__meta--right"><b class="modal__meta-header">Types of Engagement</b>
             <span class="modal__meta-content">
               {% for d in i.type_of_engagement %}
