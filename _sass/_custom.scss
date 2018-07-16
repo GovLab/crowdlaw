@@ -581,6 +581,15 @@ body {
   @include breakpoint(max-width 870px) { display: none; }
 }
 
+.top-section--mobile-logo {
+  margin: 30px auto 0 auto;
+  max-width: 30%;
+  opacity: 0.2;
+  display: none;
+  @include breakpoint(max-width 639px) { display: block; }
+
+}
+
 
 #overlay {
   background-color: rgba(0,0,0,0.4);
