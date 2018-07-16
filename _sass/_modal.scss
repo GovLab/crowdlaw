@@ -45,7 +45,8 @@
             background-color: lighten($theme-pink, 20);
             max-width: 70%;
             @include breakpoint(max-width 740px) {
-                font-size: 1.8rem;
+                max-width: 80%;
+                font-size: 1.5rem;
             }
         }
         &__location {
@@ -56,7 +57,7 @@
             margin-bottom: 10px;
             background-color: lighten($theme-pink, 20);
             @include breakpoint(max-width 740px) {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
             }
         }
         &__description {
