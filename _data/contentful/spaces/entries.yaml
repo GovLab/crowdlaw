@@ -3358,3 +3358,41 @@ entry:
     url: "//images.ctfassets.net/h96qvckp021n/6tcMfDE9uEecqiMouuQ4Mi/0048db0a0b6ec83c034f41eb055bd5cd/_CultureIsDigital.png"
   latitude: 51.520167
   longitude: -0.64296
+- sys:
+    id: 5kpBglP5xCqIGCGEQUMQ8e
+    created_at: !ruby/object:DateTime 2018-07-16 17:39:43.862000000 Z
+    updated_at: !ruby/object:DateTime 2018-07-16 17:39:43.862000000 Z
+    content_type_id: entry
+  name: Urna de Cristal
+  country: Colombia
+  region: SA
+  implementation_level: National
+  description: Urna de Cristal (www.urnadecristal.gov.co), a presidential initiative,
+    is an online platform for civic participation and government transparency with
+    the objective to inform citizens about the government’s activity and to stimulate
+    discussions and collect citizens’ views on a wide range of topics. Discussions
+    are structured around specific questions that can either be brought forward by
+    the government or by citizens and that allow for an interactive exchange between
+    the users. Feedback received through the use of Urna de Cristal informed the development
+    of the ‘Anti-paperwork Law’ (Ley anti-trámites) by identifying formalities that
+    were not necessary or leading to corruption and inefficiency.
+  short_description: http://www.oecd.org/gov/regulatory-policy/Colombia-regulatory-policy-ireg-2016.pdf
+  platforms:
+  - Web
+  implementation_progress:
+  - Problem
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: Ministry of Planning, Government of Colombia
+  url: http://www.urnadecristal.gov.co
+  image:
+    sys:
+      id: 5PR4SpN4PuAAAGycCaigsG
+      created_at: !ruby/object:DateTime 2018-07-16 17:37:37.829000000 Z
+      updated_at: !ruby/object:DateTime 2018-07-16 17:37:37.829000000 Z
+    title: Urna de Cristal
+    description: 
+    url: "//images.ctfassets.net/h96qvckp021n/5PR4SpN4PuAAAGycCaigsG/08bf12be3e00d6dfcda3149987ee0ff0/Urna-WEb_0.png"
+  latitude: 4.758
+  longitude: -73.7809
