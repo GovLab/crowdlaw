@@ -196,12 +196,12 @@ $(document).ready(function () {
         companyList.filter();
     });
 
-    function filterList() {
-        allFilters.each(function(idx, selection) {
+    function filterList(filters) {
+        filters.each(function(idx, selection) {
             $(selection).each(function(idx, option) {
                 var filterSelection = $(this).attr("data-filter");
                 var option = $(this).children(":selected").attr("id");
-                searchQueries[filterSelection] = option;
+                searchQueries[filterSelection] = option.replace("-mobile", "");
             });
         });
         companyList.filter(function(item) {
@@ -247,7 +247,11 @@ $(document).ready(function () {
     var allFilters = $(".filters select");
     var searchQueries = {};
     allFilters.on("change", function() {
-        filterList();
+        if ($(this).hasClass("dropdown-mobile")) {
+            filterList($(".mobile-filters select"));
+        } else {
+            filterList($(".filters select"));
+        }
     });
 
     // CLEAR ALL FILTERS

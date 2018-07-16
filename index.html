@@ -52,8 +52,11 @@
   <div class="list-page">
 
   <div class="top-section top-section--od500-header top-section--main-color top-section--map list-page__header">
-    <div class="top-section--title"><img src="/img/crowdlawlogo.svg"></div>
-    <h3>Catalog</h3>
+    <div class="top-section--title-container">
+      <img class="top-section--title" src="/img/crowdlawlogo.svg">
+      <span class="top-section--subtitle">Catalog</span>
+    </div>
+    <div class="top-section--mobile-logo"><img src="/img/crowdlaw-mono.svg"></div>
     <div class="map-wrapper">
       <div id="map"></div>
     </div>
@@ -68,20 +71,20 @@
 
           <div class="columns table-dropdown__item company__federal-sources">
             <div class="select" id=''>
-              <select data-filter="region" id="region-mobile" class="dropdown-content">
+              <select data-filter="region" id="region-mobile" class="dropdown-content dropdown-mobile">
                 <option id="all">Region</option>
                 
-                <option id="na">NA</option>
+                <option id="na-mobile">NA</option>
                 
-                <option id="sa">SA</option>
+                <option id="sa-mobile">SA</option>
                 
-                <option id="eu">EU</option>
+                <option id="eu-mobile">EU</option>
                 
-                <option id="as">AS</option>
+                <option id="as-mobile">AS</option>
                 
-                <option id="af">AF</option>
+                <option id="af-mobile">AF</option>
                 
-                <option id="oc">OC</option>
+                <option id="oc-mobile">OC</option>
                 
               </select>
             </div>
@@ -89,14 +92,14 @@
 
           <div class="columns table-dropdown__item company__provincial-sources">
             <div class="select">
-              <select data-filter='level' id="level-mobile" class="dropdown-content">
+              <select data-filter='level' id="level-mobile" class="dropdown-content dropdown-mobile">
                 <option id="all">Implementation Level</option>
                 
-                <option id="national">National</option>
+                <option id="national-mobile">National</option>
                 
-                <option id="regional">Regional</option>
+                <option id="regional-mobile">Regional</option>
                 
-                <option id="local">Local</option>
+                <option id="local-mobile">Local</option>
                 
               </select>
             </div>
@@ -104,18 +107,18 @@
 
           <div class="columns table-dropdown__item company__other-sources">
             <div class="select">
-              <select data-filter='engagement' id="engagement-mobile" class="dropdown-content">
+              <select data-filter='engagement' id="engagement-mobile" class="dropdown-content dropdown-mobile">
                 <option id="all">Type of Engagement</option>
                 
-                <option id="ideas">Ideas</option>
+                <option id="ideas-mobile">Ideas</option>
                 
-                <option id="expertise">Expertise</option>
+                <option id="expertise-mobile">Expertise</option>
                 
-                <option id="opinions">Opinions</option>
+                <option id="opinions-mobile">Opinions</option>
                 
-                <option id="actions">Actions</option>
+                <option id="actions-mobile">Actions</option>
                 
-                <option id="evidence">Evidence</option>
+                <option id="evidence-mobile">Evidence</option>
                 
               </select>
             </div>
@@ -123,20 +126,20 @@
 
           <div class="columns table-dropdown__item company__data-sectors">
             <div class="select">
-              <select data-filter='prog' id="prog-mobile" class="dropdown-content">
+              <select data-filter='prog' id="prog-mobile" class="dropdown-content dropdown-mobile">
                 <option id="all">Stage</option>
                 
-                <option id="problem">Problem</option>
+                <option id="problem-mobile">Problem</option>
                 
-                <option id="solution">Solution</option>
+                <option id="solution-mobile">Solution</option>
                 
-                <option id="drafting">Drafting</option>
+                <option id="drafting-mobile">Drafting</option>
                 
-                <option id="decision">Decision</option>
+                <option id="decision-mobile">Decision</option>
                 
-                <option id="implementation">Implementation</option>
+                <option id="implementation-mobile">Implementation</option>
                 
-                <option id="assessment">Assessment</option>
+                <option id="assessment-mobile">Assessment</option>
                 
               </select>
             </div>
@@ -163,7 +166,7 @@
           <th class="table-dropdown__item" style="width: 8%">
             <div class="select">
               <select data-filter="region" id="region" class="dropdown-content">
-                <option id="all">---</option>
+                <option id="all">View All</option>
                 
                 <option id="na">NA</option>
                 
@@ -183,7 +186,7 @@
           <th class="table-dropdown__item" style="width: 8%">
             <div class="select">
               <select data-filter='level' id="level" class="dropdown-content">
-                <option id="all">---</option>
+                <option id="all">View All</option>
                 
                 <option id="national">National</option>
                 
@@ -200,7 +203,7 @@
           <th class="table-dropdown__item" style="width: 12%">
             <div class="select">
               <select data-filter='engagement' id="engagement" class="dropdown-content">
-                <option id="all">---</option>
+                <option id="all">View All</option>
                 
                 <option id="ideas">Ideas</option>
                 
@@ -219,7 +222,7 @@
           <th class="table-dropdown__item" style="width: 18%; padding-right: 7px;">
             <div class="select" style="">
               <select data-filter='prog' id="prog" class="dropdown-content">
-                <option id="all">---</option>
+                <option id="all">View All</option>
                 
                 <option id="problem">Problem</option>
                 
@@ -873,7 +876,7 @@
         <tr class="entry" id="entry-Cg1LFfYszAuQoKsOaOkIc" >
 
           <td class="filter" data-location=""></td>
-          <td class="name data js-open-modal" data-modal="Cg1LFfYszAuQoKsOaOkIc" data-target="all constitutional-assembly-public-participation-programme-cappp">Constitutional Assembly Public Participation Programme (CAPPP)</td>
+          <td class="name data js-open-modal" data-modal="Cg1LFfYszAuQoKsOaOkIc" data-target="all constitutional-assembly-public-participation-programme">Constitutional Assembly Public Participation Programme</td>
           <td class="country data js-open-modal" data-modal="Cg1LFfYszAuQoKsOaOkIc" data-target="all south-africa">South Africa</td>
           <td class="region data js-open-modal" data-modal="Cg1LFfYszAuQoKsOaOkIc" data-target="all af">AF</td>
           <td class="level data js-open-modal" data-modal="Cg1LFfYszAuQoKsOaOkIc" data-target="all national">National</td>
@@ -6260,7 +6263,7 @@
 
   <span class="modal__close js-close-modal"><i class="material-icons">close</i></span>
     <div class="modal__image" style="background: center / contain no-repeat url();">&nbsp;</div>
-    <h1 class="modal__name">Constitutional Assembly Public Participation Programme (CAPPP)</h1>
+    <h1 class="modal__name">Constitutional Assembly Public Participation Programme</h1>
     <br>
     <h2 class="modal__location">South Africa, AF</h2>
 
@@ -8426,22 +8429,8 @@
 <script src="./js/map.js"></script>
 
 
-  <footer class='footer'>
-    <div class="row">
-        <div class="large-10 large-centered columns">
-            <div class="row">
-                <div class="footer__content footer--sections medium-4 small-12 column">
-                    <h2>Sections</h2>
-                    <!-- <a class="footer__menu-item" href="http://www.opendata500.com/"></a> -->
-                </div>
-                <div class="footer__content medium-offset-2 medium-6 small-12 column">
-                    <h2>Partners</h2>
-                    <!-- <a class="footer__partner-logo" href="http://www.opendata500.com/" target="_blank"><img src="/img/od500-network-neg.png" alt="Open Data 500 Global Network"></a> -->
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+
+
 <div class="copyright">
     <div class="row align-center">
         <div class="large-10 large-centered columns">
@@ -8450,6 +8439,7 @@
         </div>
     </div>
 </div>
+
 
 <div id="overlay" class="js-overlay"></div>
 </body>
