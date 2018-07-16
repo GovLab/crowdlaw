@@ -4,10 +4,10 @@
     <title>Crowdlaw</title>
     <description>Crowdlaw Catalog
 </description>
-    <link>https://govlab.github.io/crowdlaw/</link>
-    <atom:link href="https://govlab.github.io/crowdlaw/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 15 Jul 2018 23:54:51 -0400</pubDate>
-    <lastBuildDate>Sun, 15 Jul 2018 23:54:51 -0400</lastBuildDate>
+    <link>https://catalog.crowd.law/</link>
+    <atom:link href="https://catalog.crowd.law/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 15 Jul 2018 23:59:24 -0400</pubDate>
+    <lastBuildDate>Sun, 15 Jul 2018 23:59:24 -0400</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
   </channel>
