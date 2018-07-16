@@ -17,8 +17,8 @@ title: Crowdlaw
 email: admin@thegovlab.org
 description: > # this means to ignore newlines until "baseurl:"
   Crowdlaw Catalog
-baseurl: "/crowdlaw" # the subpath of your site, e.g. /blog
-url: "https://govlab.github.io" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://catalog.crowd.law" # the base hostname & protocol for your site
 twitter_username: govlab
 github_username:  GovLab
 
