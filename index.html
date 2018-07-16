@@ -239,16 +239,16 @@ progress_stages:
           <td class="organization data js-open-modal" data-modal="{{i.sys.id}}" data-target="all">{{i.organization}}</td>
           <td class="engagement tags js-open-modal" data-modal="{{i.sys.id}}" data-target="all {{i.type_of_engagement | join: ' ' | downcase }}">
             {% for d in i.type_of_engagement %}
-            <span class="tag tag__type tag__type--{{d | slugify}}">{{ d | slice: 0 }}</span>
+            <span class="tag tag__type tag__type--{{d | slugify}} js-tooltip-trigger" data-tooltip="js-tooltip--engagement__{{d | slugify}}">{{ d | slice: 0 }}</span>
             {% endfor %}
           </td>
           <td class="prog tags js-open-modal" data-modal="{{i.sys.id}}" data-target="all {{i.implementation_progress | join: ' ' | downcase }}">
-            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Problem' %}tag__progress--active{% endif %}{% endfor %}">P</span>
-            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Solution' %}tag__progress--active{% endif %}{% endfor %}">S</span>
-            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Drafting' %}tag__progress--active{% endif %}{% endfor %}">D</span>
-            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Decision' %}tag__progress--active{% endif %}{% endfor %}">D</span>
-            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Implementation' %}tag__progress--active{% endif %}{% endfor %}">I</span>
-            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Assessment' %}tag__progress--active{% endif %}{% endfor %}">A</span>
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Problem' %}tag__progress--active{% endif %}{% endfor %} js-tooltip-trigger" data-tooltip="js-tooltip--prog__problem">P</span>
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Solution' %}tag__progress--active{% endif %}{% endfor %} js-tooltip-trigger" data-tooltip="js-tooltip--prog__solution">S</span>
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Drafting' %}tag__progress--active{% endif %}{% endfor %} js-tooltip-trigger" data-tooltip="js-tooltip--prog__drafting">D</span>
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Decision' %}tag__progress--active{% endif %}{% endfor %} js-tooltip-trigger" data-tooltip="js-tooltip--prog__decision">D</span>
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Implementation' %}tag__progress--active{% endif %}{% endfor %} js-tooltip-trigger" data-tooltip="js-tooltip--prog__implementation">I</span>
+            <span class="tag tag__progress {% for d in i.implementation_progress %}{% if d == 'Assessment' %}tag__progress--active{% endif %}{% endfor %} js-tooltip-trigger" data-tooltip="js-tooltip--prog__assessment">A</span>
           </td>
           <td class="url icon" data-target="all"><a class="company-name" href="{{i.url}}" target="_blank" title="Go to Website"><i class="material-icons">open_in_new</i></a></td>
 
@@ -311,6 +311,13 @@ progress_stages:
     </div>
 
 </div>
+{% endfor %}
+
+{% for d in page.engagement_types %}
+<div class="js-tooltip js-tooltip--engagement" id="js-tooltip--engagement__{{d | slugify}}">{{ d }}</div>
+{% endfor %}
+{% for d in page.progress_stages %}
+<div class="js-tooltip js-tooltip--prog" id="js-tooltip--prog__{{d | slugify}}">{{ d }}</div>
 {% endfor %}
 
 <script src="https://d3js.org/d3.v3.min.js"></script>

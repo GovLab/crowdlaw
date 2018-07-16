@@ -590,6 +590,56 @@ body {
 
 }
 
+.js-tooltip {
+  background-color: lighten($main-color, 10);
+  color: $white;
+  padding: 15px;
+  position: absolute;
+  display: none;
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.2);
+  &::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 10px 8px 0 8px;
+    border-color: lighten($main-color, 10) transparent transparent transparent;
+  }
+  &.js-active {
+    display: block;
+  }
+}
+
+#js-tooltip--engagement {
+  &__ideas {
+    color: $black;
+    background-color: $ideas-color;
+    &::after { border-color: $ideas-color transparent transparent transparent; }
+  }
+  &__opinions {
+    background-color: $opinions-color;
+    &::after { border-color: $opinions-color transparent transparent transparent; }
+  }
+  &__expertise {
+    background-color: $expertise-color;
+    &::after { border-color: $expertise-color transparent transparent transparent; }
+  }
+  &__actions {
+    background-color: $actions-color;
+    &::after { border-color: $actions-color transparent transparent transparent; }
+  }
+  &__evidence {
+    background-color: $evidence-color;
+    &::after { border-color: $evidence-color transparent transparent transparent; }
+  }
+}
 
 #overlay {
   background-color: rgba(0,0,0,0.4);

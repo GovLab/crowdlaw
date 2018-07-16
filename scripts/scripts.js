@@ -265,6 +265,30 @@ $(document).ready(function () {
         companyList.sort('name', { order: "asc" });
     });
 
+    // tooltips
+
+
+    $(".js-tooltip-trigger").on("mouseenter", function(e) {
+        console.log($("#"+$(this).attr('data-tooltip')).length);
+        $("#"+$(this).attr('data-tooltip')).addClass('js-active');
+
+    });
+
+    $(".js-tooltip-trigger").on("mousemove", function(e) {
+        var elem = $("#"+$(this).attr('data-tooltip'));
+        elem.css({
+            left:  e.pageX-elem.outerWidth()/2.0 + 'px',
+            top:   e.pageY-elem.outerHeight()-15 + 'px'
+        });
+    });
+
+    $(".js-tooltip-trigger").on("mouseout", function(e) {
+        $("#"+$(this).attr('data-tooltip')).removeClass('js-active');
+        $("#"+$(this).attr('data-tooltip')).css({
+            left: '0px',
+            top:  '0px'
+        });
+    });
 
     //LOGO FADE
     // var fadeOutLogo = function () {
