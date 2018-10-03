@@ -38,6 +38,7 @@ contentful:
         access_token: 75985f7c583124647e5905e7ff6b1e945a6faccf7c8fcc995cd87ee732b3c6e2
         # base_path:         # Optional - Defaults to Current directory
         # destination: ./source/_data/contentful/spaces # Optional - Defaults to _data/contentful/spaces
+        limit: 1000
         all_entries: true
 
 

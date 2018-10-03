@@ -2979,19 +2979,20 @@ entry:
 - sys:
     id: 1Qp3QA7iCMC0mCC8yki4Og
     created_at: !ruby/object:DateTime 2018-07-14 11:55:14.018000000 Z
-    updated_at: !ruby/object:DateTime 2018-07-14 11:55:14.018000000 Z
+    updated_at: !ruby/object:DateTime 2018-09-23 21:09:58.399000000 Z
     content_type_id: entry
   name: Cities of Service
   country: USA
   region: NA
   implementation_level: Local
-  description: Cities of Service is a national nonprofit organization that helps mayors
-    build stronger cities by changing the way local government and citizens work together.
-    Their coalition includes Anchorage, Boston, Detroit, El Paso, Richmond and more.
-    Their Impact Volunteering strategy helps cities tap into the knowledge, creativity,
-    and service of their citizens to help identify and solve pressing local challenges.
-    Some methods include citizens contributing policy ideas, leading community groups,
-    and providing feedback to improve existing city programs and services.
+  description: Cities of Service is a nonprofit organization that helps mayors build
+    stronger cities by changing the way local government and citizens work together.
+    Their coalition of over 250 cities includes Anchorage, Boston, Detroit, El Paso,
+    Richmond and more. Their Citizen Engagement model and  Impact Volunteering strategy
+    help cities tap into the knowledge, creativity, and service of their citizens
+    to help identify and solve pressing local challenges. Methods include citizens
+    contributing policy ideas, leading community groups, and providing feedback to
+    improve existing city programs and services.
   platforms:
   - Web
   - Offline
@@ -3005,7 +3006,7 @@ entry:
   - Opinions
   - Actions
   - Evidence
-  organization: Bloomberg Philanthropies
+  organization: Cities of Service
   url: https://citiesofservice.org/
   image:
     sys:
@@ -3396,3 +3397,27 @@ entry:
     url: "//images.ctfassets.net/h96qvckp021n/5PR4SpN4PuAAAGycCaigsG/08bf12be3e00d6dfcda3149987ee0ff0/Urna-WEb_0.png"
   latitude: 4.758
   longitude: -73.7809
+- sys:
+    id: 6rsjbgxqtaIUyYG4kiwISW
+    created_at: !ruby/object:DateTime 2018-09-23 21:14:29.571000000 Z
+    updated_at: !ruby/object:DateTime 2018-09-23 21:14:29.571000000 Z
+    content_type_id: entry
+  name: Ideas Conciencia
+  country: Chile
+  region: SA
+  implementation_level: National
+  description: It´s a platform for receiving proposals for bills; of public policies;
+    projects of diffusion, of creation or of support to networks, of synergy in subjects
+    of science and technology.
+  platforms:
+  - Web
+  implementation_progress:
+  - Problem
+  - Solution
+  type_of_engagement:
+  - Ideas
+  - Expertise
+  - Actions
+  - Evidence
+  organization: Science and Technology Committe (Chamber of Deputies)
+  url: https://www.ideasconciencia.cl/
