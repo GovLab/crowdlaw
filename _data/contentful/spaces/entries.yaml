@@ -3421,3 +3421,70 @@ entry:
   - Evidence
   organization: Science and Technology Committe (Chamber of Deputies)
   url: https://www.ideasconciencia.cl/
+- sys:
+    id: 4c4y1vnXGEIeAiIWYmcK6e
+    created_at: !ruby/object:DateTime 2018-10-19 22:45:43.654000000 Z
+    updated_at: !ruby/object:DateTime 2018-10-19 22:46:27.391000000 Z
+    content_type_id: entry
+  name: We The People
+  country: United States
+  region: NA
+  implementation_level: National
+  description: Crowdfund and Crowdsource a special interest group of the people
+  platforms:
+  - Web
+  - Mobile
+  implementation_progress:
+  - Problem
+  - Solution
+  - Drafting
+  - Decision
+  type_of_engagement:
+  - Ideas
+  - Expertise
+  - Opinions
+  - Actions
+  organization: Wethepeople.org, Inc.
+  url: https://wethepeople.org/
+  image:
+    sys:
+      id: 5CUsgRJ6wgsigWs24ouYcw
+      created_at: !ruby/object:DateTime 2018-10-19 22:45:25.802000000 Z
+      updated_at: !ruby/object:DateTime 2018-10-19 22:45:25.802000000 Z
+    title: WeThePeople
+    description: WeThePeople Screenshot
+    url: "//images.ctfassets.net/h96qvckp021n/5CUsgRJ6wgsigWs24ouYcw/cf3ab529571fb4d8fdd556d03f9aac71/Screen_Shot_2018-10-19_at_6.44.53_PM.png"
+  latitude: 36.2795
+  longitude: 98.85785
+- sys:
+    id: 55dcJMOme4wmk2MCOUmAAg
+    created_at: !ruby/object:DateTime 2018-10-19 22:49:53.344000000 Z
+    updated_at: !ruby/object:DateTime 2018-10-19 22:50:22.697000000 Z
+    content_type_id: entry
+  name: LawMaker
+  country: USA
+  implementation_level: National
+  description: LawMaker is a lobby for the rest of us – a platform that empowers Americans
+    to crowdsource new laws, build voter coalitions, and engage politicians to advocate
+    for change.
+  platforms:
+  - Web
+  implementation_progress:
+  - Problem
+  - Solution
+  - Drafting
+  type_of_engagement:
+  - Ideas
+  - Actions
+  organization: LawMaker
+  url: https://lawmaker.io/
+  image:
+    sys:
+      id: 1M1qvQqIhGgGqucAYQsWSA
+      created_at: !ruby/object:DateTime 2018-10-19 22:49:22.775000000 Z
+      updated_at: !ruby/object:DateTime 2018-10-19 22:49:32.739000000 Z
+    title: LawMaker
+    description: LawMaker logo
+    url: "//images.ctfassets.net/h96qvckp021n/1M1qvQqIhGgGqucAYQsWSA/a1fa67eaa85d7738d2239a7500ceb98a/lawmwker_beta_purple-39a2978657df62d6a0d10cce1f55f0e81cec40766f80fa9f8c74be39d801b777.png"
+  latitude: 38.279795
+  longitude: -98.85711
