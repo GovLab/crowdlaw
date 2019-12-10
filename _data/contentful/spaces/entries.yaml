@@ -3488,3 +3488,53 @@ entry:
     url: "//images.ctfassets.net/h96qvckp021n/1M1qvQqIhGgGqucAYQsWSA/a1fa67eaa85d7738d2239a7500ceb98a/lawmwker_beta_purple-39a2978657df62d6a0d10cce1f55f0e81cec40766f80fa9f8c74be39d801b777.png"
   latitude: 38.279795
   longitude: -98.85711
+- sys:
+    id: 7ArzTCpzGgSUrOtlQY2R5j
+    created_at: !ruby/object:DateTime 2019-12-10 04:23:15.027000000 Z
+    updated_at: !ruby/object:DateTime 2019-12-10 04:31:20.511000000 Z
+    content_type_id: entry
+  name: CitizenLab
+  country: Belgium
+  region: EU
+  implementation_level: Local
+  description: CitizenLab provides cities and local governments with a digital platform
+    to easily consult their citizens on a wide variety of topics. Thanks to an intuitive
+    back-office, administrators can easily respond to citizens, moderate the comments
+    and share the input internally. The automated analysis features, based on natural
+    language processing technology, also help administrators cut through the noise
+    and easily access valuable, real-time insights to inform their decisions and shape
+    better policies.
+  platforms:
+  - Web
+  - Mobile
+  implementation_progress:
+  - Problem
+  type_of_engagement:
+  - Ideas
+  - Opinions
+  organization: CitizenLab
+  url: https://www.citizenlab.co/
+  latitude: 50.85045
+  longitude: 4.34878
+- sys:
+    id: 1T5DB4qlp7Tqd7690evxAc
+    created_at: !ruby/object:DateTime 2019-12-10 04:25:11.581000000 Z
+    updated_at: !ruby/object:DateTime 2019-12-10 04:31:04.362000000 Z
+    content_type_id: entry
+  name: Civis
+  country: India
+  region: AS
+  implementation_level: Local
+  description: 'Civis helps citizens understand and co-create the laws that impact
+    them, with the Government. '
+  platforms:
+  - Mobile
+  - Web
+  implementation_progress:
+  - Drafting
+  type_of_engagement:
+  - Ideas
+  organization: Civic Innovation Foundation
+  url: https://civis.vote/
+  latitude: 19.076
+  longitude: 72.8777
